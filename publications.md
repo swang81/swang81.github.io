@@ -11,14 +11,15 @@ Lastest Update: 3rd July 2023
 ## Thesis
 
 ### Ph.D.
-First principles study on the spin transfer torques and fully relativistic spin-polarized EMTO method, May, 2010 [ [pdf](./mypaper/thesis/wangshuaiphd.pdf)]
+First principles study on the spin transfer torques and fully relativistic spin-polarized EMTO method, May, 2010 [[pdf](./mypaper/thesis/wangshuaiphd.pdf)]
 
 ### Bachelor
+
 Computer simulation on structure and hydrogen storage of single-walled carbon nanotubes
 
 ## Papers
 
-- Yizhong Zhang, Huamin Wang, Shuai Wang, Yiying Tong, Kun Zhou. A Deformable Surface Model for Real-Time Water Drop Animation. IEEE Transactions on Visualization & Computer Graphics, TVCG. 2011.141
+- Yizhong Zhang, Huamin Wang, Shuai Wang, Yiying Tong, Kun Zhou. A Deformable Surface Model for Real-Time Water Drop Animation. IEEE Transactions on Visualization & Computer Graphics, TVCG. 2011.141 [[pdf](./mypaper/papers/tvcg.pdf)] [[video](./mypaper/papers/02_WaterDropAnimation.mp4)]
 
 - Shuai Wang, Ling Tang, Ke Xia, Spin transfer torque in the presence of Andreev reflections, PHYSICAL REVIEW B 81, 094404 (2010). 
 
