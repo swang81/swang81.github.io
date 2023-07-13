@@ -6,6 +6,8 @@ title: Projects
 
 # Projects
 
+<br>
+
 ## Volume Rendering Engine
 <br>
 ![imageVolumerendering](images/volumerendering.jpg)
