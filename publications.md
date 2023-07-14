@@ -4,13 +4,12 @@ permalink: /publications/index.html
 title: Publications
 ---
 
-# Publications 
-
-Lastest Update: 3rd July 2023
+# Publications
 
 ## Thesis
 
 ### Ph.D.
+
 First principles study on the spin transfer torques and fully relativistic spin-polarized EMTO method, May, 2010 [[pdf](./mypaper/thesis/wangshuaiphd.pdf)]
 
 ### Bachelor
