@@ -24,8 +24,22 @@ I am **Shuai Wang (Jack)**.
 
 - 2003.07 - 2005.09:  University Teacher, Shenyang University of Technology
 
+## **Technical background**
 
-## Research Interests
++ Solid foundation in mathematics and physics
 
++ Computer graphics, medical image processing
 
++ Physics simulation, SLAM, ROS, OpenCV, OpenGL
 
++ Deep learning, Python, Pytorch
+
++ C++, Linux, Fortran
+
++ Unity Shader, UPR and ASE
+
++ UE4 Material and Blueprint Development
+
++ PBR workflow DCC tools: 3D Max, Maya, PS, SP, SD, Zbrush, VRED, C4D
+
++ Hand drawing ability (PS, Procreate, oil painting stick, sketch, watercolor, sketch)
