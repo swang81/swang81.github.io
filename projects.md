@@ -9,7 +9,9 @@ title: Projects
 <br>
 
 ## Volume Rendering Engine
+
 <br>
+
 ![imageVolumerendering](images/volumerendering.jpg)
 
 <br>
@@ -30,10 +32,10 @@ As a postdoctoral researcher, we proposed a deformable surface model to simulate
 ## VR/AR/3D printing in Medical Image Application
 
 <br>
+
 ![](images/vrar3dprinting.jpg)
+
 <br>
-
-
 Lead the team to develop many interesting product prototypes, which is based on VR/AR and 3D printing techniques.  They were  exhibited at the CMEF exhibition and were reported and noticed by the many medias. It can render real medical image data and provide effective supporting for surgical planning. 
 
 
@@ -43,9 +45,9 @@ Lead the team to develop many interesting product prototypes, which is based on 
 
 <br>
 
+![](images/algorithm.jpg)
+
 <br>
-
-
 As an algorithm engineer, using C + +, develop colon segmentation algorithms, colon centerline extraction, and colon polyp CAD diagnosis algorithms. Through OpenGL shader language, the algorithm of nerve fiber and brain fusion display is developed. Intel IPP technology is used for acceleration. Relevant algorithms have been integrated into the released products. There are more than 10 related patents.
 
 ---
@@ -57,6 +59,5 @@ As an algorithm engineer, using C + +, develop colon segmentation algorithms, co
 ![](images/poster.jpg)
 
 <br>
-
 Recent experiments on the tunneling system and magnetic domain wall call for a full quantum treatment of the whole system. We have developed an efficient first-principles method to calculate spin-transfer torques (STTs) in layered system with noncollinear magnetization. The complete scattering wave function is determined by matching the wave function in the scattering region with the Bloch states in the leads. The STTs are obtained with the aid of the scattering wave function. 
 
