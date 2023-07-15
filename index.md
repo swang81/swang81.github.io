@@ -13,7 +13,7 @@ I am **Shuai Wang (Jack)**.
 ## Study experience
 - 2010.09 - 2011.10: Postdoctoral Fellow in Graphics (State Key Laboratory of CAD&CG), Zhejiang University
 
-- 2005.09 - 2010.07 :   Ph. D. in Condensed Matter Physics (Master and Doctor), Chinese Academy of SciencesInstitute of Physics
+- 2005.09 - 2010.07 :   Ph. D. in Condensed Matter Physics (Master and Doctor), Chinese Academy of Sciences Institute of Physics
 
 - 1999.09 - 2003.07:   Bachelor of Applied Physics, Shenyang University of Technology
 
@@ -27,19 +27,10 @@ I am **Shuai Wang (Jack)**.
 ## **Technical background**
 
 + Solid foundation in mathematics and physics
-
 + Computer graphics, medical image processing
-
 + Physics simulation, SLAM, ROS, OpenCV, OpenGL
-
-+ Deep learning, Python, Pytorch
-
-+ C++, Linux, Fortran
-
-+ Unity Shader, UPR and ASE
-
-+ UE4 Material and Blueprint Development
-
++ Deep learning, Python, PyTorch
++ C++, C#，Linux, Fortran
++ Unity shader, UPR, ASE, UE game engines
 + PBR workflow DCC tools: 3D Max, Maya, PS, SP, SD, Zbrush, VRED, C4D
-
 + Hand drawing ability (PS, Procreate, oil painting stick, sketch, watercolor, sketch)
