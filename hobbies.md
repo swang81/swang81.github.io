@@ -9,10 +9,9 @@ title: Hobbies
 ## Drawing
 
 <div class="third">
-<img src="/images/prelection1.JPG">
-<img src="/images/speech1.JPG">
-<img src="/images/speech3.JPG">
+<img src="/images/hobbies/x.jpg">
+<img src="/images/hobbies/x.jpg">
+<img src="/images/hobbies/x.jpg">
 </div>
-## Running
 
-## Music
+## Others

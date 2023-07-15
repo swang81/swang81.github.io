@@ -48,7 +48,7 @@ Lead the team to develop many interesting product prototypes, which is based on 
 ![](images/algorithm.jpg)
 
 <br>
-Develop colon segmentation algorithms, colon centerline extraction, and colon polyp CAD diagnosis algorithms. Through OpenGL shader language, the algorithm of nerve fiber and brain fusion display is developed. Intel IPP technology is used for acceleration. Relevant algorithms have been integrated into the released products. It has more than 10 related patents.
+Develop colon segmentation algorithms, colon centerline extraction, and colon polyp CAD diagnosis algorithms. Visualize the neuro fibers and MR brain Images based on OpenGL(HLSL). Intel IPP technology is used for acceleration. Algorithms have been integrated into the products. It has more than 10 related patents.
 
 ---
 
