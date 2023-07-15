@@ -31,7 +31,7 @@ title: Game Engines
 
 ## UE VR Laser Sword
 
-<video src ="./images/ge/vr996.mp4" controls="controls">
+<video src ="images/ge/vr996.mp4" controls="controls">
 </video>
 
 <br>
