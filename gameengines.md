@@ -10,22 +10,16 @@ title: Game Engines
 
 ## PBR Workflow
 
-
-<div class="third">
-<img src="/images/ge/pbrgun1.jpg" >
-</div>
-
-<div class="third">
-<img src="/images/ge/pbrgun2.jpg" >
-</div>
+![](images/ge/pbrgun1.jpg)
+![](images/ge/pbrgun2.jpg)
 
 <br>
 Here I use the DCC (digtal content creation) tools to model and render a wasteland style gun using very popular PBR workflow. 
-1. Modeling: Use 3D Max to build the low model and use Zbrush to setup high model(with details). Make sure they are aligned.
-2. UV Editing: Use  3D Max UV tool or RizomUV to unfold low FBX UV.  
-3. Baking: Import low and high FBX models into Mamoset Toolbag 4 (MT4) and bake the AO, Normal, ID textures. Sometimes use Photoshop to adjust the brightness of AO. MT4 is very useful for Normal baking because its normal brush function is very convenient for some special edges. Input these textures and simple FBX to substance painter(SP).  Bake the rest textures (world space normal, Curvature, position and thickness) in SP. 
-4. Texturing: Use SP to draw PBR texture. 
-5. Rendering: In MT4, load all textures and low FBX, place the lights and render your guns. 
+1.Modeling: Use 3D Max to build the low model and use Zbrush to setup high model(with details). Make sure they are aligned.
+2.UV Editing: Use  3D Max UV tool or RizomUV to unfold low FBX UV.  
+3.Baking: Import low and high FBX models into Mamoset Toolbag 4 (MT4) and bake the AO, Normal, ID textures. Sometimes use Photoshop to adjust the brightness of AO. MT4 is very useful for Normal baking because its normal brush function is very convenient for some special edges. Input these textures and simple FBX to substance painter(SP).  Bake the rest textures (world space normal, Curvature, position and thickness) in SP. 
+4.Texturing: Use SP to draw PBR texture. 
+5.Rendering: In MT4, load all textures and low FBX, place the lights and render your guns. 
 
 ## Unity Shader
 
