@@ -22,6 +22,8 @@ Lead the team to develop the core algorithm( Ray-Casting) based on OpenGL/HLSL a
 ##  Surface Model for Water Drop Animation
 <br>
 
+<div align=left><img  src="images/droplet.jpg"/></div>
+
 ![](images/droplet.jpg)
 
 <iframe src="//player.bilibili.com/player.html?bvid=BV1rV4y1b7WJ&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
