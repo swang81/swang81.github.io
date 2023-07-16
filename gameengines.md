@@ -31,7 +31,8 @@ title: Game Engines
 
 ## UE VR Laser Sword
 
-https://github.com/swang81/swang81.github.io/assets/7790116/4b770abb-c8d6-4ec3-9b5d-f42a584be647
+
+<iframe src="//player.bilibili.com/player.html?bvid=BV1Q94y1B7RT&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 <br>
 Here we use Oculus Quest 2 + VDS(Virtual Desktop Streamer) + UE4 to build a VR Laser sword demo game.  All logic are base on blueprint. All renderings are done by the host and transmitted through VDS.
