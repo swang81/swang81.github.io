@@ -40,9 +40,9 @@ This is my stylized rendering collections. You can get them from Github in futur
 Here we use Oculus Quest 2 + VDS(Virtual Desktop Streamer) + UE4 to build a VR Laser sword demo game.  All logic are base on blueprint. All renderings are done by the host and transmitted through VDS.
 
 ## Stylized Material with SD
-
-![](images/sd1.jpg)
-![](images/sd2.jpg)
+This is a demonstration of the results of the  SD stylized Material practice. Various elements will be added later. 
+![](images/ge/sd1.jpg)
+![](images/ge/sd2.jpg)
 
 
 
