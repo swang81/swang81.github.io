@@ -25,12 +25,9 @@ title: Game Engines
 
 
 
-## Stylized Material with SD
-
 ## UE FPS
 
 <iframe src="//player.bilibili.com/player.html?bvid=BV1bP411k7mN&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
 
 ## UE VR Laser Sword
 
@@ -40,6 +37,10 @@ title: Game Engines
 <br>
 Here we use Oculus Quest 2 + VDS(Virtual Desktop Streamer) + UE4 to build a VR Laser sword demo game.  All logic are base on blueprint. All renderings are done by the host and transmitted through VDS.
 
+## Stylized Material with SD
+
+![](images/sd1.jpg)
+![](images/sd2.jpg)
 
 
 
