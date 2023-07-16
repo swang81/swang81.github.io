@@ -6,11 +6,7 @@ title: Projects
 
 # Projects
 
-<br>
-
 ## Volume Rendering Engine
-
-<br>
 
 <div align="left">
 	<img src="/images/volumerendering.jpg">
@@ -22,7 +18,6 @@ Lead the team to develop the core algorithm( Ray-Casting) based on OpenGL/HLSL a
 ---
 
 ##  Surface Model for Water Drop Animation
-<br>
 <div align="left">
 	<img src="/images/droplet.jpg">
 </div>
@@ -37,7 +32,6 @@ As a postdoctoral researcher, we proposed a deformable surface model to simulate
 
 ## VR/AR/3D printing in Medical Image Application
 
-<br>
 <div align="left">
 	<img src="/images/vrar3dprinting.jpg">
 </div>
@@ -50,7 +44,6 @@ Lead the team to develop many interesting product prototypes, which is based on 
 
 ## Medical Post-Processing Algorithm
 
-<br>
 
 <div align="left">
 	<img src="/images/algorithm.jpg">
@@ -63,7 +56,6 @@ Develop colon segmentation algorithms, colon centerline extraction, and colon po
 
 ## First principle study of spin-transfer torques
 
-<br>
 
 <div align="left">
 	<img src="/images/poster.jpg">
