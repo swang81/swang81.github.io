@@ -16,10 +16,16 @@ I like to try various painting tools. For example, sketch, colored pencils, wate
 <img src="/images/hobbies/twogirls.jpg">
 </div>
 
+<div class="third">
+<img src="/images/hobbies/girl.jpg" >
+<img src="/images/hobbies/car.jpg">
+</div>
+
 ---
 ## Others
 
 <div class="third">
 <img src="/images/hobbies/bass.jpg" >
 <img src="/images/hobbies/medals.jpg">
+<img src="/images/hobbies/man.jpg">
 </div>
