@@ -30,21 +30,12 @@ This is my interesting shader collections. You can get them from here [[**downlo
 I rewrote the surface shader for practice with the gun model, compared it with the original one and got similar results. It is very friendly for new learners. It has a lot of comments for you. 
 ![](images/ge/gunPBR.jpg)
 
+### Car Paint Shader
+
+### Cartoon Shader
 
 
 
-
-## UE FPS
-
-<iframe src="//player.bilibili.com/player.html?bvid=BV1bP411k7mN&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-## UE VR Laser Sword
-
-
-<iframe src="//player.bilibili.com/player.html?bvid=BV1Q94y1B7RT&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<br>
-Here we use Oculus Quest 2 + VDS(Virtual Desktop Streamer) + UE4 to build a VR Laser sword demo game.  All logic are base on blueprint. All renderings are done by the host and transmitted through VDS.
 
 ## Stylized Material with SD
 This is a demonstration of the results of the  SD stylized Material practice. Various elements will be added later. 
@@ -53,6 +44,18 @@ This is a demonstration of the results of the  SD stylized Material practice. Va
 
 
 
+## Game Demo
+### UE4 FPS
+
+<iframe src="//player.bilibili.com/player.html?bvid=BV1bP411k7mN&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+### UE VR Laser Sword
+
+
+<iframe src="//player.bilibili.com/player.html?bvid=BV1Q94y1B7RT&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<br>
+Here we use Oculus Quest 2 + VDS(Virtual Desktop Streamer) + UE4 to build a VR Laser sword demo game.  All logic are base on blueprint. All renderings are done by the host and transmitted through VDS.
 
 
 
