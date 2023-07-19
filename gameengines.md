@@ -13,7 +13,7 @@ title: Game Engines
 ![](images/ge/pbrgun1.jpg)
 ![](images/ge/pbrgun2.jpg)
 
-<br>Here I use the DCC (digtal content creation) tools to model and render a wasteland style gun based on very popular PBR workflow. 
+<br>Here I use the DCC (digtal content creation) tools to model and render a wasteland style gun based on very popular PBR workflow. You can get it from here [[**download**](https://github.com/swang81/MyModels/)]. It contains FBX and all Textures for Unity. 
 
 1. **Modeling:** Use 3D Max to build the low model and use Zbrush to setup high model(with details). Make sure they are aligned.
 2. **UV Editing:** Use  3D Max UV tool or RizomUV to unfold low FBX UV.  
@@ -23,7 +23,14 @@ title: Game Engines
 
 ## Unity Shader
 
-This is my stylized rendering collections. You can get them from Github in future.
+This is my interesting shader collections. You can get them from here [[**download**](https://github.com/swang81/JackUnityShaders/)]
+
+### PBR Shader
+
+I rewrote the surface shader for practice with the gun model, compared it with the original one and got similar results. It is very friendly for new learners. It has a lot of comments for you. 
+![](images/ge/gunPBR.jpg)
+
+
 
 
 
@@ -43,7 +50,6 @@ Here we use Oculus Quest 2 + VDS(Virtual Desktop Streamer) + UE4 to build a VR L
 This is a demonstration of the results of the  SD stylized Material practice. Various elements will be added later. 
 ![](images/ge/sd1.jpg)
 ![](images/ge/sd2.jpg)
-
 
 
 
