@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /blogs/pbr/index.html
+permalink: /blogs/buildpytorch/index.html
 title: 20yrs
 ---
 
