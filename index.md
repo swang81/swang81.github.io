@@ -8,7 +8,7 @@ layout: page
 <img src="/images/wangshuai.jpg">
 </div>
 
-I am **Shuai Wang (Jack)**.
+I am **Shuai Wang (Jack)**. This is my CV. [[**pdf**](./file/jackCV.pdf)]
 
 ## Study experience
 
