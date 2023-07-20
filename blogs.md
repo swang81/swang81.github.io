@@ -15,6 +15,7 @@ title: Blogs
 
 - [Pytorch环境搭建](/blogs/buildpytorch)
 
-## 工具
+## Tools
+
 - [Oculus Quest2如何注册](/blogs/quest2)
 
