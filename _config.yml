@@ -34,16 +34,14 @@ google_verify: "SkiyuGpJOKT74vv5GmXLvYXXDkXy4v8VWPtbelYz3Hs"
 links:
   - title: About Me
     url: /
-  - title: Resume
-    url: /file/jackCV.pdf
   - title: Publications
     url: /publications/
   - title: Projects
     url: /projects/
   - title: Game Engines
     url: /gameengines/
-  - title: Awards
-    url: /awards/
+  - title: Blogs
+    url: /blogs/
   - title: Hobbies
     url: /hobbies/
 
