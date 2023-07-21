@@ -8,8 +8,10 @@ title: Blogs
 
 ## Unity Shader
 
-- [Unity PBR一些公式(更新中)](/blogs/pbr)
-- [汽车漆的渲染(更新中)](/blogs/carpaint)
+|                                                  |                                                   |
+| ------------------------------------------------ | ------------------------------------------------- |
+| ![ ](./blogs.assets/Forum.jpg)                   | [我翻译Amplify Shader Editor中文说明](/blogs/ase) |
+| ![frame-000000](./blogs.assets/frame-000000.jpg) | [汽车漆的渲染(更新中)](/blogs/carpaint)           |
 
 ## Deep Learning
 
