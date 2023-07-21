@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /blogs/buildpytorch/index.html
-title: 20yrs
+title: Blogs
 ---
 
 ## 如何最快搭建Pytorch环境

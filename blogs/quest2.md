@@ -1,13 +1,14 @@
 ---
 layout: page
 permalink: /blogs/quest2/index.html
-title: 20yrs
+title: Blogs
 ---
 
 ## Oculus Quest2如何注册
 2021年9月拿到的OQ2，如果你想挑战一下自己动手能力，就试试自己来调试Oculus吧，用它玩玩VR大作（比如Alyx），制作自己虚拟场景。如果你想玩Alyx, 你需要准备以下东西和知道他们的用处：
 **硬件：**
 一台没有激活的Oculus quest2 VR眼镜，可以独立游戏，也可以和PC一起组合，玩画质更好的游戏。
+
 1. 一台PC台式机（超强显卡），负责游戏的图像渲染。
 2. 一个5G的路由，负责PC和Oculus眼镜的数据中转。
 3. 科学上网（KXSW）的热点或路由，激活和升级oculus时，都需要。

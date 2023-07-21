@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /blogs/pbr/index.html
-title: 20yrs
+title: Blogs
 ---
 
 ## this is a test
