@@ -6,7 +6,8 @@ title: Blogs
 
 # Chinese Blogs
 
-[TOC]
+* TOC
+{:toc}
 
 
 
