@@ -8,9 +8,9 @@ title: Blogs
 
 ## Unity Shader
 
-| ![](./blogs.assets/ase.jpg)      | [我翻译Amplify Shader Editor中文说明](/blogs/ase) |
-| -------------------------------- | ------------------------------------------------- |
-| ![](./blogs.assets/carpaint.jpg) | [汽车漆的渲染(更新中)](/blogs/carpaint)           |
+| ![](./blogs.assets/ase.jpg){:width ="25%"}                   | [我翻译Amplify Shader Editor中文说明](/blogs/ase) |
+| ------------------------------------------------------------ | ------------------------------------------------- |
+| <img src ="/blogs.assets/carpaint.jpg" width ="300" height="200" align = center> | [汽车漆的渲染(更新中)](/blogs/carpaint)           |
 
 ## Deep Learning
 
