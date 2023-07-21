@@ -7,7 +7,6 @@ title: Blogs
 # Chinese Blogs
 
 ## Unity Shader
-
 | ![](./blogs.assets/x300.jpg)                               | ![](./blogs.assets/x10.jpg) |                ![](./blogs.assets/x600.jpg)                 |
 | ---------------------------------------------------------- | --------------------------- | :---------------------------------------------------------: |
 | <img src ="/blogs.assets/ase.jpg" style="zoom: 33%;"  >    |                             | [Amplify Shader Pack Manual Translated by Jack](/blogs/ase) |
