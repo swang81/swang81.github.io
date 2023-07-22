@@ -54,25 +54,49 @@ ASE Shader可以直接在项目选项卡中创建，或者通过Assets > Create 
 ## 窗口UI交互
 ![ASE_m_5.jpg](./ase.assets/ASE_m_5.jpg) 
 
-1. 可以在左侧选项卡中调整节点属性。选择一个节点，或output节点，以显示其参数。有些值可以在实际节点中直接调整。如果没有选择任何节点或选择了多个节点，则output节点的属性总是显示在此选项卡上。output节点属性选项卡可以通过单击选项卡的右上角的减号按钮来最小化。
-3. Node properties can be adjusted in the left tab. Select a node, or the Output Node, to reveal its parameters. Some values can be adjusted directly in the actual node. Output Node properties are always shown on this tab if no node or multiple nodes are selected. The Output Node Properties tab can be minimized by clicking the minus button in the upper right corner of the tab.
-2. Minimalist Save/Update/Clear/Edit buttons. Gray when unavailable or disabled, green when up-to-date, yellow when outdated.Button 1: Manual shader update (Save and Update)Button 2: Toggle LIVE shader update (Save and Update Automatically)Button 3: Remove disconnected nodesButton 4: Open shader in Text Editor
-3. 3. Shader category and name. 4. Canvas view adjustment.Button 
-   4. 1: Select and focus on the Output NodeButton 2: Focus on selected nodes, will focus on the entire node collection if nothing is selected. Automatic zoom is also done by double clicking the button or double pressing the ‘F’ key
-   5. 5. The Node Palette tab is a searchable node list where you can select and drag out nodes directly onto the canvas area. The Node Palette tab can be minimized by clicking the minus button in the upper left corner of the tab.
-      6. 6. Right-click anywhere on the canvas to bring up a searchable node list, click on the node name to create it.Sharing ContentAs of version v1.6.8.002, you can now take full canvas screenshots of your shaders using the Camera button.Additionally, you can also share nodes by copying and pasting a link directly into your canvas using the link sharing button.
+1. 可以在左侧选项卡中调整节点属性。选择一个节点，或output节点，以显示其参数。有些值可以在实际节点中直接调整。如果没有选择任何节点或选择了多个节点，则output节点的属性总是显示在此选项卡上。output节点属性选项卡可以通过单击选项卡的右上角的减号按钮来最小化。（jack: 新版的为output node）
+
+2. 最小化的保存/更新/清除/编辑按钮。不可用或禁用时为灰色，最新时为绿色，过时时为黄色。
+  - 按钮1：手动着色器更新（保存和更新）
+  - 按钮2：切换LIVE shader更新（自动保存和更新）
+  - 按钮3：删除已断开连接的节点
+  - 按钮4：在文本编辑器中打开shader
+
+3. 着色器的类别和名称。 
+
+4. 画布视图的调整。(jack: 新版的按钮多一些)
+	- 按钮1：选择并关注输出节点。
+	- 按钮2：关注选定的节点。如果未选择任何内容，将关注整个节点集合。自动变焦也可以通过双击按钮或双按“F”键来完成。
+	
+5. 节点选项板选项卡是一个可搜索的节点列表，您可以选择并将节点直接拖动到窗口区域上。可以通过单击选项卡左上角的减号按钮来最小化节点选项板选项卡。
+
+6. 右键单击画布上的任何位置以显示可搜索的节点列表，单击节点名称以创建它。
+
+## 分享内容
+
+在版本v1.6.8.002中，你现在可以使用相机按钮拍摄你的着色器的完整画布截图。此外，您还可以通过使用链接共享按钮, 将链接直接复制和粘贴到画布中来共享节点。
 
 ![QeTFBpR.gif](https://i.imgur.com/QeTFBpR.gif) 
 
-7. Hold a shortcut key and click anywhere on the canvas to create a new node. Shortcut keys are shown inside [ ] placed in front of their respective node names on the Palette Tab. For example: Key ‘1’ for a Float and Key ‘5’ for a Color node.
+7. 按住快捷键并单击画布上的任意位置以创建新节点。快捷键显示在[ ]中，位于选项卡上它们各自的节点名称的前面（jack:实际是后面）。例如：键“1”表示浮点，键“5”表示颜色节点。
 
 ![ASE_m_22.jpg](./ase.assets/ASE_m_22.jpg)
 
-Data flows from left to right – Input Port > Processed Data > Output Port. Only nodes directly or indirectly connected to a Output Node are analyzed and used to generate the final shader instructions. If a node contains unconnected Input Ports, ASE will use internal data during the processing phase. Internal data values can be edited via the Node Property tab.
+数据从左向右流，过程为：输入端口>处理的数据>输出端口。系统只分析直接或间接连接到output节点的节点，并用于生成最终的着色器指令。如果一个节点包含了未连接的输入端口，则ASE将在处理阶段使用内部参数。内部参数值可以通过节点属性选项卡进行编辑。
 
 ![ASE_m_21.jpg](./ase.assets/ASE_m_21.jpg) 
 
-**Nodes** Nodes can be selected by either left mouse clicking on them or left mouse drag a box selection over them. Nodes can be appended or removed from a selection by holding the ‘Shift’ key and clicking on it. Press ‘CTRL/CMD+A’ to select everything. Deselect everything by left mouse clicking over an empty space on the node canvas. Move selected nodes by holding your left mouse button over them and dragging.**Wires** Delete a wire by holding the ‘Alt’ key and clicking on a node port or drag a connection to an empty canvas space and left click. Wires connected to selected nodes are highlighted to denote data flow, from the leftmost node to the rightmost node.**Connections** Create connection by left clicking and dragging a wire either from an output port into an input or from an empty input port to an output port. Left mouse holding on a already connected input port removes wire ending from it and locks it to the mouse cursor so you can drag it to another port. Drag a wire onto an empty canvas space and the context menu automatically appears and if a node type is selected a connection is made with the first valid port.**Ports** Output ports can be connected to multiple input ports but input ports accept a single input. Wires automatically snap to ports near the mouse cursor. For easier use, the active port area is quite forgiving, you can even drop your wires directly onto the port name.**View** Right mouse or middle mouse button drag to pan the view. The canvas will scroll automatically when box selecting or moving selected nodes away from the visible workspace area. You can Zoom In/Out via the mouse scroll wheel. The amount of zoom out is dynamically determined from the nodes positioning on the canvas.**Tabs** Both the Node Properties and Node Palette windows are automatically minimized when reducing the ASE window width below a value of 750px. You can always maximize them by clicking the rectangular button.Material and Shader Mode
+**Nodes** 节点可以通过鼠标左键单击节点或用鼠标左键拖动选择框来选择节点。通过按住“Shift”键并单击它，可以从选择中附加或删除节点。按“CTRL/CMD+A”来选择所有内容。通过鼠标左键单击节点画布上的空白区域取消选择所有内容。通过按住鼠标左键并拖动来移动选定的节点。
+
+**Wires** Delete a wire by holding the ‘Alt’ key and clicking on a node port or drag a connection to an empty canvas space and left click. Wires connected to selected nodes are highlighted to denote data flow, from the leftmost node to the rightmost node.
+
+**Connections** Create connection by left clicking and dragging a wire either from an output port into an input or from an empty input port to an output port. Left mouse holding on a already connected input port removes wire ending from it and locks it to the mouse cursor so you can drag it to another port. Drag a wire onto an empty canvas space and the context menu automatically appears and if a node type is selected a connection is made with the first valid port.
+
+**Ports** Output ports can be connected to multiple input ports but input ports accept a single input. Wires automatically snap to ports near the mouse cursor. For easier use, the active port area is quite forgiving, you can even drop your wires directly onto the port name.
+
+**View** Right mouse or middle mouse button drag to pan the view. The canvas will scroll automatically when box selecting or moving selected nodes away from the visible workspace area. You can Zoom In/Out via the mouse scroll wheel. The amount of zoom out is dynamically determined from the nodes positioning on the canvas.
+
+**Tabs** Both the Node Properties and Node Palette windows are automatically minimized when reducing the ASE window width below a value of 750px. You can always maximize them by clicking the rectangular button.Material and Shader Mode
 
 ![ShaderMaterial.jpg](./ase.assets/ShaderMaterial.jpg) 
 You can work with ASE in one of two modes, shader or material, depending if you load the shader file from a shader or a material asset. The canvas border serves as a visual indicator of the active mode, a green outline is shown for the shader mode and a blue outline for the material mode.
