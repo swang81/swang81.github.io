@@ -7,12 +7,16 @@ title: Blogs
 # Chinese Blogs
 
 ## Unity Shader
-| ![](./blogs.assets/x300.jpg)                               | ![](./blogs.assets/x10.jpg) |                ![](./blogs.assets/x600.jpg)                 |
-| ---------------------------------------------------------- | --------------------------- | :---------------------------------------------------------: |
-| <img src ="/blogs.assets/ase.jpg" style="zoom: 33%;"  >    |                             | [Amplify Shader Pack Manual Translated by Jack](/blogs/ase) |
-| <img src ="/blogs.assets/carpaint.jpg" style="zoom: 33%;"> |                             |           [Car Paint(Updating)](/blogs/carpaint)            |
 
-## Deep Learning
+![](./blogs.assets/ase.jpg)
+
+- [Amaplify Shader Pack Chinese Manual](/blogs/ase), Here I translated the ASE manual.
+
+![](./blogs.assets/carpaint.jpg)
+
+- [Car Paint(Updating)](/blogs/carpaint), It shows how to render a car coat with ASE. 
+
+# Deep Learning
 
 - [Pytorch环境搭建](/blogs/buildpytorch)
 
