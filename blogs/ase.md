@@ -6,6 +6,8 @@ title: Blogs
 
 # Amplify Shader Editor Manual
 
+{:toc}
+
 ## 安装
 
 1. 打开 AmplifyshaderEditor###.unitypackage
@@ -86,15 +88,15 @@ ASE Shader可以直接在项目选项卡中创建，或者通过Assets > Create 
 
 ![ASE_m_21.jpg](./ase.assets/ASE_m_21.jpg) 
 
-**Nodes** 节点可以通过鼠标左键单击节点或用鼠标左键拖动选择框来选择节点。通过按住“Shift”键并单击它，可以从选择中附加或删除节点。按“CTRL/CMD+A”来选择所有内容。通过鼠标左键单击节点画布上的空白区域取消选择所有内容。通过按住鼠标左键并拖动来移动选定的节点。
+**Nodes（节点）** 节点可以通过鼠标左键单击节点或用鼠标左键拖动选择框来选择节点。通过按住“Shift”键并单击它，可以从选择中附加或删除节点。按“CTRL/CMD+A”来选择所有内容。通过鼠标左键单击节点画布上的空白区域取消选择所有内容。通过按住鼠标左键并拖动来移动选定的节点。
 
-**Wires** Delete a wire by holding the ‘Alt’ key and clicking on a node port or drag a connection to an empty canvas space and left click. Wires connected to selected nodes are highlighted to denote data flow, from the leftmost node to the rightmost node.
+**Wires（线）** 删除连线，按住“Alt”键并单击节点端口或拖动连接到画布的空白区并左键单击。连接到选定节点的连线被高亮显示，表示从最左边节点到最右边节点的数据流。
 
-**Connections** Create connection by left clicking and dragging a wire either from an output port into an input or from an empty input port to an output port. Left mouse holding on a already connected input port removes wire ending from it and locks it to the mouse cursor so you can drag it to another port. Drag a wire onto an empty canvas space and the context menu automatically appears and if a node type is selected a connection is made with the first valid port.
+**Connections(连接)** 通过左键单击并拖动线从节点的“输出端口”到下一个节点的“输入端口”，或从空的“输入端口”拖拽到“输出端口”来创建连接。鼠标左键按住已连接的输入端口，可将连线断开，按住鼠标，可以将其拖动到另一个输入端口上。将导线拖到空的画布空间上，就会自动出现一个菜单（可以选择不同类型节点），如果选择了一个节点类型，则将使用第一个有效端口进行连接。
 
-**Ports** Output ports can be connected to multiple input ports but input ports accept a single input. Wires automatically snap to ports near the mouse cursor. For easier use, the active port area is quite forgiving, you can even drop your wires directly onto the port name.
+**Ports（端口）** 输出端口可以连接到多个输入端口，但输入端口仅接受单个输入。线会自动捕捉到鼠标光标附近端口。为了便于使用，端口激活区域非常大，甚至可以将线直接放到端口名称上。
 
-**View** Right mouse or middle mouse button drag to pan the view. The canvas will scroll automatically when box selecting or moving selected nodes away from the visible workspace area. You can Zoom In/Out via the mouse scroll wheel. The amount of zoom out is dynamically determined from the nodes positioning on the canvas.
+**View(视图)** Right mouse or middle mouse button drag to pan the view. The canvas will scroll automatically when box selecting or moving selected nodes away from the visible workspace area. You can Zoom In/Out via the mouse scroll wheel. The amount of zoom out is dynamically determined from the nodes positioning on the canvas.
 
 **Tabs** Both the Node Properties and Node Palette windows are automatically minimized when reducing the ASE window width below a value of 750px. You can always maximize them by clicking the rectangular button.Material and Shader Mode
 
