@@ -169,7 +169,7 @@ Shaders可以通过单击着色器“inspector”面板上的“Open in Shader E
 - Albedo（反照率）: 反照率参数控制着色器表面的基本颜色，可使用颜色值或纹理贴图。 
 
 - Normal（法线）: 法线贴图是一种特殊的纹理，允许添加表面细节。例如，高精度网格、凸起、凹槽和划痕导致的阴影。您可以连接法线贴图或自定义法线向量。
- 
+
 - Emission（发光）: 它控制从表面发出光的颜色和强度。忽略光照条件如何。RGB值作为输入。
 
 - Metallic ( Metallic workflow only 仅金属工作流 ): 使用金属工作流程时，可以通过修改金属度和光滑度来改变表面反射率和光响应。使用灰度输入。可以使用从0到1的数和一个纹理，来控制金属值，不同区域使用不同的金属值。参数0是电介质（非金属）和1是全金属。
@@ -202,47 +202,61 @@ Shaders可以通过单击着色器“inspector”面板上的“Open in Shader E
 
 ![MN_2.jpg](./ase.assets/MN_2.jpg)
 
-**Blend Mode**
+**Blend Mode(混合模式)**
 
-- Blend Mode: The selected mode automatically adjust the available parameters; Opaque, Masked, Transparent, Translucent, Alpha Premultiplied or Custom.
- 
-- Render Type: RenderType tag categorizes shaders into several predefined groups; opaque shader, or an alpha-tested shader etc. Available tags: Opaque, Transparent, Transparent Cutout, Background, Overlay, Tree Opaque, Tree Transparent Cutout, Tree Billboard, Grass and Grass Billboard.
+- Blend Mode（混合模式）: 选定模式自动调整可用参数：例如不透明、遮罩、透明度、半透明、Alpha预乘法或自定义。
 
-- Render Queue: Geometry render queue optimizes the drawing order of the objects for best performance. Render queues sort objects by distance, starting rendering from the furthest ones and ending with the closest ones. Available options: Background, Geometry, Alpha Test, Transparent and Overlay. Each succeeding queue is rendered after the previous one creating a layered system.
+- Render Type（渲染类型）: 渲染类型标签可以将着色器分类为几个预定义的组；不透明的着色器，或经过alpha测试的着色器。可用的标签有：不透明，透明，透明切割，背景，覆盖，树不透明，树透明切割，树广告牌，草和草广告牌。
 
-- Mask Clip Value: Default value to be compared with opacity alpha. 0 fully opaque, 1 fully masked; set to 0 by default. Commonly used in Transparent Cutout materials.
+- Render Queue（渲染队列）: 几何体渲染队列优化了对象的绘图顺序，以获得最佳性能。渲染队列按距离对对象进行排序，从最远的对象开始渲染，然后以最近的对象结束。可用的选项：背景，几何体，Alpha测试，透明和覆盖。通过分层系统，每个后续队列都在前一个队列完成后渲染。
 
-- Refraction Layer: When specified grabpasses will be offsetted by this value, effectively creating a layered system for refraction effects.
+- Mask Clip Value（蒙版切割值）: 要与不透明度alpha进行比较的默认值。0完全不透明，1完全屏蔽；默认情况下设置为0。通常用于透明切割材料。
 
-- Alpha To Coverage: Turns on internal MSAA capabilities to blend alpha objects using layers of opaque objects; only available for forward rendering with MSAA turned on.
+- Refraction Layer（折射层）: 特殊的grabpass将被此值抵消时，有效地为折射效果创建分层系统。
 
-- Blend RGB and Blend Alpha: When graphics are rendered, after all Shaders have executed and all Textures have been applied, the pixels are written to the screen. How they are combined with what is already there is controlled by the Blend command. ASE currently provides a Custom, Alpha Blend, Premultiplied, Additive, Soft Additive, Multiplicative and a 2x Multiplicative mode.
+- Alpha To Coverage（Alpha覆盖）: 打开内部MSAA功能，混合不透明对象和alpha对象；仅用于打开MSAA的正向渲染可用。
 
-- Blend Factors (SrcFactor & DstFactor): All following properties are valid for both SrcFactor & DstFactor in the Blend command. Source refers to the calculated color, Destination is the color already on the screen. The blend factors are ignored if BlendOp is using logical operations.
-  - One The value of one - use this to let either the source or the destination color come through fully.
-  - Zero: The value zero - use this to remove either the source or the destination values.
-  - SrcColor: The value of this stage is multiplied by the source color value.
-  - SrcAlpha: The value of this stage is multiplied by the source alpha value.
-  - DstColor: The value of this stage is multiplied by frame buffer source color value.
-  - DstAlpha: The value of this stage is multiplied by frame buffer source alpha value.
-  - OneMinusSrcColor: The value of this stage is multiplied by (1 - source color).
-  - OneMinusSrcAlpha: The value of this stage is multiplied by (1 - source alpha).
-  - OneMinusDstColor: The value of this stage is multiplied by (1 - destination color).
-  - OneMinusDstAlpha: The value of this stage is multiplied by (1 - destination alpha).
+- Blend RGB and Blend Alpha（混合RGB和混合Alpha）: 当图形被渲染后，在所有的着色器都被执行和所有的纹理都被应用后，像素就会被写入屏幕上。它们如何与已经存在的东西结合起来是由混合命令控制的。ASE目前提供了一个自定义的、Alpha混合模式、预乘法模式、加性模式、软加性模式、乘法模式和一个2倍乘法模式。
+
+- Blend Factors (SrcFactor & DstFactor)混合因子（Src因子和Dst因子）:以下所有属性对“混合”命令中的“Src因子和Dst因子”都有效。Src是指计算出的颜色，Dst是已经在屏幕上的颜色。如果通过BlendOp使用逻辑操作，则会忽略混合因子。 
+  - One：1 - 使用src或dst颜色完全通过。
+  - Zero:  0 - 用它来删除src或dst值。
+  - SrcColor: 乘以src的颜色值.
+  - SrcAlpha: 乘以src的Alpha值.
+  - DstColor: 乘以帧缓冲区Dst颜色值
+  - DstAlpha: 乘以帧缓冲区Alpha值
+  - OneMinusSrcColor: 乘以(1 - source color).
+  - OneMinusSrcAlpha: 乘以(1 - source alpha).
+  - OneMinusDstColor: 乘以 (1 - destination color).
+  - OneMinusDstAlpha: 乘以 (1 - destination alpha).
   - Blend Op RGB & Blend Op Alpha: Add, Sub, Rev Sub, Min and Max
-
-- Color Mask: Sets color channel writing mask, turning them all OFF makes it invisible.
+- Color Mask: 设置颜色管道写入掩模, 开启OFF后不可见.
 
 ![MN_3.jpg](./ase.assets/MN_3.jpg)
 
-**Stencil Buffer**
-The stencil buffer can be used as a general purpose per pixel mask for saving or discarding pixels. It's usually an 8 bit integer per pixel. The value can be written to, increment or decremented. Subsequent draw calls can test against the value, to decide if a pixel should be discarded before running the pixel shader. When Cull mode is set to OFF this menu shows an extra set of comparison selections to use the buffer separately from front faces and back faces.
+**Stencil Buffer（模板缓冲区）**
 
-Reference: The value to be compared against (if Comp is anything else than always) and/or the value to be written to the buffer (if either Pass, Fail or ZFail is set to replace). 0–255 integer.Read Mask: An 8 bit mask as an 0–255 integer, used when comparing the reference value with the contents of the buffer (referenceValue & readMask) comparisonFunction (stencilBufferValue & readMask). Default: 255.Write Mask: An 8 bit mask as an 0–255 integer, used when writing to the buffer. Default: 255.Comparison (front and back): The function used to compare the reference value to the current contents of the buffer. Default: always.Pass (front and back): What to do with the contents of the buffer if the stencil test (and the depth test) passes. Default: keep.Fail (front and back): What to do with the contents of the buffer if the stencil test fails. Default: keep.ZFail (front and back): What to do with the contents of the buffer if the stencil test passes, but the depth test fails. Default: keep.
+可以用模板缓冲区的每个像素掩码来决定保存或丢弃像素。每个像素是一个8位整数。该值可以写入、递增或递减。后续的绘制调用可以对该值进行测试，以决定在运行像素着色器之前是否应该丢弃这个像素。当Cull模式设置为OFF时，为了正面和背面使用缓冲区，菜单会添加一组额外的比较选择选项。
+
+- Reference（参考）: 要Comp进行比较的值，比较后要写入缓冲区的值（设定不同条件：Pass, Fail,和ZFail）。可以是0-255的整数。
+
+- Read Mask（读掩码）: 8位掩码为0-255整数，用于比较引用值和缓冲区内容（referenceValue & readMask）和（stencilBufferValue & readMask）。默认值：255。
+
+- Write Mask（写入掩码）:  8 位掩码，0–255 integer。可以写入缓冲区。默认值：255。
+
+- Comparison (front and back) 比较前后: 用于比较参考值与缓冲区当前内容的函数。默认值：always。
+
+- Pass (front and back):  如果模板测试（和深度测试）通过，则如何处理缓冲区中的内容。默认值: keep。
+
+- Fail (front and back): 如果模板测试失败，如何处理缓冲区的内容。默认值：keep。
+
+- ZFail (front and back): 如果模板测试通过，但深度测试失败，则如何处理缓冲区中的内容。默认值：keep。
 
 ![MN_4.jpg](./ase.assets/MN_4.jpg)
 
-**Tessellation**Phong: Modifies the positions of the subdivided faces so that the resulting surface follows the mesh normals a bit; set to OFF by Default.Strength: Effect strength 0-1.Type: Defines the technique used; Distance Based, Fixed, Edge Length and Edge Length Cull.Tess: Tessellation factor; 1-32.Min: Minimum Tessellation distance.Max: Maximum Tessellation distance.Edge Length: Maximum length an edge can have before starting to tessellate.Max Disp: Maximum displacement outside of the frustum borders where polygon patches are still tesselated. 
+**Tessellation**
+
+- Phong: Modifies the positions of the subdivided faces so that the resulting surface follows the mesh normals a bit; set to OFF by Default.Strength: Effect strength 0-1.Type: Defines the technique used; Distance Based, Fixed, Edge Length and Edge Length Cull.Tess: Tessellation factor; 1-32.Min: Minimum Tessellation distance.Max: Maximum Tessellation distance.Edge Length: Maximum length an edge can have before starting to tessellate.Max Disp: Maximum displacement outside of the frustum borders where polygon patches are still tesselated. 
 
 ![OutlineOptions.jpg](./ase.assets/OutlineOptions.jpg)
 
