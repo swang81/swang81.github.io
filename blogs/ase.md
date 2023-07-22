@@ -6,6 +6,7 @@ title: Blogs
 
 # Amplify Shader Editor Manual
 
+* awsl
 {:toc}
 
 ## 安装
@@ -96,9 +97,9 @@ ASE Shader可以直接在项目选项卡中创建，或者通过Assets > Create 
 
 **Ports（端口）** 输出端口可以连接到多个输入端口，但输入端口仅接受单个输入。线会自动捕捉到鼠标光标附近端口。为了便于使用，端口激活区域非常大，甚至可以将线直接放到端口名称上。
 
-**View(视图)** Right mouse or middle mouse button drag to pan the view. The canvas will scroll automatically when box selecting or moving selected nodes away from the visible workspace area. You can Zoom In/Out via the mouse scroll wheel. The amount of zoom out is dynamically determined from the nodes positioning on the canvas.
+**View(视图)** 按鼠标右键或中键拖动以平移视图。当框选定节点，或者选择的节点远离可见工作区区域时，画布将自动滚动。可以通过鼠标滚动轮进行放大/缩小。缩小的幅度由画布上的节点位置动态确定。
 
-**Tabs** Both the Node Properties and Node Palette windows are automatically minimized when reducing the ASE window width below a value of 750px. You can always maximize them by clicking the rectangular button.Material and Shader Mode
+**Tabs（标签栏）** Both the Node Properties and Node Palette windows are automatically minimized when reducing the ASE window width below a value of 750px. You can always maximize them by clicking the rectangular button.Material and Shader Mode
 
 ![ShaderMaterial.jpg](./ase.assets/ShaderMaterial.jpg) 
 You can work with ASE in one of two modes, shader or material, depending if you load the shader file from a shader or a material asset. The canvas border serves as a visual indicator of the active mode, a green outline is shown for the shader mode and a blue outline for the material mode.
