@@ -55,6 +55,7 @@ ASE Shader可以直接在项目选项卡中创建，或者通过Assets > Create 
 2. 通过打开material，激活shader和material都将显示在窗口的下面区域。与shader一样，单击它将在“项目浏览器"选项卡中找到并选择material。注意窗口蓝色的轮廓，这是一个视觉辅助工具，让你知道shader和material当前都是打开的。
 
 ## 窗口UI交互
+
 ![ASE_m_5.jpg](./ase.assets/ASE_m_5.jpg) 
 
 1. 可以在左侧选项卡中调整节点属性。选择一个节点，或output节点，以显示其参数。有些值可以在实际节点中直接调整。如果没有选择任何节点或选择了多个节点，则output节点的属性总是显示在此选项卡上。output节点属性选项卡可以通过单击选项卡的右上角的减号按钮来最小化。（jack: 新版的为output node）
@@ -75,7 +76,7 @@ ASE Shader可以直接在项目选项卡中创建，或者通过Assets > Create 
 
 6. 右键单击画布上的任何位置以显示可搜索的节点列表，单击节点名称以创建它。
 
-## 分享内容
+### 分享内容
 
 在版本v1.6.8.002中，你现在可以使用相机按钮拍摄你的着色器的完整画布截图。此外，您还可以通过使用链接共享按钮, 将链接直接复制和粘贴到画布中来共享节点。
 
@@ -99,122 +100,213 @@ ASE Shader可以直接在项目选项卡中创建，或者通过Assets > Create 
 
 **View(视图)** 按鼠标右键或中键拖动以平移视图。当框选定节点，或者选择的节点远离可见工作区区域时，画布将自动滚动。可以通过鼠标滚动轮进行放大/缩小。缩小的幅度由画布上的节点位置动态确定。
 
-**Tabs（标签栏）** Both the Node Properties and Node Palette windows are automatically minimized when reducing the ASE window width below a value of 750px. You can always maximize them by clicking the rectangular button.Material and Shader Mode
+**Tabs（标签栏）** 当将ASE窗口宽度减小到750px以下时，选项卡上的"节点属性"面板和“选择节点”面板都会自动最小化。你总是可以通过点击矩形按钮来最大化它们。
+
+## Material和Shader模式
 
 ![ShaderMaterial.jpg](./ase.assets/ShaderMaterial.jpg) 
-You can work with ASE in one of two modes, shader or material, depending if you load the shader file from a shader or a material asset. The canvas border serves as a visual indicator of the active mode, a green outline is shown for the shader mode and a blue outline for the material mode.
+
+您可以在Shader/着色器或Material/材质两种模式之一中使用ASE，这取决于您是否从着色器或材质资源加载着色器文件。画布边框作为激活的模式视觉指示器，着色器模式显示绿色轮廓，材质模式显示蓝色轮廓。
 
 ![ASE_m_6.jpg](./ase.assets/ASE_m_6.jpg) 
-Values set in a shader are commonly referred to as Default Values. Any changes made to the Default Values of any given shader will automatically affect all materials using it. When simultaneously editing a material and shader, pay close attention to which values are being altered
-      
+
+在着色器中设置的值通常被称为默认值。对任何给定着色器默认值所做的任何更改都将自动影响使用它的所有材质。当同时编辑材质和着色器时，请密切注意那些修改的值。
+
 ![ASE_m_7.jpg](./ase.assets/ASE_m_7.jpg)
-Unlike the Default Values in a shader, material values can be unique. material values are only shown when working in the material mode ( with both material and shader opened ). Only nodes which represent variables ( Color, Float, Int, Vector, Matrix ) have a Parameter Type dropdown and can be set to Property. Default values are always copied to material values when selecting Property or Uniform parameter type. Each material can be adjusted in order to create an unlimited number of variations, while still using the same shader. You can think of your materials as instances of your shader, each instance is unique but created using the same set of Default Values.
-      
+
+与着色器中的默认值不同，材质中的值可以是唯一的。材质值仅在材质模式（材质和着色器全部打开）下工作时显示，即：这些具有变量（颜色、浮动、Int、向量、矩阵）的节点，在参数类型下拉列表，设置为“属性”时。当选择属性或统一参数类型时，默认值总是被复制到材质值。每个材质都可以进行调整，以创建无限数量的变化，同时仍然使用相同的着色器。您可以将材质视为着色器的实例，每个实例都是唯一的，可以使用相同的默认值集进行创建。
+
 ![ASE_m_8.jpg](./ase.assets/ASE_m_8.jpg) 
-You can Copy and Paste property values between materials using the same ASE shader. The Open in Shader Editor button provides a quick way to open both the material and shader used in the Amplify Shader Editor.
-     
+
+在使用相同的ASE着色器在材质之间，你可以复制和粘贴属性值。"Open in Shader Editor"按钮提供了一种快速的、可以同时打开材质和着色器的方法。
+
 ![ASE_m_9.jpg](./ase.assets/ASE_m_9.jpg) 
-Shaders can also be opened directly via their inspector tab by clicking on the Open in Shader Editor button. Alternatively, click on Open in Text Editor to open it in your current code editor.Output Node (Built-in Renderer)**ATTENTION** This section serves solely as an example of common parameters found in the Standard Built-in Renderer PBR Shader. Depending on the shader type used, you might have a different set of parameters available used or an entirely different order. If you're looking for specific HDRP or URP information, be sure to check the relevant page: [Scriptable Rendering Pipeline](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Scriptable_Rendering_Pipeline)Portions of this section have been acquired directly from the Unity Shader Reference documentation. Learn more: [Unity Shader Reference](https://docs.unity3d.com/Manual/SL-Reference.html)
-    
+
+Shaders可以通过单击着色器“inspector”面板上的“Open in Shader Editor”检查器选项卡直接打开。或者单击“Open in Text Editor”在文本编辑器中打开。
+
+## Output Node (Built-in管线)
+
+**注意** 本节仅作为标准Build-in管线PBR着色器中常见参数的示例。根据所使用的着色器类型，您可能有一组不同的可用参数或完全不同的顺序。如果您正在寻找特定的HDRP或URP信息，一定要检查相关的页面：[Scriptable Rendering Pipeline](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Scriptable_Rendering_Pipeline)
+
+本节的部分内容已直接从Unity着色器参考文档中获取。了解更多信息: [Unity Shader Reference](https://docs.unity3d.com/Manual/SL-Reference.html)
+
 ![OutputNode.jpg](./ase.assets/OutputNode.jpg)
+
 ![MN_1.jpg](./ase.assets/MN_1.jpg)
-**General**Shader Name: Editable text box, defines the name and path of the shader. Use a forward slash "/" to define its category and name; e.g. UserSamples/EnvironmentGradient. Note that the name displayed in this box is not the same as the filename, they have to be set individually.Shader Type: This area displays the current shader type used. These include the template you currently have in your project. ASE comes with presets for post process effects, particls, sprites, UI and an unlit shader. Set to Surface Shader by default.Light Model: Defines how the surfaces reflect light, commonly referred to as the type of shader used. ASE currently provides Standard(Metallic), Standard Specular, Lambert, Blinn Phong and a Custom Lighting that allows to create a unique node-based lighting model.Shader Model: When writing either Surface Shaders or regular Shader Programs, the HLSL source can be compiled into different “shader models”. Higher shader compilation targets allow using more modern GPU functionality, but might make the shader not work on older GPUs or platforms.Precision: Defines the maximum precision of internal calculations, using lower types offers an added performance boost in exchange for some accuracy; set to Float by default - this value caps all existing properties placed in your canvas.Cull Mode: Front - Cull front-facing geometry, Back - Cull back-facing geometry, Off - Disables culling (double-side material); set to Back by default.Render Path: Allows you to define which mode (Forward/Deferred) is supported by the shaders; set to All by default.Cast Shadows: Defines if the shader generates a shadow pass to be able to cast shadows; can still be turned off on a per object basis in the material renderer component.Receive Shadows: Defines if objects using the shader receive shadows; this includes self-shadowing(only with forward rendering); can still be turned off on a per object basis in the material renderer component.Queue Index: Render queue offset value, accepts positive(later) and negative(sooner) integers.Vertex Output: Relative by default, can be set to absolute; the input Local Vertex Offset input will automatically change to Local Vertex Position.LOD: By default, the allowed LOD level is infinite, that is, all shaders that are supported by the user’s hardware can be used. However, in some cases you might want to drop shader details, even if the hardware can support them. [Unity Shader Reference](https://docs.unity3d.com/Manual/SL-ShaderLOD.html)Fallback: Sets a fallback shader from the available shaders in the project which will be used whenever a certain pass is either missing or not supported by the main shader.Custom Editor: Custom inspectors allows you to use a custom material inspector, by default uses ASE custom material inspector.
+
+**General**
+- Shader Name: Editable text box, defines the name and path of the shader. Use a forward slash "/" to define its category and name; e.g. UserSamples/EnvironmentGradient. Note that the name displayed in this box is not the same as the filename, they have to be set individually.
+- Shader Type: This area displays the current shader type used. These include the template you currently have in your project. ASE comes with presets for post process effects, particls, sprites, UI and an unlit shader. Set to Surface Shader by default.
+- Light Model: Defines how the surfaces reflect light, commonly referred to as the type of shader used. ASE currently provides Standard(Metallic), Standard Specular, Lambert, Blinn Phong and a Custom Lighting that allows to create a unique node-based lighting model.
+- Shader Model: When writing either Surface Shaders or regular Shader Programs, the HLSL source can be compiled into different “shader models”. Higher shader compilation targets allow using more modern GPU functionality, but might make the shader not work on older GPUs or platforms.
+- Precision: Defines the maximum precision of internal calculations, using lower types offers an added performance boost in exchange for some accuracy; set to Float by default - this value caps all existing properties placed in your canvas.
+- Cull Mode: Front - Cull front-facing geometry, Back - Cull back-facing geometry, Off - Disables culling (double-side material); set to Back by default.
+- Render Path: Allows you to define which mode (Forward/Deferred) is supported by the shaders; set to All by default.Cast Shadows: Defines if the shader generates a shadow pass to be able to 
+- cast shadows; can still be turned off on a per object basis in the material renderer component.
+- Receive Shadows: Defines if objects using the shader receive shadows; this includes self-shadowing(only with forward rendering); can still be turned off on a per object basis in the material renderer component.
+- Queue Index: Render queue offset value, accepts positive(later) and negative(sooner) integers.
+- Vertex Output: Relative by default, can be set to absolute; the input Local Vertex Offset input will automatically change to Local Vertex Position.
+- LOD: By default, the allowed LOD level is infinite, that is, all shaders that are supported by the user’s hardware can be used. However, in some cases you might want to drop shader details, even if the hardware can support them. [Unity Shader Reference](https://docs.unity3d.com/Manual/SL-ShaderLOD.html)
+- Fallback: Sets a fallback shader from the available shaders in the project which will be used whenever a certain pass is either missing or not supported by the main shader.
+- Custom Editor: Custom inspectors allows you to use a custom material inspector, by default uses ASE custom material inspector.
 
 ![OutputNode2.jpg](./ase.assets/OutputNode2.jpg)
-**Standard Shader Inputs**Albedo: The Albedo parameter controls the base color of the shader surface, accepting either color values or texture maps.Normal: Normal maps are a special kind of texture that allow the addition of surface details, such as shading information transferred from highpoly meshes, bumps, grooves and scratches. You may connect normal maps or custom normal vectors here.Emission: Emission controls the colour and intensity of light emitted from the surface, regardless of the lighting conditions; accepts full RGB values.Metallic ( Metallic workflow only ): When working in the Metallic workflow, the reflectivity and light response of the surface are modified by both Metallic and Smoothness levels; both greyscale inputs. You may use a range of values from 0 to 1, affecting the whole surface, or even connect a texture, which will control the Metallic values while providing different values for different areas of the surface; 0 being dielectric ( non-metallic ) and 1 full Metal.Specular ( Specular workflow only ): When working in Specular mode, the RGB colour in the Specular parameter controls the strength and colour tint of the specular reflectivity.Smoothness ( Both workflows ): The concept of Smoothness applies to both Specular and Metallic workflows, and works very much the same way in both; also greyscale. A completely smooth surface at value 1 provides clear reflections, while a rough surface set to 0 creates a diffuse color with no clear reflections; It's also referred to as "Roughness" in some engines.Ambient Occlusion: The Occlusion input accepts an occlusion texture map, or custom value, that's used to provide information about which areas of the model should display high or low indirect lighting, which comes from ambient lighting and reflections. The occlusion map is a greyscale image where white indicates areas that should receive full indirect lighting, while black indicates no indirect lighting.Transmission: The Transmission is a highly optimized way of approximating light scattering. In other words, it defines how much light passes through a surface when lit from behind, which is ideal for less detailed assets such as leaves, cloth, or even wax objects; accepts full RGB inputs.Translucency: The Translucency input allows you to approximate SSS (Sub-Surface Scattering) effects in a simple and optimized manner by controlling the light-normal angle falloff offset. It is usually used for skin effects but flexible enough for other uses; accepts full RGB inputs.Refraction ( Transparent Render Type ): The refraction input requires a shader with its Render Type set to Transparent and is used to simulate the deformation effect of objects seen through a medium such as glass or water, which is achieved by a screen-space UV offset that refracts the background pixels; accepts full RGB inputs. This technique is a simple approximation to a light phenomenon that often occurs when waves travel from a medium with a given refractive index to a medium with another at an oblique angle.Opacity ( Transparent Render Type ): The Opacity input requires a shader with its Render Type set to Transparent, being responsible for setting the transparency of a surface as a whole, using a range of values between 0 and 1, from completely transparent to fully opaque respectively; accepts full RGB inputs.Opacity Mask ( Transparent Render Type ): The Opacity Mask requires a shader with its Render Type set to Transparent or a Masked Blend Mode, and works similarly to Opacity in the sense that it takes in a value between 0 and 1, from complete transparency to full opacity, but without considering the values in-between, resulting in either completely visible or completely invisible surfaces in specific areas. It is the perfect solution for materials that define complex solid surfaces such as wire mesh or chain link, as the opaque portions will still respect lighting; accepts greyscale inputs.Local Vertex Offset ( Relative Vertex Output ): The Local Vertex Offset input may be used to alter the shape of a surface through vertex manipulation, where a XYZ coordinate will define how each vertex will offset from its relative position.Local Vertex Position ( Absolute Vertex Output ): The Local Vertex Position works similarly to the Local Vertex Offset input, however, instead of offsetting each vertex from its relative position it will instead offset the vertices in absolute world space direction.Local Vertex Normal: The Local Vertex Normal allows the adjustment of the normal direction of any offset surfaces as Mesh Normals are not computed in real-time. This process is usually referred to as Normal Reconstruction.Tessellation: The Tessellation input allows the subdivision of a mesh's triangles, splitting them into smaller triangles at runtime in order to increase the surface detail of any given mesh.Debug: The Debug input generates a preview shader that ignores all other active inputs, drawing only what is plugged in to its input port without taking lighting into account. Please note that not all nodes, or specific combinations, can be previewed in the debug mode.
+
+**Standard Shader Inputs**
+- Albedo: The Albedo parameter controls the base color of the shader surface, accepting either color values or texture maps.Normal: Normal maps are a special kind of texture that allow the addition of surface details, such as shading information transferred from highpoly meshes, bumps, grooves and scratches. You may connect normal maps or custom normal vectors here.Emission: Emission controls the colour and intensity of light emitted from the surface, regardless of the lighting conditions; accepts full RGB values.Metallic ( Metallic workflow only ): When working in the Metallic workflow, the reflectivity and light response of the surface are modified by both Metallic and Smoothness levels; both greyscale inputs. You may use a range of values from 0 to 1, affecting the whole surface, or even connect a texture, which will control the Metallic values while providing different values for different areas of the surface; 0 being dielectric ( non-metallic ) and 1 full Metal.Specular ( Specular workflow only ): When working in Specular mode, the RGB colour in the Specular parameter controls the strength and colour tint of the specular reflectivity.Smoothness ( Both workflows ): The concept of Smoothness applies to both Specular and Metallic workflows, and works very much the same way in both; also greyscale. A completely smooth surface at value 1 provides clear reflections, while a rough surface set to 0 creates a diffuse color with no clear reflections; It's also referred to as "Roughness" in some engines.Ambient Occlusion: The Occlusion input accepts an occlusion texture map, or custom value, that's used to provide information about which areas of the model should display high or low indirect lighting, which comes from ambient lighting and reflections. The occlusion map is a greyscale image where white indicates areas that should receive full indirect lighting, while black indicates no indirect lighting.Transmission: The Transmission is a highly optimized way of approximating light scattering. In other words, it defines how much light passes through a surface when lit from behind, which is ideal for less detailed assets such as leaves, cloth, or even wax objects; accepts full RGB inputs.Translucency: The Translucency input allows you to approximate SSS (Sub-Surface Scattering) effects in a simple and optimized manner by controlling the light-normal angle falloff offset. It is usually used for skin effects but flexible enough for other uses; accepts full RGB inputs.Refraction ( Transparent Render Type ): The refraction input requires a shader with its Render Type set to Transparent and is used to simulate the deformation effect of objects seen through a medium such as glass or water, which is achieved by a screen-space UV offset that refracts the background pixels; accepts full RGB inputs. This technique is a simple approximation to a light phenomenon that often occurs when waves travel from a medium with a given refractive index to a medium with another at an oblique angle.Opacity ( Transparent Render Type ): The Opacity input requires a shader with its Render Type set to Transparent, being responsible for setting the transparency of a surface as a whole, using a range of values between 0 and 1, from completely transparent to fully opaque respectively; accepts full RGB inputs.Opacity Mask ( Transparent Render Type ): The Opacity Mask requires a shader with its Render Type set to Transparent or a Masked Blend Mode, and works similarly to Opacity in the sense that it takes in a value between 0 and 1, from complete transparency to full opacity, but without considering the values in-between, resulting in either completely visible or completely invisible surfaces in specific areas. It is the perfect solution for materials that define complex solid surfaces such as wire mesh or chain link, as the opaque portions will still respect lighting; accepts greyscale inputs.Local Vertex Offset ( Relative Vertex Output ): The Local Vertex Offset input may be used to alter the shape of a surface through vertex manipulation, where a XYZ coordinate will define how each vertex will offset from its relative position.Local Vertex Position ( Absolute Vertex Output ): The Local Vertex Position works similarly to the Local Vertex Offset input, however, instead of offsetting each vertex from its relative position it will instead offset the vertices in absolute world space direction.Local Vertex Normal: The Local Vertex Normal allows the adjustment of the normal direction of any offset surfaces as Mesh Normals are not computed in real-time. This process is usually referred to as Normal Reconstruction.Tessellation: The Tessellation input allows the subdivision of a mesh's triangles, splitting them into smaller triangles at runtime in order to increase the surface detail of any given mesh.Debug: The Debug input generates a preview shader that ignores all other active inputs, drawing only what is plugged in to its input port without taking lighting into account. Please note that not all nodes, or specific combinations, can be previewed in the debug mode.
 
 ![MN_2.jpg](./ase.assets/MN_2.jpg)
-**Blend Mode**Blend Mode: The selected mode automatically adjust the available parameters; Opaque, Masked, Transparent, Translucent, Alpha Premultiplied or Custom.Render Type: RenderType tag categorizes shaders into several predefined groups; opaque shader, or an alpha-tested shader etc. Available tags: Opaque, Transparent, Transparent Cutout, Background, Overlay, Tree Opaque, Tree Transparent Cutout, Tree Billboard, Grass and Grass Billboard.Render Queue: Geometry render queue optimizes the drawing order of the objects for best performance. Render queues sort objects by distance, starting rendering from the furthest ones and ending with the closest ones. Available options: Background, Geometry, Alpha Test, Transparent and Overlay. Each succeeding queue is rendered after the previous one creating a layered system.Mask Clip Value: Default value to be compared with opacity alpha. 0 fully opaque, 1 fully masked; set to 0 by default. Commonly used in Transparent Cutout materials.Refraction Layer: When specified grabpasses will be offsetted by this value, effectively creating a layered system for refraction effects.Alpha To Coverage: Turns on internal MSAA capabilities to blend alpha objects using layers of opaque objects; only available for forward rendering with MSAA turned on.Blend RGB and Blend Alpha: When graphics are rendered, after all Shaders have executed and all Textures have been applied, the pixels are written to the screen. How they are combined with what is already there is controlled by the Blend command. ASE currently provides a Custom, Alpha Blend, Premultiplied, Additive, Soft Additive, Multiplicative and a 2x Multiplicative mode.Blend Factors (SrcFactor & DstFactor): All following properties are valid for both SrcFactor & DstFactor in the Blend command. Source refers to the calculated color, Destination is the color already on the screen. The blend factors are ignored if BlendOp is using logical operations.One The value of one - use this to let either the source or the destination color come through fully.Zero: The value zero - use this to remove either the source or the destination values.SrcColor: The value of this stage is multiplied by the source color value.SrcAlpha: The value of this stage is multiplied by the source alpha value.DstColor: The value of this stage is multiplied by frame buffer source color value.DstAlpha: The value of this stage is multiplied by frame buffer source alpha value.OneMinusSrcColor: The value of this stage is multiplied by (1 - source color).OneMinusSrcAlpha: The value of this stage is multiplied by (1 - source alpha).OneMinusDstColor: The value of this stage is multiplied by (1 - destination color).OneMinusDstAlpha: The value of this stage is multiplied by (1 - destination alpha).Blend Op RGB & Blend Op Alpha: Add, Sub, Rev Sub, Min and MaxColor Mask: Sets color channel writing mask, turning them all OFF makes it invisible.
+
+**Blend Mode**
+Blend Mode: The selected mode automatically adjust the available parameters; Opaque, Masked, Transparent, Translucent, Alpha Premultiplied or Custom.Render Type: RenderType tag categorizes shaders into several predefined groups; opaque shader, or an alpha-tested shader etc. Available tags: Opaque, Transparent, Transparent Cutout, Background, Overlay, Tree Opaque, Tree Transparent Cutout, Tree Billboard, Grass and Grass Billboard.Render Queue: Geometry render queue optimizes the drawing order of the objects for best performance. Render queues sort objects by distance, starting rendering from the furthest ones and ending with the closest ones. Available options: Background, Geometry, Alpha Test, Transparent and Overlay. Each succeeding queue is rendered after the previous one creating a layered system.Mask Clip Value: Default value to be compared with opacity alpha. 0 fully opaque, 1 fully masked; set to 0 by default. Commonly used in Transparent Cutout materials.Refraction Layer: When specified grabpasses will be offsetted by this value, effectively creating a layered system for refraction effects.Alpha To Coverage: Turns on internal MSAA capabilities to blend alpha objects using layers of opaque objects; only available for forward rendering with MSAA turned on.Blend RGB and Blend Alpha: When graphics are rendered, after all Shaders have executed and all Textures have been applied, the pixels are written to the screen. How they are combined with what is already there is controlled by the Blend command. ASE currently provides a Custom, Alpha Blend, Premultiplied, Additive, Soft Additive, Multiplicative and a 2x Multiplicative mode.Blend Factors (SrcFactor & DstFactor): All following properties are valid for both SrcFactor & DstFactor in the Blend command. Source refers to the calculated color, Destination is the color already on the screen. The blend factors are ignored if BlendOp is using logical operations.One The value of one - use this to let either the source or the destination color come through fully.Zero: The value zero - use this to remove either the source or the destination values.SrcColor: The value of this stage is multiplied by the source color value.SrcAlpha: The value of this stage is multiplied by the source alpha value.DstColor: The value of this stage is multiplied by frame buffer source color value.DstAlpha: The value of this stage is multiplied by frame buffer source alpha value.OneMinusSrcColor: The value of this stage is multiplied by (1 - source color).OneMinusSrcAlpha: The value of this stage is multiplied by (1 - source alpha).OneMinusDstColor: The value of this stage is multiplied by (1 - destination color).OneMinusDstAlpha: The value of this stage is multiplied by (1 - destination alpha).Blend Op RGB & Blend Op Alpha: Add, Sub, Rev Sub, Min and MaxColor Mask: Sets color channel writing mask, turning them all OFF makes it invisible.
 
 ![MN_3.jpg](./ase.assets/MN_3.jpg)
-**Stencil Buffer**The stencil buffer can be used as a general purpose per pixel mask for saving or discarding pixels. It's usually an 8 bit integer per pixel. The value can be written to, increment or decremented. Subsequent draw calls can test against the value, to decide if a pixel should be discarded before running the pixel shader. When Cull mode is set to OFF this menu shows an extra set of comparison selections to use the buffer separately from front faces and back faces.Reference: The value to be compared against (if Comp is anything else than always) and/or the value to be written to the buffer (if either Pass, Fail or ZFail is set to replace). 0–255 integer.Read Mask: An 8 bit mask as an 0–255 integer, used when comparing the reference value with the contents of the buffer (referenceValue & readMask) comparisonFunction (stencilBufferValue & readMask). Default: 255.Write Mask: An 8 bit mask as an 0–255 integer, used when writing to the buffer. Default: 255.Comparison (front and back): The function used to compare the reference value to the current contents of the buffer. Default: always.Pass (front and back): What to do with the contents of the buffer if the stencil test (and the depth test) passes. Default: keep.Fail (front and back): What to do with the contents of the buffer if the stencil test fails. Default: keep.ZFail (front and back): What to do with the contents of the buffer if the stencil test passes, but the depth test fails. Default: keep.
+
+**Stencil Buffer**
+The stencil buffer can be used as a general purpose per pixel mask for saving or discarding pixels. It's usually an 8 bit integer per pixel. The value can be written to, increment or decremented. Subsequent draw calls can test against the value, to decide if a pixel should be discarded before running the pixel shader. When Cull mode is set to OFF this menu shows an extra set of comparison selections to use the buffer separately from front faces and back faces.Reference: The value to be compared against (if Comp is anything else than always) and/or the value to be written to the buffer (if either Pass, Fail or ZFail is set to replace). 0–255 integer.Read Mask: An 8 bit mask as an 0–255 integer, used when comparing the reference value with the contents of the buffer (referenceValue & readMask) comparisonFunction (stencilBufferValue & readMask). Default: 255.Write Mask: An 8 bit mask as an 0–255 integer, used when writing to the buffer. Default: 255.Comparison (front and back): The function used to compare the reference value to the current contents of the buffer. Default: always.Pass (front and back): What to do with the contents of the buffer if the stencil test (and the depth test) passes. Default: keep.Fail (front and back): What to do with the contents of the buffer if the stencil test fails. Default: keep.ZFail (front and back): What to do with the contents of the buffer if the stencil test passes, but the depth test fails. Default: keep.
 
 ![MN_4.jpg](./ase.assets/MN_4.jpg)
+
 **Tessellation**Phong: Modifies the positions of the subdivided faces so that the resulting surface follows the mesh normals a bit; set to OFF by Default.Strength: Effect strength 0-1.Type: Defines the technique used; Distance Based, Fixed, Edge Length and Edge Length Cull.Tess: Tessellation factor; 1-32.Min: Minimum Tessellation distance.Max: Maximum Tessellation distance.Edge Length: Maximum length an edge can have before starting to tessellate.Max Disp: Maximum displacement outside of the frustum borders where polygon patches are still tesselated. 
 
 ![OutlineOptions.jpg](./ase.assets/OutlineOptions.jpg)
+
 **Outline** Creates a customizable outline effect using the inverse hull techniqueMode: Vertex mode offsets the hull by a value while vertex scale increases by a percentage.Color: Lets you define the color of the outline.Width: The value to be offseted or scaled by.
 
 ![BillboardOptions.jpg](./ase.assets/BillboardOptions.jpg)
+
 **Billboard**Type: A cylindrical billboard will only rotate on the Y axis while a spherical will rotate towards the camera irregardless of it's rotation.Ignore Rotation: Setting this on will ignore the billboard transform rotation.
 
 ![DepthOptions.jpg](./ase.assets/DepthOptions.jpg)
+
 **Depth**ZWrite Mode: Controls whether pixels from this object are written to the depth buffer (default is On). If you’re drawing solid objects, leave this on. If you’re drawing semitransparent effects, switch to ZWrite Off. For more details read below.ZTest Mode: How should depth testing be performed. Default is LEqual (draw objects in from or at the distance as existing objects; hide objects behind them). ASE provides ZTest Less, Greater, LEqual, GEqual, Equal, NotEqual and Always.Offset: Allows you specify a depth offset with two parameters. factor and units. Factor scales the maximum Z slope, with respect to X or Y of the polygon, and units scale the minimum resolvable depth buffer value. This allows you to force one polygon to be drawn on top of another although they are actually in the same position. For example Offset 0, –1 pulls the polygon closer to the camera ignoring the polygon’s slope, whereas Offset –1, –1 will pull the polygon even closer when looking at a grazing angle.Factor: Scales the maximum Z slope, with respect to X or Y of the polygon.Units: Units scale the minimum resolvable depth buffer value.
 
 ![RenderingOptions.jpg](./ase.assets/RenderingOptions.jpg)
+
 **Rendering Options**Here it's possible to activate or deactivate certain shader features, by the default most of them will be ON to mimic Unity's standard shader.
 
 ![PlatformOptions.jpg](./ase.assets/PlatformOptions.jpg)
+
 **Rendering Platforms**Defines which platforms are supported; set to All by default.
 
 ![AdditionalIncludes.jpg](./ase.assets/AdditionalIncludes.jpg)
+
 **Additional Includes**Allows a definition of a relative path from the shader for a cg include file. If the file is missing or the path incorrect it will fail to compile the shader. "../" can be use to go down a folder.
 
 ![AdditionalPragmas.jpg](./ase.assets/AdditionalPragmas.jpg)
+
 **Additional Pragmas**Allows the addition of individual pragma directives to control the compilation and rendering of the shader.
 
 ![CustomTags.jpg](./ase.assets/CustomTags.jpg)
+
 **Custom SubShader Tags**Allows the addition of custom subshader tags for custom shader rendering control.
 
 ![MaterialProperties.jpg](./ase.assets/MaterialProperties.jpg)
-**Material Properties**Variables set to Property will be listed in this section, you tweak their position by dragging them.Referencing Custom PropertiesCertain shader options, like Cull Mode or Stencil, can also be configured by shader properties, Ints and Floats to be specific, instead of their usual predefined values. 
 
-![PropertyMode.gif](./ase.assets/PropertyMode.gif)  
-These will have a clickable Dot present on the side of the drop-down box, which you may use as a toggle in order to activate the new property select mode for selecting your own properties through the shader option's list. Shader Functions
+**Material Properties**Variables set to Property will be listed in this section, you tweak their position by dragging them.
+
+### Referencing Custom Properties
+
+Certain shader options, like Cull Mode or Stencil, can also be configured by shader properties, Ints and Floats to be specific, instead of their usual predefined values. 
+
+![PropertyMode.gif](./ase.assets/PropertyMode.gif) 
+
+These will have a clickable Dot present on the side of the drop-down box, which you may use as a toggle in order to activate the new property select mode for selecting your own properties through the shader option's list. 
+
+## Shader Functions
 
 ![sf_1.jpg](./ase.assets/sf_1.jpg)
-Shader Functions, SF for short, are individual node networks that allow you to build reusable functions. Easy to setup and extremely flexible, they work by receiving input values directly from your shader, processing that information and outputting them back for further alterations or direct use. SF assets are not bound to any shader, you can use them multiple times throughout your project, in the same shader, inside other Shader Functions, or even share them with other users. From simple to complex graphs, Shader Functions are a great way to reduce canvas clutter by packing complex networks into single nodes, and a great way to eliminate unnecessary repetitive tasks; they can be considered a form of "grouping", that offers you a way to group nodes into more manageable assets. **Would you like to share your creations with the ASE community?** [Contribute here!](http://amplify.pt/unity/amplify-shader-editor/contribute/) FeaturesWorks with all ASE nodes.Configurable Input/Output nodes.Copy & Paste nodes between shaders and SF.Supports all variable types, including Material Properties.Reusable and unique assets, not bound to any shader or project.Seamless editor workflow, drag & drop into any open shader or add them from the Node list.Comparison
+
+Shader Functions, SF for short, are individual node networks that allow you to build reusable functions. Easy to setup and extremely flexible, they work by receiving input values directly from your shader, processing that information and outputting them back for further alterations or direct use. SF assets are not bound to any shader, you can use them multiple times throughout your project, in the same shader, inside other Shader Functions, or even share them with other users. From simple to complex graphs, Shader Functions are a great way to reduce canvas clutter by packing complex networks into single nodes, and a great way to eliminate unnecessary repetitive tasks; they can be considered a form of "grouping", that offers you a way to group nodes into more manageable assets. **Would you like to share your creations with the ASE community?** [Contribute here!](http://amplify.pt/unity/amplify-shader-editor/contribute/) 
+
+### Features
+Works with all ASE nodes.Configurable Input/Output nodes.Copy & Paste nodes between shaders and SF.Supports all variable types, including Material Properties.Reusable and unique assets, not bound to any shader or project.Seamless editor workflow, drag & drop into any open shader or add them from the Node list.Comparison
 
 ![sf_2.jpg](./ase.assets/sf_2.jpg) 
+
 The node networks above all produce the same burning effect. The **original** version does not use shader functions. **Version 1** uses a SF that contains the original node network used to generate the burning effect, it receives 1 Texture Object node for the burn mask, 1 Texture Object node for the fire texture, and 1 Texture Coordinate node. **Version 2** is simpler than the previous example, the burn effect generation and texture nodes are all included in the SF, the only exception being the Texture Coordinate node that allows users to tweak its behavior. Keep in mind that a SF does not need to receive any input, the outputted data can be entirely generated in its graph if necessary.**Version 1 Shader Function Example**
 
-![sf_3.jpg](./ase.assets/sf_3.jpg)Creation and Usage
+![sf_3.jpg](./ase.assets/sf_3.jpg)
 
-![sf_4.jpg](./ase.assets/sf_4.jpg)Create a new Shader Function Asset under Assets > Create > Shaders > Amplify Shader Function.
+Creation and Usage
 
-![sf_5.jpg](./ase.assets/sf_5.jpg)Your newly created Shader Function will be automatically opened in the ASE Editor after being renamed.
+![sf_4.jpg](./ase.assets/sf_4.jpg)
 
-![sf_6.jpg](./ase.assets/sf_6.jpg)1. Add your Shader Function description here. You can also reorder your Function Inputs/Outputs and Material Properties by dragging them to the desired position. The order set in your SF will be the same used in your Material inspector tab.2. Create 2 Input nodes or more. By default, there's always 1 Output node but you can add as many as necessary. You can also use other SF nodes inside your active SF but, in order to avoid Shader Function Loops, you cannot add a function to its own canvas.3. Select an Input node to set the type used or toggle the Auto Cast option to automate the procedure directly in the left tab as you would with any other node properties.4. Connect your resulting output(s) directly to the Output node(s).5. Save your changes and click Return to go back to the previously open Shader or Material, if any.
+Create a new Shader Function Asset under Assets > Create > Shaders > Amplify Shader Function.
+
+![sf_5.jpg](./ase.assets/sf_5.jpg)
+
+Your newly created Shader Function will be automatically opened in the ASE Editor after being renamed.
+
+![sf_6.jpg](./ase.assets/sf_6.jpg)
+
+1. Add your Shader Function description here. You can also reorder your Function Inputs/Outputs and Material Properties by dragging them to the desired position. The order set in your SF will be the same used in your Material inspector tab.2. Create 2 Input nodes or more. By default, there's always 1 Output node but you can add as many as necessary. You can also use other SF nodes inside your active SF but, in order to avoid Shader Function Loops, you cannot add a function to its own canvas.3. Select an Input node to set the type used or toggle the Auto Cast option to automate the procedure directly in the left tab as you would with any other node properties.4. Connect your resulting output(s) directly to the Output node(s).5. Save your changes and click Return to go back to the previously open Shader or Material, if any.
 
 ![sf_7.jpg](./ase.assets/sf_7.jpg)
-1. Add the created Shader Function to your shader by selecting it directly from the Node List. SF nodes can be used just as any other ASE nodes, they can be duplicated, copied, or deleted.2. Alternatively, you can drag & drop Shader Functions directly into your editor canvas.3. Double-click a SF node to open it.HotkeysColored Line Mode
+
+1. Add the created Shader Function to your shader by selecting it directly from the Node List. SF nodes can be used just as any other ASE nodes, they can be duplicated, copied, or deleted.2. Alternatively, you can drag & drop Shader Functions directly into your editor canvas.3. Double-click a SF node to open it.
+2. 
+## Hotkeys
+### ColoredLine Mode
 
 ![DebugMode.jpg](./ase.assets/DebugMode.jpg) 
+
 Press [ W ] to toggle it.Node Previews
 
 ![source.gif](./ase.assets/source.gif) 
+
 Press [ P ] to toggle node previewsMulti-line Mod
 
 ![LsGX8pv.gif](http://i.imgur.com/LsGX8pv.gif)
-Press [ CTRL + W ] to activate the multi-line mode.Full Shortcut ListEditor**[Double Click Wire]:** Create wire control point.**[F1]:** Open Selected Node Wiki page**[C]:** Create Commentary box (groups/grouping/group nodes)**[F]:** Focus On Selection**[B]:** New Master Node**[Space]:** Open Node Palette**[W]:** Toggle Colored Line Mode**[Control + W]:** Toggle Multi-Line Mode**[P]:** Global Preview**[Delete]:** Delete selected nodes**[Backspace]:** Delete selected nodesNodesUse KEY + Left Mouse Button**[Alpha5]:** Color**[Alpha0]:** Int**[Alpha1]:** Float**[Alpha2]:** Vector2**[Alpha3]:** Vector3**[Alpha4]:** Vector4**[L]:** Lerp**[N]:** Normalize**[O]:** One Minus**[E]:** Power**[A]:** Add**[D]:** Divide**[M]:** Multiply**[S]:** Subtract**[R]:** World Reflection**[T]:** Texture Sample**[U]:** Texture CoordinatesTranslucencyThe Translucency input provides a fast method of representing light scattering. It's not the most realistic method available but it's a flexible and fast-performing approximation. In our example (AmplifyShaderEditor\Examples\Official\Translucency) we use a simple red tinted Depth Texture to represent the skin subsurface scatter effect but you don't necessarily need to use the same setup, you could very well plug a full RGB texture to the Translucency Input in order to get some color variation or stylized results
+
+Press [ CTRL + W ] to activate the multi-line mode.Full Shortcut ListEditor**[Double Click Wire]:** Create wire control point.**[F1]:** Open Selected Node Wiki page**[C]:** Create Commentary box (groups/grouping/group nodes)**[F]:** Focus On Selection**[B]:** New Master Node**[Space]:** Open Node Palette**[W]:** Toggle Colored Line Mode**[Control + W]:** Toggle Multi-Line Mode**[P]:** Global Preview**[Delete]:** Delete selected nodes**[Backspace]:** Delete selected nodesNodesUse KEY + Left Mouse Button**[Alpha5]:** Color**[Alpha0]:** Int**[Alpha1]:** Float**[Alpha2]:** Vector2**[Alpha3]:** Vector3**[Alpha4]:** Vector4**[L]:** Lerp**[N]:** Normalize**[O]:** One Minus**[E]:** Power**[A]:** Add**[D]:** Divide**[M]:** Multiply**[S]:** Subtract**[R]:** World Reflection**[T]:** Texture Sample**[U]:** Texture Coordinates
+
+## Translucency
+
+The Translucency input provides a fast method of representing light scattering. It's not the most realistic method available but it's a flexible and fast-performing approximation. In our example (AmplifyShaderEditor\Examples\Official\Translucency) we use a simple red tinted Depth Texture to represent the skin subsurface scatter effect but you don't necessarily need to use the same setup, you could very well plug a full RGB texture to the Translucency Input in order to get some color variation or stylized results
 
 ![uTq4P7T.gif](http://i.imgur.com/uTq4P7T.gif)
+
 **The Material Properties below are automatically added to your shader when you plug your values into the Translucency Input Port.**
 
 ![Translucency.jpg](./ase.assets/Translucency.jpg)
-Strength: Translucency effect strength, you can think of it as a multiplier slider.Normal Distortion: Defines the amount of normal distortion on the translucency effect.Scattering Falloff: Scattering falloff amount for the translucency effect.Direct: Direct light influence on the translucency effect.Ambient: GI/ambient light influence on the translucency effect.Shadow: Self-shadowing influence on the translucency effect, reduces the translucency effect in shadowed areas.Your First shader
 
-![ASE_m_12.jpg](./ase.assets/ASE_m_12.jpg) 1. Open the Editor, create a new material and a new shader in the Project Explorer tab. In the newly created material, select your new shader and click on the Open in Shader Editor button to open both the shader and material.
+Strength: Translucency effect strength, you can think of it as a multiplier slider.Normal Distortion: Defines the amount of normal distortion on the translucency effect.Scattering Falloff: Scattering falloff amount for the translucency effect.Direct: Direct light influence on the translucency effect.Ambient: GI/ambient light influence on the translucency effect.Shadow: Self-shadowing influence on the translucency effect, reduces the translucency effect in shadowed areas.
 
-![ASE_m_13.jpg](./ase.assets/ASE_m_13.jpg) 2. As an example, select the Output Node and change its Light Model to specular.
+## Your First shader
 
-![ASE_m_14.jpg](./ase.assets/ASE_m_14.jpg) 3. Right click on the canvas to open the searchable node list and type “Lerp”. Click on Lerp and connect the node Output Port to the Albedo Input Port.
+![ASE_m_12.jpg](./ase.assets/ASE_m_12.jpg) 
 
-![ASE_m_15.jpg](./ase.assets/ASE_m_15.jpg) 4. Hold the 5 shortcut key and click on the canvas to create a new Color node. Alternatively, you can use the searchable list used early or drag and drop the node from the Node Palette on the right side; Constants > Color [ 5 ].
+1. Open the Editor, create a new material and a new shader in the Project Explorer tab. In the newly created material, select your new shader and click on the Open in Shader Editor button to open both the shader and material.
 
-![ASE_m_16.jpg](./ase.assets/ASE_m_16.jpg) 5. Select the new Color node and hit ‘CTRL/CMD+D’ to duplicate it. Connect both nodes to the Lerp Input Ports. Set the first node to gray and the second one to a more lively color.
+![ASE_m_13.jpg](./ase.assets/ASE_m_13.jpg) 
+
+2. As an example, select the Output Node and change its Light Model to specular.
+
+![ASE_m_14.jpg](./ase.assets/ASE_m_14.jpg) 
+
+3. Right click on the canvas to open the searchable node list and type “Lerp”. Click on Lerp and connect the node Output Port to the Albedo Input Port.
+
+![ASE_m_15.jpg](./ase.assets/ASE_m_15.jpg) 
+
+4. Hold the 5 shortcut key and click on the canvas to create a new Color node. Alternatively, you can use the searchable list used early or drag and drop the node from the Node Palette on the right side; Constants > Color [ 5 ].
+
+![ASE_m_16.jpg](./ase.assets/ASE_m_16.jpg) 
+
+5. Select the new Color node and hit ‘CTRL/CMD+D’ to duplicate it. Connect both nodes to the Lerp Input Ports. Set the first node to gray and the second one to a more lively color.
 
 ![ASE_m_17.jpg](./ase.assets/ASE_m_17.jpg)
+
 6. Create a Float node by dragging and dropping it from the Node Palette, connect it to the Alpha port of the Lerp node. In the node properties of the newly created float, set its Minimum value to 0 and Maximum to 1. Notice that the Float can now be controlled by a Slider. Don’t forget to set its Parameter Type to Property, this way you will be able to change it directly in the material. You can also name the node and change its position in the material inspector by adjusting the Index value. As an example, lets name it Color Mix.
 
 ![ASE_m_18.jpg](http://amplify.pt/wp-content/uploads/2016/09/ASE_m_18.jpg)
 7. Create a new Float and connect it to the Smoothness Input Port of the Output Node, set its Minimum value to 0 and Maximum to 1 as you did before. Set its type to Property and name it Smoothness Value. Create another Float and connect it to the Specular Input Port, set its Minimum value to 0 and Maximum to 1. Set its Type to Property and name it Specular Value.
 
 ![ASE_m_19.jpg](http://amplify.pt/wp-content/uploads/2016/09/ASE_m_19.jpg)
+
 8. To conclude, Drag and Drop a Normal Map texture from your Project Explorer directly into the canvas. As an example, we used a Brushed Metal texture. Connect it to the Normal Input Port of the Output Node and you are done. You have just built your first shader, don’t forget to save your work regularly by clicking the Update button located in the upper left corner. Alternatively, you could edit the shader with the LIVE mode enabled, any change are immediately saved and updated. Depending on the complexity of the shader, the LIVE mode may take a second or so to update. Contrary to Default shader values, any changes made to a material property are immediately visible.
+
 ![ASE_m_20.jpg](http://amplify.pt/wp-content/uploads/2016/09/ASE_m_20.jpg) 
-
-
 
 ## 3rd-Party Compatibility
 
