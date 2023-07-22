@@ -144,7 +144,7 @@ Shaders可以通过单击着色器“inspector”面板上的“Open in Shader E
 - Shader Model（着色器模型）: 当编写表面着色器或常规着色器程序时，HLSL源代码可以被编译成不同的“着色器模型”。更高的着色器编译目标允许使用更现代的GPU功能，但可能会使着色器不能在较旧的GPU或平台上工作。
 
 - Precision（精度）: 定义内部计算的最大精度，使用较低的类型提供了额外的性能提升，牺牲一些精度；默认情况下，设置为float，这个值会限制了放置在画布中的所有属性值。
- 
+
 - Cull Mode（剔除模式）: Front - 剔除正面, Back - 剔除后面, Off - 关闭剔除(双面材料); 默认使用Back。
 
 - Render Path（渲染路径）: 允许您定义着色器模式（向前/延迟）；默认情况下设置为“所有“。
@@ -166,17 +166,79 @@ Shaders可以通过单击着色器“inspector”面板上的“Open in Shader E
 ![OutputNode2.jpg](./ase.assets/OutputNode2.jpg)
 
 **Standard Shader Inputs**
-- Albedo: The Albedo parameter controls the base color of the shader surface, accepting either color values or texture maps.Normal: Normal maps are a special kind of texture that allow the addition of surface details, such as shading information transferred from highpoly meshes, bumps, grooves and scratches. You may connect normal maps or custom normal vectors here.Emission: Emission controls the colour and intensity of light emitted from the surface, regardless of the lighting conditions; accepts full RGB values.Metallic ( Metallic workflow only ): When working in the Metallic workflow, the reflectivity and light response of the surface are modified by both Metallic and Smoothness levels; both greyscale inputs. You may use a range of values from 0 to 1, affecting the whole surface, or even connect a texture, which will control the Metallic values while providing different values for different areas of the surface; 0 being dielectric ( non-metallic ) and 1 full Metal.Specular ( Specular workflow only ): When working in Specular mode, the RGB colour in the Specular parameter controls the strength and colour tint of the specular reflectivity.Smoothness ( Both workflows ): The concept of Smoothness applies to both Specular and Metallic workflows, and works very much the same way in both; also greyscale. A completely smooth surface at value 1 provides clear reflections, while a rough surface set to 0 creates a diffuse color with no clear reflections; It's also referred to as "Roughness" in some engines.Ambient Occlusion: The Occlusion input accepts an occlusion texture map, or custom value, that's used to provide information about which areas of the model should display high or low indirect lighting, which comes from ambient lighting and reflections. The occlusion map is a greyscale image where white indicates areas that should receive full indirect lighting, while black indicates no indirect lighting.Transmission: The Transmission is a highly optimized way of approximating light scattering. In other words, it defines how much light passes through a surface when lit from behind, which is ideal for less detailed assets such as leaves, cloth, or even wax objects; accepts full RGB inputs.Translucency: The Translucency input allows you to approximate SSS (Sub-Surface Scattering) effects in a simple and optimized manner by controlling the light-normal angle falloff offset. It is usually used for skin effects but flexible enough for other uses; accepts full RGB inputs.Refraction ( Transparent Render Type ): The refraction input requires a shader with its Render Type set to Transparent and is used to simulate the deformation effect of objects seen through a medium such as glass or water, which is achieved by a screen-space UV offset that refracts the background pixels; accepts full RGB inputs. This technique is a simple approximation to a light phenomenon that often occurs when waves travel from a medium with a given refractive index to a medium with another at an oblique angle.Opacity ( Transparent Render Type ): The Opacity input requires a shader with its Render Type set to Transparent, being responsible for setting the transparency of a surface as a whole, using a range of values between 0 and 1, from completely transparent to fully opaque respectively; accepts full RGB inputs.Opacity Mask ( Transparent Render Type ): The Opacity Mask requires a shader with its Render Type set to Transparent or a Masked Blend Mode, and works similarly to Opacity in the sense that it takes in a value between 0 and 1, from complete transparency to full opacity, but without considering the values in-between, resulting in either completely visible or completely invisible surfaces in specific areas. It is the perfect solution for materials that define complex solid surfaces such as wire mesh or chain link, as the opaque portions will still respect lighting; accepts greyscale inputs.Local Vertex Offset ( Relative Vertex Output ): The Local Vertex Offset input may be used to alter the shape of a surface through vertex manipulation, where a XYZ coordinate will define how each vertex will offset from its relative position.Local Vertex Position ( Absolute Vertex Output ): The Local Vertex Position works similarly to the Local Vertex Offset input, however, instead of offsetting each vertex from its relative position it will instead offset the vertices in absolute world space direction.Local Vertex Normal: The Local Vertex Normal allows the adjustment of the normal direction of any offset surfaces as Mesh Normals are not computed in real-time. This process is usually referred to as Normal Reconstruction.Tessellation: The Tessellation input allows the subdivision of a mesh's triangles, splitting them into smaller triangles at runtime in order to increase the surface detail of any given mesh.Debug: The Debug input generates a preview shader that ignores all other active inputs, drawing only what is plugged in to its input port without taking lighting into account. Please note that not all nodes, or specific combinations, can be previewed in the debug mode.
+- Albedo（反照率）: 反照率参数控制着色器表面的基本颜色，可使用颜色值或纹理贴图。 
+
+- Normal（法线）: 法线贴图是一种特殊的纹理，允许添加表面细节。例如，高精度网格、凸起、凹槽和划痕导致的阴影。您可以连接法线贴图或自定义法线向量。
+ 
+- Emission（发光）: 它控制从表面发出光的颜色和强度。忽略光照条件如何。RGB值作为输入。
+
+- Metallic ( Metallic workflow only 仅金属工作流 ): 使用金属工作流程时，可以通过修改金属度和光滑度来改变表面反射率和光响应。使用灰度输入。可以使用从0到1的数和一个纹理，来控制金属值，不同区域使用不同的金属值。参数0是电介质（非金属）和1是全金属。
+
+- Specular ( Specular workflow only 仅镜面工作流 ): 使用镜面工作流时，镜面参数RGB颜色控制着镜面反射率的强度和色调。
+
+- Smoothness ( Both workflows两个工作流都支持 ): 平滑度的概念适用于镜面工作流和金属工作流，在这两种工作流中非常相同；灰度作为输入。当值为1时为完全光滑表面，提供清晰的反射。当是粗糙表面时，设置为0，产生漫反射颜色，没有清晰的反射。在一些引擎中，会使用“粗糙度”。
+
+- Ambient Occlusion（环境遮挡）: 遮挡输入可以是：遮挡纹理贴图，或自定义值。表示来自环境照明和反射，模型区域高或低间接照明。遮挡纹理是一个灰度的图片，白色区域表示应该接受完全间接照明，而黑色区域表示没有间接照明。
+
+- Transmission（透射）: 透射是一种高度优化的近似光散射的方法。换句话说，它定义了从后面照明时，有多少光线通过一个表面。这对于不细节的资产非常理想。如树叶、布，甚至是蜡质物体。RGB可以作为输入。
+
+- Translucency（半透明）: 半透明输入，通过控制光法线角度衰减偏移，以简单和优化的方式显示SSS（子表面散射）效果。通常用于皮肤效果，因为足够灵活也可用于其他用途。接受完整的RGB输入。
+
+- Refraction ( Transparent Render Type  折射，透明渲染 ): 使用折射输入，需要一个着色器把渲染类型设置为透明。用于模拟通过玻璃或水等介质看到的物体的变形效果。方法是通过折射背景像素的屏幕空间UV偏移来实现的。接受完整的RGB输入。这是一种简单的模拟光现象技术，即当光波从一个给定折射率的介质斜角传播到另一个介质时折射。
+
+- Opacity ( Transparent Render Type )不透明度（透明渲染类型）: 使用不透明度输入时，需要将着色器的渲染类型设置为透明（transparent），设置表面的透明度。当值范围为0到1，从完全透明到完全不透明。接受完整的RGB输入。
+
+- Opacity Mask ( Transparent Render Type ) 不透明蒙版（透明渲染类型）：不透明度蒙版需要将渲染类型设置为透明（transparent）或屏蔽混合(Masked Blend)模式。工作方式类似于不透明度，其值介于0到1之间，从完全透明到完全不透明，但不考虑中间值。特定表面区域完全可见或完全不可见。对于定义复杂固体表面的材料，如钢丝网或链杆，这是完美的解决方案。不透明部分仍然遵守照明规则。接受灰度输入。
+
+- Local Vertex Offset ( Relative Vertex Output )局部顶点偏移（相对顶点输出）：局部顶点偏移输入可用于通过顶点操作改变表面的形状。其中XYZ坐标，将定义每个顶点将如何从其相对位置偏移。
+
+- Local Vertex Position ( Absolute Vertex Output ) 局部顶点位置（绝对顶点输出）:局部顶点位置的工作方式类似于局部顶点偏移输入。但是，它不使用每个顶点的相对位置偏移，而是在绝对世界空间方向上偏移顶点。
+
+- Local Vertex Normal（局部顶点法线）: 局部顶点法线允许调整任何偏移曲面的法线方向。网格的法线不实时计算。这一过程通常被称为法线重建。
+
+- Tessellation（细分）: 细分输入允许对网格的三角形进行细分，在运行时将它们分割成更小的三角形，以增加任何给定网格的表面细节。
+
+- Debug （调试）: 调试输入生成一个预览着色器，忽略所有其他激活输入，只绘制debug插入，而不考虑照明。请注意并非所有的节点或特定的组合，都可以在debug模式下进行预览。
 
 ![MN_2.jpg](./ase.assets/MN_2.jpg)
 
 **Blend Mode**
-Blend Mode: The selected mode automatically adjust the available parameters; Opaque, Masked, Transparent, Translucent, Alpha Premultiplied or Custom.Render Type: RenderType tag categorizes shaders into several predefined groups; opaque shader, or an alpha-tested shader etc. Available tags: Opaque, Transparent, Transparent Cutout, Background, Overlay, Tree Opaque, Tree Transparent Cutout, Tree Billboard, Grass and Grass Billboard.Render Queue: Geometry render queue optimizes the drawing order of the objects for best performance. Render queues sort objects by distance, starting rendering from the furthest ones and ending with the closest ones. Available options: Background, Geometry, Alpha Test, Transparent and Overlay. Each succeeding queue is rendered after the previous one creating a layered system.Mask Clip Value: Default value to be compared with opacity alpha. 0 fully opaque, 1 fully masked; set to 0 by default. Commonly used in Transparent Cutout materials.Refraction Layer: When specified grabpasses will be offsetted by this value, effectively creating a layered system for refraction effects.Alpha To Coverage: Turns on internal MSAA capabilities to blend alpha objects using layers of opaque objects; only available for forward rendering with MSAA turned on.Blend RGB and Blend Alpha: When graphics are rendered, after all Shaders have executed and all Textures have been applied, the pixels are written to the screen. How they are combined with what is already there is controlled by the Blend command. ASE currently provides a Custom, Alpha Blend, Premultiplied, Additive, Soft Additive, Multiplicative and a 2x Multiplicative mode.Blend Factors (SrcFactor & DstFactor): All following properties are valid for both SrcFactor & DstFactor in the Blend command. Source refers to the calculated color, Destination is the color already on the screen. The blend factors are ignored if BlendOp is using logical operations.One The value of one - use this to let either the source or the destination color come through fully.Zero: The value zero - use this to remove either the source or the destination values.SrcColor: The value of this stage is multiplied by the source color value.SrcAlpha: The value of this stage is multiplied by the source alpha value.DstColor: The value of this stage is multiplied by frame buffer source color value.DstAlpha: The value of this stage is multiplied by frame buffer source alpha value.OneMinusSrcColor: The value of this stage is multiplied by (1 - source color).OneMinusSrcAlpha: The value of this stage is multiplied by (1 - source alpha).OneMinusDstColor: The value of this stage is multiplied by (1 - destination color).OneMinusDstAlpha: The value of this stage is multiplied by (1 - destination alpha).Blend Op RGB & Blend Op Alpha: Add, Sub, Rev Sub, Min and MaxColor Mask: Sets color channel writing mask, turning them all OFF makes it invisible.
+
+- Blend Mode: The selected mode automatically adjust the available parameters; Opaque, Masked, Transparent, Translucent, Alpha Premultiplied or Custom.
+ 
+- Render Type: RenderType tag categorizes shaders into several predefined groups; opaque shader, or an alpha-tested shader etc. Available tags: Opaque, Transparent, Transparent Cutout, Background, Overlay, Tree Opaque, Tree Transparent Cutout, Tree Billboard, Grass and Grass Billboard.
+
+- Render Queue: Geometry render queue optimizes the drawing order of the objects for best performance. Render queues sort objects by distance, starting rendering from the furthest ones and ending with the closest ones. Available options: Background, Geometry, Alpha Test, Transparent and Overlay. Each succeeding queue is rendered after the previous one creating a layered system.
+
+- Mask Clip Value: Default value to be compared with opacity alpha. 0 fully opaque, 1 fully masked; set to 0 by default. Commonly used in Transparent Cutout materials.
+
+- Refraction Layer: When specified grabpasses will be offsetted by this value, effectively creating a layered system for refraction effects.
+
+- Alpha To Coverage: Turns on internal MSAA capabilities to blend alpha objects using layers of opaque objects; only available for forward rendering with MSAA turned on.
+
+- Blend RGB and Blend Alpha: When graphics are rendered, after all Shaders have executed and all Textures have been applied, the pixels are written to the screen. How they are combined with what is already there is controlled by the Blend command. ASE currently provides a Custom, Alpha Blend, Premultiplied, Additive, Soft Additive, Multiplicative and a 2x Multiplicative mode.
+
+- Blend Factors (SrcFactor & DstFactor): All following properties are valid for both SrcFactor & DstFactor in the Blend command. Source refers to the calculated color, Destination is the color already on the screen. The blend factors are ignored if BlendOp is using logical operations.
+  - One The value of one - use this to let either the source or the destination color come through fully.
+  - Zero: The value zero - use this to remove either the source or the destination values.
+  - SrcColor: The value of this stage is multiplied by the source color value.
+  - SrcAlpha: The value of this stage is multiplied by the source alpha value.
+  - DstColor: The value of this stage is multiplied by frame buffer source color value.
+  - DstAlpha: The value of this stage is multiplied by frame buffer source alpha value.
+  - OneMinusSrcColor: The value of this stage is multiplied by (1 - source color).
+  - OneMinusSrcAlpha: The value of this stage is multiplied by (1 - source alpha).
+  - OneMinusDstColor: The value of this stage is multiplied by (1 - destination color).
+  - OneMinusDstAlpha: The value of this stage is multiplied by (1 - destination alpha).
+  - Blend Op RGB & Blend Op Alpha: Add, Sub, Rev Sub, Min and Max
+
+- Color Mask: Sets color channel writing mask, turning them all OFF makes it invisible.
 
 ![MN_3.jpg](./ase.assets/MN_3.jpg)
 
 **Stencil Buffer**
-The stencil buffer can be used as a general purpose per pixel mask for saving or discarding pixels. It's usually an 8 bit integer per pixel. The value can be written to, increment or decremented. Subsequent draw calls can test against the value, to decide if a pixel should be discarded before running the pixel shader. When Cull mode is set to OFF this menu shows an extra set of comparison selections to use the buffer separately from front faces and back faces.Reference: The value to be compared against (if Comp is anything else than always) and/or the value to be written to the buffer (if either Pass, Fail or ZFail is set to replace). 0–255 integer.Read Mask: An 8 bit mask as an 0–255 integer, used when comparing the reference value with the contents of the buffer (referenceValue & readMask) comparisonFunction (stencilBufferValue & readMask). Default: 255.Write Mask: An 8 bit mask as an 0–255 integer, used when writing to the buffer. Default: 255.Comparison (front and back): The function used to compare the reference value to the current contents of the buffer. Default: always.Pass (front and back): What to do with the contents of the buffer if the stencil test (and the depth test) passes. Default: keep.Fail (front and back): What to do with the contents of the buffer if the stencil test fails. Default: keep.ZFail (front and back): What to do with the contents of the buffer if the stencil test passes, but the depth test fails. Default: keep.
+The stencil buffer can be used as a general purpose per pixel mask for saving or discarding pixels. It's usually an 8 bit integer per pixel. The value can be written to, increment or decremented. Subsequent draw calls can test against the value, to decide if a pixel should be discarded before running the pixel shader. When Cull mode is set to OFF this menu shows an extra set of comparison selections to use the buffer separately from front faces and back faces.
+
+Reference: The value to be compared against (if Comp is anything else than always) and/or the value to be written to the buffer (if either Pass, Fail or ZFail is set to replace). 0–255 integer.Read Mask: An 8 bit mask as an 0–255 integer, used when comparing the reference value with the contents of the buffer (referenceValue & readMask) comparisonFunction (stencilBufferValue & readMask). Default: 255.Write Mask: An 8 bit mask as an 0–255 integer, used when writing to the buffer. Default: 255.Comparison (front and back): The function used to compare the reference value to the current contents of the buffer. Default: always.Pass (front and back): What to do with the contents of the buffer if the stencil test (and the depth test) passes. Default: keep.Fail (front and back): What to do with the contents of the buffer if the stencil test fails. Default: keep.ZFail (front and back): What to do with the contents of the buffer if the stencil test passes, but the depth test fails. Default: keep.
 
 ![MN_4.jpg](./ase.assets/MN_4.jpg)
 
