@@ -135,20 +135,33 @@ Shaders可以通过单击着色器“inspector”面板上的“Open in Shader E
 ![MN_1.jpg](./ase.assets/MN_1.jpg)
 
 **General**
-- Shader Name: Editable text box, defines the name and path of the shader. Use a forward slash "/" to define its category and name; e.g. UserSamples/EnvironmentGradient. Note that the name displayed in this box is not the same as the filename, they have to be set individually.
-- Shader Type: This area displays the current shader type used. These include the template you currently have in your project. ASE comes with presets for post process effects, particls, sprites, UI and an unlit shader. Set to Surface Shader by default.
-- Light Model: Defines how the surfaces reflect light, commonly referred to as the type of shader used. ASE currently provides Standard(Metallic), Standard Specular, Lambert, Blinn Phong and a Custom Lighting that allows to create a unique node-based lighting model.
-- Shader Model: When writing either Surface Shaders or regular Shader Programs, the HLSL source can be compiled into different “shader models”. Higher shader compilation targets allow using more modern GPU functionality, but might make the shader not work on older GPUs or platforms.
-- Precision: Defines the maximum precision of internal calculations, using lower types offers an added performance boost in exchange for some accuracy; set to Float by default - this value caps all existing properties placed in your canvas.
-- Cull Mode: Front - Cull front-facing geometry, Back - Cull back-facing geometry, Off - Disables culling (double-side material); set to Back by default.
-- Render Path: Allows you to define which mode (Forward/Deferred) is supported by the shaders; set to All by default.Cast Shadows: Defines if the shader generates a shadow pass to be able to 
-- cast shadows; can still be turned off on a per object basis in the material renderer component.
-- Receive Shadows: Defines if objects using the shader receive shadows; this includes self-shadowing(only with forward rendering); can still be turned off on a per object basis in the material renderer component.
-- Queue Index: Render queue offset value, accepts positive(later) and negative(sooner) integers.
-- Vertex Output: Relative by default, can be set to absolute; the input Local Vertex Offset input will automatically change to Local Vertex Position.
-- LOD: By default, the allowed LOD level is infinite, that is, all shaders that are supported by the user’s hardware can be used. However, in some cases you might want to drop shader details, even if the hardware can support them. [Unity Shader Reference](https://docs.unity3d.com/Manual/SL-ShaderLOD.html)
-- Fallback: Sets a fallback shader from the available shaders in the project which will be used whenever a certain pass is either missing or not supported by the main shader.
-- Custom Editor: Custom inspectors allows you to use a custom material inspector, by default uses ASE custom material inspector.
+- Shader Name（着色器名称）: 可编辑的文本框，定义了着色器的名称和路径。使用正斜杠“/”来定义其类别和名称；例如，UserSamples/EnvironmentGradient。注意，此框中显示的名称与文件名不相同，它们必须单独设置。
+
+- Shader Type（着色器类型）: 此区域显示当前所使用的着色器类型。这里包括了所有您在项目中使用的模板。ASE提供了post process effects, particls, sprites, UI和unlit shader.默认设置为surface。
+
+- Light Model(光学模型):定义表面如何反射光线，通常指着色器的类型。ASE目前提供：标准（金属），标准镜面，兰伯特，Blinn-Phong和自定义照明，允许创建一个独特的基于节点的照明模型。
+
+- Shader Model（着色器模型）: 当编写表面着色器或常规着色器程序时，HLSL源代码可以被编译成不同的“着色器模型”。更高的着色器编译目标允许使用更现代的GPU功能，但可能会使着色器不能在较旧的GPU或平台上工作。
+
+- Precision（精度）: 定义内部计算的最大精度，使用较低的类型提供了额外的性能提升，牺牲一些精度；默认情况下，设置为float，这个值会限制了放置在画布中的所有属性值。
+ 
+- Cull Mode（剔除模式）: Front - 剔除正面, Back - 剔除后面, Off - 关闭剔除(双面材料); 默认使用Back。
+
+- Render Path（渲染路径）: 允许您定义着色器模式（向前/延迟）；默认情况下设置为“所有“。
+
+- Cast Shadows（投射阴影）: 定义着色器是否生成阴影传递，来投射阴影；仍然可以在每个对象的材质渲染器组件中关闭阴影投射。
+
+- Receive Shadows（接受阴影）: 定义使用着色器的对象是否接收阴影；这包括自阴影（仅支持正向渲染）；可以在每个对象的材质渲染器组件中关闭这个功能。
+
+- Queue Index（队列索引）：渲染队列偏移值，正数（靠后）和负数（靠前）。
+
+- Vertex Output（顶点输出）: 默认情况下为相对。可以设置为绝对。输入局部的顶点偏移将自动变为局部顶点位置。
+
+- LOD：默认情况下，允许的LOD级别是无限的，只要用户的硬件支持，即可使用。然而，在某些情况下，您可能想要删除着色器的细节，即使硬件可以支持它们。 [Unity Shader Reference](https://docs.unity3d.com/Manual/SL-ShaderLOD.html)
+
+- Fallback（回退）: 从项目中的可用着色器中设置一个回退着色器，当主要着色器缺少或不支持时，将使用这个回退着色器。
+
+- Custom Editor（自定义编辑器）: 自定义检查器允许您使用自定义材质检查器（inspector），默认情况下使用ASE自定义材质检查器。
 
 ![OutputNode2.jpg](./ase.assets/OutputNode2.jpg)
 
