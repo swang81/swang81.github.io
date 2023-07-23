@@ -4,10 +4,14 @@ permalink: /blogs/ase/index.html
 title: Blogs
 ---
 
-# Amplify Shader Editor Manual
+# Amplify Shader Editor / Manual
+---
+这里我翻译了英文的Manual, 部分内容可能由于版本问题，存在部分差异。我已经通过(**jack：**)进行标注了。原版网址[点击这里](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Manual)。
 
 * awsl
 {:toc}
+
+---
 
 ## 安装
 
@@ -452,37 +456,34 @@ Shaders可以通过单击着色器“inspector”面板上的“Open in Shader E
 
 ![G07b3mm.png](./ase.assets/G07b3mm.png)
 
-Be sure to check the official Aura 2 Manual for updated information.
+请务必查看官方的Aura 2手册以获取更新的信息。
 
 ### Substance Support
 
-Support for [Substances](https://www.allegorithmic.com/substance) in Unity 2018 and above has been added to ASE.
-
+在ASE中增加了对Unity 2018及以上物质的支持。[Substances](https://www.allegorithmic.com/substance) 
 
 ![Tv4Hllq.gif](https://i.imgur.com/Tv4Hllq.gif)
 
+原始的Substance例子打包到一个Unity包中，因为.sbsar文件现在在Unity 2018中导致导入错误。对Substance的支持已被删除。
 
-The original Substance example had to be packaged into a Unity package since .sbsar files now cause an importing error in Unity 2018, as native Substance support has been dropped.
+如果你使用的是**pre-unity2018**年版本，其中原生实体支持还没有被废弃，你可以找到下面的实体示例：
+- 进入*AmplifyShaderEditor\Examples\Official\Substance*文件夹
+- 请提取**LegacySubstanceExample.unitypackage**
 
+如果你使用的是**Unity 2018**，你需要在提取正确的ASE包之前确保你安装了Allegorithmic Substance 插件：
+- 下载、导入和安装 [Substance in Unity](https://assetstore.unity.com/packages/tools/utilities/substance-in-unity-110555?aid=1011lPwI&pubref=Wiki)
+- 找到 *AmplifyShaderEditor\Examples\Official\Substance2018* 文件夹
+- 解开 **Substance2018.unitypackage**
 
-If you're using **pre-Unity 2018** versions where native Substance support wasn't yet deprecated, you can find the Substance Example below:
-- Go into the *AmplifyShaderEditor\Examples\Official\Substance* folder
-- Extract the **LegacySubstanceExample.unitypackage**
+ASE允许您直接或间接地从编辑器内部使用物质。使用物质最基本的方法是在编辑器中拖放一个substance资产。 [Substance Sample](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Substance_Sample) 节点将创建它的各种纹理，可以在任何地方使用。
 
-If you're using **Unity 2018**, you'll need to make sure that you install the Allegorithmic Substance plugin before you extract the proper ASE package:
-- Download, import and setup the [Substance in Unity](https://assetstore.unity.com/packages/tools/utilities/substance-in-unity-110555?aid=1011lPwI&pubref=Wiki)
-- Go into the *AmplifyShaderEditor\Examples\Official\Substance2018* folder
-- Extract the **Substance2018.unitypackage**
+可以设置substance生成所有纹理，并作为规则纹理独立拖放。引用这些纹理，对于新产生的问题可以进行同步更新。
 
-ASE lets you use substances directly or indirectly from within the editor. The most basic way to use a substance is to literally drag and drop a substance asset inside the editor. A new [Substance Sample](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Substance_Sample) node will be created with it's various textures inside that can be used anywhere.
-
-It's possible to set the substance to generate all textures and drag and drop each one of them independently as a regular texture. These will maintain their reference and update accordingly even if you regenerate the textures.
-
-It's also possible to create a generic shader that is used directly in the shader. The only caveat for this is the extra configuration needed in the substance asset to link each texture sample to a generated texture. If a more automatic process is needed the texture sample node can be set to use a property name that matches Unity's default names (ie: _MainTex for albedos, _SpecGlossMap for specular maps, _MetallicGlossMap for metallic maps, _Glossiness for smoothness maps, _BumpMap for normal maps, _OcclusionMap for occlusion maps, _EmissionMap for emission maps, etc) This way the substance asset will detect the property and automatically assign them the correct texture without extra intervention.
+可以创建一个直接在着色器中使用的通用着色器。唯一需要注意的是 ,在substance资产中需要的额外配置，链接每个纹理。如果需要更自动的过程，则可以将纹理节点设置为使用与Unity的默认名称相匹配的属性名称。(ie: _MainTex for albedos, _SpecGlossMap for specular maps, _MetallicGlossMap for metallic maps, _Glossiness for smoothness maps, _BumpMap for normal maps, _OcclusionMap for occlusion maps, _EmissionMap for emission maps, etc) 通过这种方式，substance资产将检测属性，并自动分配他们正确的纹理，而不需要额外的干预。
 
 ### MegaSplat
 
-Native support for ASE is included in [MegaSplat](https://www.assetstore.unity3d.com/en/#!/content/76166?aid=1011lPwI&pubref=Wiki)
+对 ASE支持，参考[MegaSplat](https://www.assetstore.unity3d.com/en/#!/content/76166?aid=1011lPwI&pubref=Wiki)
 
 ### Curved World Shaders
 
