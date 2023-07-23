@@ -240,128 +240,137 @@ Shaders可以通过单击着色器“inspector”面板上的“Open in Shader E
 
 **Depth（深度）**
 - ZWrite Mode: 控制对象的像素是否写入深度缓冲区（默认打开）。如果绘制实体对象，请设置ON。如果你绘制半透明的效果，切换到ZWrite Off。有关更多细节，请阅读下文。
-- 
-- Controls whether pixels from this object are written to the depth buffer (default is On). If you’re drawing solid objects, leave this on. If you’re drawing semitransparent effects, switch to ZWrite Off. For more details read below.
-- ZTest Mode: How should depth testing be performed. Default is LEqual (draw objects in from or at the distance as existing objects; hide objects behind them). ASE provides ZTest Less, Greater, LEqual, GEqual, Equal, NotEqual and Always.
-- Offset: Allows you specify a depth offset with two parameters. factor and units. Factor scales the maximum Z slope, with respect to X or Y of the polygon, and units scale the minimum resolvable depth buffer value. This allows you to force one polygon to be drawn on top of another although they are actually in the same position. For example Offset 0, –1 pulls the polygon closer to the camera ignoring the polygon’s slope, whereas Offset –1, –1 will pull the polygon even closer when looking at a grazing angle.
-- - Factor: Scales the maximum Z slope, with respect to X or Y of the polygon.
-- - Units: Units scale the minimum resolvable depth buffer value.
+- ZTest Mode: 深度测试的方式。默认值为LEqual。（小于这个距离的绘制，否则隐藏）。ASE提供ZTest可以ZTest Less, Greater, LEqual, GEqual, Equal, NotEqual and Always。
+- Offset: 允许您使用两个参数指定深度偏移，为factor(因子)和units(单位)。factor调整最大的 Z slop, 相对于多边形的X或Y。Units调整最小可分辨深度缓冲值。这允许您强制将一个多边形绘制在另一个多边形之上，尽管它们实际上处于相同的位置。例如，Offset（ 0，-1）将多边形拉得更接近相机，而忽略多边形的斜率，而Offset（ -1，-1）将多边形拉得更近。
+- - Factor: 相对于多边形的X或Y，调整最大Z斜率。
+- - Units: 最小可分辨深度缓冲区值。
 
 ![RenderingOptions.jpg](./ase.assets/RenderingOptions.jpg)
 
-**Rendering Options**
-Here it's possible to activate or deactivate certain shader features, by the default most of them will be ON to mimic Unity's standard shader.
+**Rendering Options（渲染选项）**
+激活或停用某些着色器功能。默认情况下，大多数功能将打开，以模仿Unity的标准着色器。
 
 ![PlatformOptions.jpg](./ase.assets/PlatformOptions.jpg)
 
-**Rendering Platforms**
-Defines which platforms are supported; set to All by default.
+**Rendering Platforms（渲染平台）**
+定义支持哪些平台；默认设置为“全部”。
 
 ![AdditionalIncludes.jpg](./ase.assets/AdditionalIncludes.jpg)
 
-**Additional Includes**
-Allows a definition of a relative path from the shader for a cg include file. If the file is missing or the path incorrect it will fail to compile the shader. "../" can be use to go down a folder.
+**Additional Includes（额外包含）**
+允许为cg文件定义着色器的相对路径。如果文件丢失或路径不正确，将无法编译着色器。”../“可以用来进入上一级文件夹。
 
 ![AdditionalPragmas.jpg](./ase.assets/AdditionalPragmas.jpg)
 
-**Additional Pragmas**
-Allows the addition of individual pragma directives to control the compilation and rendering of the shader.
+**Additional Pragmas（额外程序）**
+允许添加单个语用器指令来控制着色器的编译和渲染。
 
 ![CustomTags.jpg](./ase.assets/CustomTags.jpg)
 
-**Custom SubShader Tags**
-Allows the addition of custom subshader tags for custom shader rendering control.
+**Custom SubShader Tags（自定义SubShader）**
+允许为自定义着色器渲染，控制添加自定义SubShader。
 
 ![MaterialProperties.jpg](./ase.assets/MaterialProperties.jpg)
 
-**Material Properties**
-Variables set to Property will be listed in this section, you tweak their position by dragging them.
+**Material Properties(材质特性)**
+这里列出属性变量。你可以通过拖拽来调整上下位置。
 
-### Referencing Custom Properties
+### Referencing Custom Properties（引用自定义属性）
 
-Certain shader options, like Cull Mode or Stencil, can also be configured by shader properties, Ints and Floats to be specific, instead of their usual predefined values. 
+某些着色器选项，如Cull Mode或Stencil也可以通过着色器属性进行设置。使用int和float。
 
 ![PropertyMode.gif](./ase.assets/PropertyMode.gif) 
 
-These will have a clickable Dot present on the side of the drop-down box, which you may use as a toggle in order to activate the new property select mode for selecting your own properties through the shader option's list. 
+在下拉框的一侧会有一个可点击的点，你可以点击它作，激活新属性选择模式，通过选项列表选择你的属性。
 
-## Shader Functions
+## Shader Functions（着色器函数）
 
 ![sf_1.jpg](./ase.assets/sf_1.jpg)
 
-Shader Functions, SF for short, are individual node networks that allow you to build reusable functions. Easy to setup and extremely flexible, they work by receiving input values directly from your shader, processing that information and outputting them back for further alterations or direct use. SF assets are not bound to any shader, you can use them multiple times throughout your project, in the same shader, inside other Shader Functions, or even share them with other users. From simple to complex graphs, Shader Functions are a great way to reduce canvas clutter by packing complex networks into single nodes, and a great way to eliminate unnecessary repetitive tasks; they can be considered a form of "grouping", that offers you a way to group nodes into more manageable assets. **Would you like to share your creations with the ASE community?** [Contribute here!](http://amplify.pt/unity/amplify-shader-editor/contribute/) 
+着色器函数，简称SF，是允许您构建可重用函数的单个节点网络。易于设置和非常灵活，它们的工作原理是直接从着色器接收输入值，处理这些信息并输出以供进一步更改或直接使用。SF资产不绑定到任何着色器，您可以在整个项目中多次使用它们，例如，在同一着色器中、在其他着色器功能中使用它们，甚至与其他用户共享它们。从简单的图到复杂的图，着色器函数是通过将复杂的网络打包成单个节点来减少画布混乱的好方法，也是消除不必要的重复任务的好方法；它们可以被认为是一种“分类”的形式，它为您提供了一种将节点分类更易于管理的资产方法。
 
-### Features
-- Works with all ASE nodes.
-- Configurable Input/Output nodes.
-- Copy & Paste nodes between shaders and SF.
-- Supports all variable types, including Material Properties.
-- Reusable and unique assets, not bound to any shader or project.
-- Seamless editor workflow, drag & drop into any open shader or add them from the Node list.
+**您想与ASE社区分享您的创作吗?** [贡献在这里!](http://amplify.pt/unity/amplify-shader-editor/contribute/) 
 
-### Comparison
+### 特性
+- 适于所有ASE节点
+- 输入/输出节点可配置
+- 在着色器和SF之间可以复制和粘贴节点
+- 支持所有变量类型，包括材质属性
+- 可重用的和唯一的资产，不绑定到任何着色器或项目
+- 无缝编辑器工作流，拖放到任何打开的着色器或者可以从节点列表中添加它们
+
+### 比较
 
 ![sf_2.jpg](./ase.assets/sf_2.jpg) 
 
-The node networks above all produce the same burning effect. The **original** version does not use shader functions. **Version 1** uses a SF that contains the original node network used to generate the burning effect, it receives 1 Texture Object node for the burn mask, 1 Texture Object node for the fire texture, and 1 Texture Coordinate node. **Version 2** is simpler than the previous example, the burn effect generation and texture nodes are all included in the SF, the only exception being the Texture Coordinate node that allows users to tweak its behavior. Keep in mind that a SF does not need to receive any input, the outputted data can be entirely generated in its graph if necessary.
-**Version 1 Shader Function Example**
+以上的节点网络都产生相同的燃烧效应。**原始的**版本不使用SF功能。**版本1**使用包含用于生成燃烧效果的原始节点网络的SF，连接节点：1个纹理对象节点作为燃烧掩模，1个纹理对象节点为火纹理，1个纹理坐标节点。
+
+**版本2**比前面的示例更简单，烧伤效果生成和纹理节点都包含在SF中，唯一的例外是纹理坐标节点，它允许用户调整。请记住SF可以没有任何输入，如果有必要输出的数据可以完全在其图中生成。
+
+**Version 1 Shader Function 例子**
 
 ![sf_3.jpg](./ase.assets/sf_3.jpg)
 
-### Creation and Usage
+### 创建和使用SF
 
 ![sf_4.jpg](./ase.assets/sf_4.jpg)
 
-Create a new Shader Function Asset under Assets > Create > Shaders > Amplify Shader Function.
+从菜单 Assets > Create > Shaders > Amplify Shader Function， 点击。
 
 ![sf_5.jpg](./ase.assets/sf_5.jpg)
 
-Your newly created Shader Function will be automatically opened in the ASE Editor after being renamed.
+您新创建的SF函数，将在重命名后，在ASE编辑器中自动打开。
 
 ![sf_6.jpg](./ase.assets/sf_6.jpg)
 
-1. Add your Shader Function description here. You can also reorder your Function Inputs/Outputs and Material Properties by dragging them to the desired position. The order set in your SF will be the same used in your Material inspector tab.
-2. Create 2 Input nodes or more. By default, there's always 1 Output node but you can add as many as necessary. You can also use other SF nodes inside your active SF but, in order to avoid Shader Function Loops, you cannot add a function to its own canvas.3. 
-3. Select an Input node to set the type used or toggle the Auto Cast option to automate the procedure directly in the left tab as you would with any other node properties.4. 
-4. Connect your resulting output(s) directly to the Output node(s).5. 
-5. Save your changes and click Return to go back to the previously open Shader or Material, if any.
+1. 在这里添加着色器函数描述。您可以拖拽SF函数的输入/输出和材质属性节点，来调整位置。在SF中设置出来的属性顺序，与材质面板中顺序一样。
+2. 创建2个输入节点或更多。默认情况下，总是有一个输出节点，但您可以添加尽可能多的输出节点。您也可以在活动SF中使用其他SF节点，但是，为了避免着色器函数循环依赖，您不能将SF函数添加到它自己的画布中。
+3. 选择一个输入节点来设置使用的类型，或者激活"Auto Cast“完成类型自动转换，就像你使用任何其他节点属性一样方法。 
+4. 将结果输出直接连接到输出节点。 
+5. 保存更改，并单击返回，返回到之前打开的着色器或材质。
 
 ![sf_7.jpg](./ase.assets/sf_7.jpg)
 
-1. Add the created Shader Function to your shader by selecting it directly from the Node List. SF nodes can be used just as any other ASE nodes, they can be duplicated, copied, or deleted.2. 
-2. Alternatively, you can drag & drop Shader Functions directly into your editor canvas.3. 
-3. Double-click a SF node to open it.
+1. 通过直接从节点列表中选择已创建的着色器函数，可以将其添加到创建的着色器中。SF节点可以与任何其他ASE节点一样使用，它们可以被复制、复制或删除。
+2. 或者，您也可以直接将SF函数拖放到编辑器画布中
+3. 双击一个SF节点以打开它。
 
-## Hotkeys
+## 热键
+
 ---
-### Colored Line Mode
+### 彩线模式
 
 ![DebugMode.jpg](./ase.assets/DebugMode.jpg) 
 
-Press [ W ] to toggle it.
+使用 [ W ] 开关彩线模式
 
-### Node Previews
+### Node 预览
 
 ![source.gif](./ase.assets/source.gif) 
 
-Press [ P ] to toggle node previewsMulti-line Mod
+按 [ P ]来控制Node效果预览
+
+### 多线显示模式
 
 ![LsGX8pv.gif](http://i.imgur.com/LsGX8pv.gif)
 
-Press [ CTRL + W ] to activate the multi-line mode.
-### Full Shortcut List
-**Editor**
-- **[Double Click Wire]:** Create wire control point.
-- **[F1]:** Open Selected Node Wiki page
-- **[C]:** Create Commentary box (groups/grouping/group nodes)
-- **[F]:** Focus On Selection
-- **[B]:** New Master Node
-- **[Space]:** Open Node Palette
-- **[W]:** Toggle Colored Line Mode
-- **[Control + W]:** Toggle Multi-Line Mode
-- **[P]:** Global Preview
-- **[Delete]:** Delete selected nodes
-- **[Backspace]:** Delete selected nodes
+使用 [ CTRL + W ] 来开关多线显示模式
+
+### 快捷键列表
+
+**编辑器**
+- **[双击线]:** 创建线的控制点
+- **[F1]:** 选择Node, F1打开Wiki网页
+- **[C]:** 创建备注方框
+- **[F]:** 专注到选择的Node
+- **[B]:** 分开Node管道
+- **[Space]:** 打开Node菜单，可以进行查找
+- **[W]:** 颜色线模式开关
+- **[Control + W]:** 多线模式开关
+- **[P]:** 全局效果预览（显示纹理）
+- **[Delete]:** 删除选择的节点
+- **[Backspace]:** 删除选择的节点
+
 **Nodes**
 - Use KEY + Left Mouse Button
 - **[Alpha5]:** Color
@@ -382,55 +391,56 @@ Press [ CTRL + W ] to activate the multi-line mode.
 - **[T]:** Texture Sample
 - **[U]:** Texture Coordinates
 
-## Translucency
+## 半透明性
 
-The Translucency input provides a fast method of representing light scattering. It's not the most realistic method available but it's a flexible and fast-performing approximation. In our example (AmplifyShaderEditor\Examples\Official\Translucency) we use a simple red tinted Depth Texture to represent the skin subsurface scatter effect but you don't necessarily need to use the same setup, you could very well plug a full RGB texture to the Translucency Input in order to get some color variation or stylized results
+半透明输入提供了一种快速表示光散射的方法。这不是最现实的方法，但它是一个灵活和快速执行的近似。在我们的例子中，见（AmplifyShaderEditor\Examples\Official\Translucency）。我们使用一个简单的红色颜色深度纹理表示皮肤地下散射效果，但你不一定需要使用相同的设置，你很可能插入一个完整的RGB纹理和半透明纹理，得到一些颜色变化或风格化的结果。
 
 ![uTq4P7T.gif](http://i.imgur.com/uTq4P7T.gif)
 
-**The Material Properties below are automatically added to your shader when you plug your values into the Translucency Input Port.**
+**当您将值插入半透明输入端口时，以下材质属性将自动添加到着色器中**
 
 ![Translucency.jpg](./ase.assets/Translucency.jpg)
 
-- Strength: Translucency effect strength, you can think of it as a multiplier slider.
-- Normal Distortion: Defines the amount of normal distortion on the translucency effect.
-- Scattering Falloff: Scattering falloff amount for the translucency effect.
-- Direct: Direct light influence on the translucency effect.
-- Ambient: GI/ambient light influence on the translucency effect.
-- Shadow: Self-shadowing influence on the translucency effect, reduces the translucency effect in shadowed areas.
+- Strength: 半透明效应强度，你可以把它看作是一个乘数滑块。
+- Normal Distortion: 定义在半透明效应上的法线变形量。
+- Scattering Falloff: 对半透明效应的散射衰减量。
+- Direct: 直接光影响半透明效应。
+- Ambient: 全局光/环境光对半透明效应的影响
+- Shadow: 自阴影对半透明效应的影响，减少了阴影区域的半透明效应。
 
-## Your First shader
+## 我的第一个shader
 
 ![ASE_m_12.jpg](./ase.assets/ASE_m_12.jpg) 
 
-1. Open the Editor, create a new material and a new shader in the Project Explorer tab. In the newly created material, select your new shader and click on the Open in Shader Editor button to open both the shader and material.
+1. 打开编辑器，在“项目资源管理器”选项卡中创建新材质和新着色器。在新创建的材质中，选择新的着色器，然后单击“Open in Shader Editor “按钮，同时打开着色器和材质。
 
 ![ASE_m_13.jpg](./ase.assets/ASE_m_13.jpg) 
 
-2. As an example, select the Output Node and change its Light Model to specular.
+2. 例如，选择输出节点，并将其灯光模型更改为镜面模型。
 
 ![ASE_m_14.jpg](./ase.assets/ASE_m_14.jpg) 
 
-3. Right click on the canvas to open the searchable node list and type “Lerp”. Click on Lerp and connect the node Output Port to the Albedo Input Port.
+3. 右击画布上，打开可搜索节点列表并键入“Lerp”。单击Lerp，并将节点输出端口连接到Albedo（反照率）输入端口。
 
 ![ASE_m_15.jpg](./ase.assets/ASE_m_15.jpg) 
 
-4. Hold the 5 shortcut key and click on the canvas to create a new Color node. Alternatively, you can use the searchable list used early or drag and drop the node from the Node Palette on the right side; Constants > Color [ 5 ].
+4. 按住5快捷键，单击画布上以创建新的颜色节点。或者，您可以使用可搜索列表，或从右侧的节点选项板中拖放节点；Constants > Color [ 5 ]
 
 ![ASE_m_16.jpg](./ase.assets/ASE_m_16.jpg) 
 
-5. Select the new Color node and hit ‘CTRL/CMD+D’ to duplicate it. Connect both nodes to the Lerp Input Ports. Set the first node to gray and the second one to a more lively color.
+5. 选择新的颜色节点，并点击“CTRL/CMD+D”来复制它。将两个节点连接到Lerp输入端口。将第一个节点设置为灰色，将第二个节点设置为更生动颜色。
 
 ![ASE_m_17.jpg](./ase.assets/ASE_m_17.jpg)
 
-6. Create a Float node by dragging and dropping it from the Node Palette, connect it to the Alpha port of the Lerp node. In the node properties of the newly created float, set its Minimum value to 0 and Maximum to 1. Notice that the Float can now be controlled by a Slider. Don’t forget to set its Parameter Type to Property, this way you will be able to change it directly in the material. You can also name the node and change its position in the material inspector by adjusting the Index value. As an example, lets name it Color Mix.
+6. 通过从节点选项板中，拖放它来创建一个Float节点，并将其连接到Lerp节点的Alpha端口。在新创建的浮点数的节点属性中，将其最小值设置为0，将最大值设置为1。请注意，Float现在可以由滑块控制。不要忘记将其参数类型设置为Property，这样您就可以直接在材质中更改它。您还可以命名节点，通过调整“order index”值，并更改其在材质检查器中的位置。（jack:新版在输出节点最下面的Material Properties中调节）
 
 ![ASE_m_18.jpg](http://amplify.pt/wp-content/uploads/2016/09/ASE_m_18.jpg)
-7. Create a new Float and connect it to the Smoothness Input Port of the Output Node, set its Minimum value to 0 and Maximum to 1 as you did before. Set its type to Property and name it Smoothness Value. Create another Float and connect it to the Specular Input Port, set its Minimum value to 0 and Maximum to 1. Set its Type to Property and name it Specular Value.
+
+7. 创建一个新的Float，并将其连接到输出节点的"Smoothness"输入端口，将其最小值设置为0，最大值设置为1。将其类型设置为Property，并将其命名为Smoothness Level Value。创建另一个Float,并将其连接到Specular输入端口，将其最小值设置为0，最大值设置为1。将其类型设置为Property，并将其命名为Specular Level Value。
 
 ![ASE_m_19.jpg](http://amplify.pt/wp-content/uploads/2016/09/ASE_m_19.jpg)
 
-8. To conclude, Drag and Drop a Normal Map texture from your Project Explorer directly into the canvas. As an example, we used a Brushed Metal texture. Connect it to the Normal Input Port of the Output Node and you are done. You have just built your first shader, don’t forget to save your work regularly by clicking the Update button located in the upper left corner. Alternatively, you could edit the shader with the LIVE mode enabled, any change are immediately saved and updated. Depending on the complexity of the shader, the LIVE mode may take a second or so to update. Contrary to Default shader values, any changes made to a material property are immediately visible.
+8. 最后，请将Normal贴图纹理从项目浏览器中直接拖放到画布中。举例，我们使用了一个拉丝金属纹理。将其连接到输出节点的正常输入端口，您就完成了。你刚刚建立了你的第一个shader，不要忘记定期通过点击位于左上角的update按钮来保存你的工作。或者，您可以编辑启用了LIVE模式的着色器，任何更改都会立即保存和更新。根据着色器的复杂性，LIVE模式可能需要几秒钟左右才能更新。与默认的着色器值相反，任何对材质属性的更改都会立即可见。
 
 ![ASE_m_20.jpg](http://amplify.pt/wp-content/uploads/2016/09/ASE_m_20.jpg) 
 
@@ -438,7 +448,7 @@ The Translucency input provides a fast method of representing light scattering. 
 
 ### Aura 2
 
-Using Aura 2 with ASE is quite simple, just add the necessary nodes.
+使用Aura 2和ASE非常简单，只需要添加必要的节点。
 
 ![G07b3mm.png](./ase.assets/G07b3mm.png)
 
