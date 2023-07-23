@@ -213,45 +213,69 @@ Shaders可以通过单击着色器“inspector”面板上的“Open in Shader E
 
 ![MN_4.jpg](./ase.assets/MN_4.jpg)
 
-**Tessellation**
+**Tessellation(细化)**
 
-- Phong: Modifies the positions of the subdivided faces so that the resulting surface follows the mesh normals a bit; set to OFF by Default.Strength: Effect strength 0-1.Type: Defines the technique used; Distance Based, Fixed, Edge Length and Edge Length Cull.Tess: Tessellation factor; 1-32.Min: Minimum Tessellation distance.Max: Maximum Tessellation distance.Edge Length: Maximum length an edge can have before starting to tessellate.Max Disp: Maximum displacement outside of the frustum borders where polygon patches are still tesselated. 
+- Phong: 修改细分面的位置，使生成的表面符合网格法线方向；默认设置为OFF。强度：0-1
+- Type: 定义所使用的技术；基于距离、固定、边长度和Edge Length Cull
+- Tess: 镶嵌因子; 1-32.
+- Min:  最小镶嵌距离.
+- Max: 最大镶嵌距离.
+- Edge Length: 在开始镶嵌之前，可以有的最大长度。
+- Max Disp: 多边形补丁处的最大边界外位移 
 
 ![OutlineOptions.jpg](./ase.assets/OutlineOptions.jpg)
 
-**Outline** Creates a customizable outline effect using the inverse hull techniqueMode: Vertex mode offsets the hull by a value while vertex scale increases by a percentage.Color: Lets you define the color of the outline.Width: The value to be offseted or scaled by.
+**Outline （轮廓线）** 使用反外壳技术，创建一个自定义的轮廓效果
+- Mode:  Vertex Offse: 通过值的大小控制; Vertex Scale:通过顶点比例增加来调节  
+- Color: 用于定义轮廓的颜色。
+- Width: 要被偏移或缩放的值。
 
 ![BillboardOptions.jpg](./ase.assets/BillboardOptions.jpg)
 
-**Billboard**Type: A cylindrical billboard will only rotate on the Y axis while a spherical will rotate towards the camera irregardless of it's rotation.Ignore Rotation: Setting this on will ignore the billboard transform rotation.
+**Billboard (广告牌)**
+- Type: 圆柱形广告牌只能在Y轴上旋转。一个球形广告牌会朝向相机旋转，而不管它的如何旋转。
+- Ignore Rotation: 设置ON，忽略公告牌旋转。
 
 ![DepthOptions.jpg](./ase.assets/DepthOptions.jpg)
 
-**Depth**ZWrite Mode: Controls whether pixels from this object are written to the depth buffer (default is On). If you’re drawing solid objects, leave this on. If you’re drawing semitransparent effects, switch to ZWrite Off. For more details read below.ZTest Mode: How should depth testing be performed. Default is LEqual (draw objects in from or at the distance as existing objects; hide objects behind them). ASE provides ZTest Less, Greater, LEqual, GEqual, Equal, NotEqual and Always.Offset: Allows you specify a depth offset with two parameters. factor and units. Factor scales the maximum Z slope, with respect to X or Y of the polygon, and units scale the minimum resolvable depth buffer value. This allows you to force one polygon to be drawn on top of another although they are actually in the same position. For example Offset 0, –1 pulls the polygon closer to the camera ignoring the polygon’s slope, whereas Offset –1, –1 will pull the polygon even closer when looking at a grazing angle.Factor: Scales the maximum Z slope, with respect to X or Y of the polygon.Units: Units scale the minimum resolvable depth buffer value.
+**Depth（深度）**
+- ZWrite Mode: 控制对象的像素是否写入深度缓冲区（默认打开）。如果绘制实体对象，请设置ON。如果你绘制半透明的效果，切换到ZWrite Off。有关更多细节，请阅读下文。
+- 
+- Controls whether pixels from this object are written to the depth buffer (default is On). If you’re drawing solid objects, leave this on. If you’re drawing semitransparent effects, switch to ZWrite Off. For more details read below.
+- ZTest Mode: How should depth testing be performed. Default is LEqual (draw objects in from or at the distance as existing objects; hide objects behind them). ASE provides ZTest Less, Greater, LEqual, GEqual, Equal, NotEqual and Always.
+- Offset: Allows you specify a depth offset with two parameters. factor and units. Factor scales the maximum Z slope, with respect to X or Y of the polygon, and units scale the minimum resolvable depth buffer value. This allows you to force one polygon to be drawn on top of another although they are actually in the same position. For example Offset 0, –1 pulls the polygon closer to the camera ignoring the polygon’s slope, whereas Offset –1, –1 will pull the polygon even closer when looking at a grazing angle.
+- - Factor: Scales the maximum Z slope, with respect to X or Y of the polygon.
+- - Units: Units scale the minimum resolvable depth buffer value.
 
 ![RenderingOptions.jpg](./ase.assets/RenderingOptions.jpg)
 
-**Rendering Options**Here it's possible to activate or deactivate certain shader features, by the default most of them will be ON to mimic Unity's standard shader.
+**Rendering Options**
+Here it's possible to activate or deactivate certain shader features, by the default most of them will be ON to mimic Unity's standard shader.
 
 ![PlatformOptions.jpg](./ase.assets/PlatformOptions.jpg)
 
-**Rendering Platforms**Defines which platforms are supported; set to All by default.
+**Rendering Platforms**
+Defines which platforms are supported; set to All by default.
 
 ![AdditionalIncludes.jpg](./ase.assets/AdditionalIncludes.jpg)
 
-**Additional Includes**Allows a definition of a relative path from the shader for a cg include file. If the file is missing or the path incorrect it will fail to compile the shader. "../" can be use to go down a folder.
+**Additional Includes**
+Allows a definition of a relative path from the shader for a cg include file. If the file is missing or the path incorrect it will fail to compile the shader. "../" can be use to go down a folder.
 
 ![AdditionalPragmas.jpg](./ase.assets/AdditionalPragmas.jpg)
 
-**Additional Pragmas**Allows the addition of individual pragma directives to control the compilation and rendering of the shader.
+**Additional Pragmas**
+Allows the addition of individual pragma directives to control the compilation and rendering of the shader.
 
 ![CustomTags.jpg](./ase.assets/CustomTags.jpg)
 
-**Custom SubShader Tags**Allows the addition of custom subshader tags for custom shader rendering control.
+**Custom SubShader Tags**
+Allows the addition of custom subshader tags for custom shader rendering control.
 
 ![MaterialProperties.jpg](./ase.assets/MaterialProperties.jpg)
 
-**Material Properties**Variables set to Property will be listed in this section, you tweak their position by dragging them.
+**Material Properties**
+Variables set to Property will be listed in this section, you tweak their position by dragging them.
 
 ### Referencing Custom Properties
 
@@ -268,15 +292,23 @@ These will have a clickable Dot present on the side of the drop-down box, which 
 Shader Functions, SF for short, are individual node networks that allow you to build reusable functions. Easy to setup and extremely flexible, they work by receiving input values directly from your shader, processing that information and outputting them back for further alterations or direct use. SF assets are not bound to any shader, you can use them multiple times throughout your project, in the same shader, inside other Shader Functions, or even share them with other users. From simple to complex graphs, Shader Functions are a great way to reduce canvas clutter by packing complex networks into single nodes, and a great way to eliminate unnecessary repetitive tasks; they can be considered a form of "grouping", that offers you a way to group nodes into more manageable assets. **Would you like to share your creations with the ASE community?** [Contribute here!](http://amplify.pt/unity/amplify-shader-editor/contribute/) 
 
 ### Features
-Works with all ASE nodes.Configurable Input/Output nodes.Copy & Paste nodes between shaders and SF.Supports all variable types, including Material Properties.Reusable and unique assets, not bound to any shader or project.Seamless editor workflow, drag & drop into any open shader or add them from the Node list.Comparison
+- Works with all ASE nodes.
+- Configurable Input/Output nodes.
+- Copy & Paste nodes between shaders and SF.
+- Supports all variable types, including Material Properties.
+- Reusable and unique assets, not bound to any shader or project.
+- Seamless editor workflow, drag & drop into any open shader or add them from the Node list.
+
+### Comparison
 
 ![sf_2.jpg](./ase.assets/sf_2.jpg) 
 
-The node networks above all produce the same burning effect. The **original** version does not use shader functions. **Version 1** uses a SF that contains the original node network used to generate the burning effect, it receives 1 Texture Object node for the burn mask, 1 Texture Object node for the fire texture, and 1 Texture Coordinate node. **Version 2** is simpler than the previous example, the burn effect generation and texture nodes are all included in the SF, the only exception being the Texture Coordinate node that allows users to tweak its behavior. Keep in mind that a SF does not need to receive any input, the outputted data can be entirely generated in its graph if necessary.**Version 1 Shader Function Example**
+The node networks above all produce the same burning effect. The **original** version does not use shader functions. **Version 1** uses a SF that contains the original node network used to generate the burning effect, it receives 1 Texture Object node for the burn mask, 1 Texture Object node for the fire texture, and 1 Texture Coordinate node. **Version 2** is simpler than the previous example, the burn effect generation and texture nodes are all included in the SF, the only exception being the Texture Coordinate node that allows users to tweak its behavior. Keep in mind that a SF does not need to receive any input, the outputted data can be entirely generated in its graph if necessary.
+**Version 1 Shader Function Example**
 
 ![sf_3.jpg](./ase.assets/sf_3.jpg)
 
-Creation and Usage
+### Creation and Usage
 
 ![sf_4.jpg](./ase.assets/sf_4.jpg)
 
@@ -288,18 +320,27 @@ Your newly created Shader Function will be automatically opened in the ASE Edito
 
 ![sf_6.jpg](./ase.assets/sf_6.jpg)
 
-1. Add your Shader Function description here. You can also reorder your Function Inputs/Outputs and Material Properties by dragging them to the desired position. The order set in your SF will be the same used in your Material inspector tab.2. Create 2 Input nodes or more. By default, there's always 1 Output node but you can add as many as necessary. You can also use other SF nodes inside your active SF but, in order to avoid Shader Function Loops, you cannot add a function to its own canvas.3. Select an Input node to set the type used or toggle the Auto Cast option to automate the procedure directly in the left tab as you would with any other node properties.4. Connect your resulting output(s) directly to the Output node(s).5. Save your changes and click Return to go back to the previously open Shader or Material, if any.
+1. Add your Shader Function description here. You can also reorder your Function Inputs/Outputs and Material Properties by dragging them to the desired position. The order set in your SF will be the same used in your Material inspector tab.
+2. Create 2 Input nodes or more. By default, there's always 1 Output node but you can add as many as necessary. You can also use other SF nodes inside your active SF but, in order to avoid Shader Function Loops, you cannot add a function to its own canvas.3. 
+3. Select an Input node to set the type used or toggle the Auto Cast option to automate the procedure directly in the left tab as you would with any other node properties.4. 
+4. Connect your resulting output(s) directly to the Output node(s).5. 
+5. Save your changes and click Return to go back to the previously open Shader or Material, if any.
 
 ![sf_7.jpg](./ase.assets/sf_7.jpg)
 
-1. Add the created Shader Function to your shader by selecting it directly from the Node List. SF nodes can be used just as any other ASE nodes, they can be duplicated, copied, or deleted.2. Alternatively, you can drag & drop Shader Functions directly into your editor canvas.3. Double-click a SF node to open it.
-2. 
+1. Add the created Shader Function to your shader by selecting it directly from the Node List. SF nodes can be used just as any other ASE nodes, they can be duplicated, copied, or deleted.2. 
+2. Alternatively, you can drag & drop Shader Functions directly into your editor canvas.3. 
+3. Double-click a SF node to open it.
+
 ## Hotkeys
-### ColoredLine Mode
+---
+### Colored Line Mode
 
 ![DebugMode.jpg](./ase.assets/DebugMode.jpg) 
 
-Press [ W ] to toggle it.Node Previews
+Press [ W ] to toggle it.
+
+### Node Previews
 
 ![source.gif](./ase.assets/source.gif) 
 
@@ -307,7 +348,39 @@ Press [ P ] to toggle node previewsMulti-line Mod
 
 ![LsGX8pv.gif](http://i.imgur.com/LsGX8pv.gif)
 
-Press [ CTRL + W ] to activate the multi-line mode.Full Shortcut ListEditor**[Double Click Wire]:** Create wire control point.**[F1]:** Open Selected Node Wiki page**[C]:** Create Commentary box (groups/grouping/group nodes)**[F]:** Focus On Selection**[B]:** New Master Node**[Space]:** Open Node Palette**[W]:** Toggle Colored Line Mode**[Control + W]:** Toggle Multi-Line Mode**[P]:** Global Preview**[Delete]:** Delete selected nodes**[Backspace]:** Delete selected nodesNodesUse KEY + Left Mouse Button**[Alpha5]:** Color**[Alpha0]:** Int**[Alpha1]:** Float**[Alpha2]:** Vector2**[Alpha3]:** Vector3**[Alpha4]:** Vector4**[L]:** Lerp**[N]:** Normalize**[O]:** One Minus**[E]:** Power**[A]:** Add**[D]:** Divide**[M]:** Multiply**[S]:** Subtract**[R]:** World Reflection**[T]:** Texture Sample**[U]:** Texture Coordinates
+Press [ CTRL + W ] to activate the multi-line mode.
+### Full Shortcut List
+**Editor**
+- **[Double Click Wire]:** Create wire control point.
+- **[F1]:** Open Selected Node Wiki page
+- **[C]:** Create Commentary box (groups/grouping/group nodes)
+- **[F]:** Focus On Selection
+- **[B]:** New Master Node
+- **[Space]:** Open Node Palette
+- **[W]:** Toggle Colored Line Mode
+- **[Control + W]:** Toggle Multi-Line Mode
+- **[P]:** Global Preview
+- **[Delete]:** Delete selected nodes
+- **[Backspace]:** Delete selected nodes
+**Nodes**
+- Use KEY + Left Mouse Button
+- **[Alpha5]:** Color
+- **[Alpha0]:** Int
+- **[Alpha1]:** Float
+- **[Alpha2]:** Vector2
+- **[Alpha3]:** Vector3
+- **[Alpha4]:** Vector4
+- **[L]:** Lerp
+- **[N]:** Normalize
+- **[O]:** One Minus
+- **[E]:** Power
+- **[A]:** Add
+- **[D]:** Divide
+- **[M]:** Multiply
+- **[S]:** Subtract
+- **[R]:** World Reflection
+- **[T]:** Texture Sample
+- **[U]:** Texture Coordinates
 
 ## Translucency
 
@@ -319,7 +392,12 @@ The Translucency input provides a fast method of representing light scattering. 
 
 ![Translucency.jpg](./ase.assets/Translucency.jpg)
 
-Strength: Translucency effect strength, you can think of it as a multiplier slider.Normal Distortion: Defines the amount of normal distortion on the translucency effect.Scattering Falloff: Scattering falloff amount for the translucency effect.Direct: Direct light influence on the translucency effect.Ambient: GI/ambient light influence on the translucency effect.Shadow: Self-shadowing influence on the translucency effect, reduces the translucency effect in shadowed areas.
+- Strength: Translucency effect strength, you can think of it as a multiplier slider.
+- Normal Distortion: Defines the amount of normal distortion on the translucency effect.
+- Scattering Falloff: Scattering falloff amount for the translucency effect.
+- Direct: Direct light influence on the translucency effect.
+- Ambient: GI/ambient light influence on the translucency effect.
+- Shadow: Self-shadowing influence on the translucency effect, reduces the translucency effect in shadowed areas.
 
 ## Your First shader
 
@@ -378,17 +456,13 @@ The original Substance example had to be packaged into a Unity package since .sb
 
 
 If you're using **pre-Unity 2018** versions where native Substance support wasn't yet deprecated, you can find the Substance Example below:
-
 - Go into the *AmplifyShaderEditor\Examples\Official\Substance* folder
 - Extract the **LegacySubstanceExample.unitypackage**
 
-
 If you're using **Unity 2018**, you'll need to make sure that you install the Allegorithmic Substance plugin before you extract the proper ASE package:
-
 - Download, import and setup the [Substance in Unity](https://assetstore.unity.com/packages/tools/utilities/substance-in-unity-110555?aid=1011lPwI&pubref=Wiki)
 - Go into the *AmplifyShaderEditor\Examples\Official\Substance2018* folder
 - Extract the **Substance2018.unitypackage**
-
 
 ASE lets you use substances directly or indirectly from within the editor. The most basic way to use a substance is to literally drag and drop a substance asset inside the editor. A new [Substance Sample](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Substance_Sample) node will be created with it's various textures inside that can be used anywhere.
 
@@ -470,7 +544,8 @@ It this image extreme example every special lighting feature is turned off and e
 
 ASE allows the creation of custom lighting model shaders for the built-in renderer. These are still unity surface shaders that allow the replacement of unity lighting functions. In ASE this means you can set your shader Light Model into custom lighting. Doing this will transform the main output node into one that only has emission and opacity ports. With this it's possible to use existing nodes with some extra light nodes to create an optimized and tailor fitted shader for a specific purpose.
 
-The following image shows how it's possible to create a simple wrapped Lambertian shader which should be very performant for lower end machines. ![img](http://amplify.pt/wp-content/uploads/2018/07/CustomLightingExample.jpg) Nodes used: [Texture Sample](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Texture_Sample), [World Normal](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/World_Normal), [World Space Light Dir](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/World_Space_Light_Dir), [Dot](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Dot), [Multiply](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Multiply) [Float](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Float), [Add](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Add)
+The following image shows how it's possible to create a simple wrapped Lambertian shader which should be very performant for lower end machines. ![img](http://amplify.pt/wp-content/uploads/2018/07/CustomLightingExample.jpg) 
+Nodes used: [Texture Sample](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Texture_Sample), [World Normal](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/World_Normal), [World Space Light Dir](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/World_Space_Light_Dir), [Dot](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Dot), [Multiply](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Multiply) [Float](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Float), [Add](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Add)
 
 Combine this with the previous rendering options for extra savings and do notice how in the general options a few of them where turned off or down for better performance (ie: Shader Model, Precision, Cast Shadows)
 
@@ -484,7 +559,8 @@ There's a whole page dedicated on how these templates work and how you can build
 
 The reason they might be important for mobile shaders is that these templates can be extremely simple with barely any code at all. If the idea is to save performance, a generic unlit template can serve as a base to build upon since these are editable inside the editor and extra features can be added either by construction a more complex graph tree or by editing the original template. The only caveat being the user must have a bit of shader knowledge to edit or create the original template shader. Fortunately ASE already provides a few templates that any user can pick and use as any other shader.
 
-![img](http://amplify.pt/Nodes/MasterNode/TemplateExample.jpg) Nodes used: [Template Parameter](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Template_Parameter), [Texture Sample](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Texture_Sample), [Grayscale](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Grayscale), [Float](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Float), [Lerp](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Lerp)
+![img](http://amplify.pt/Nodes/MasterNode/TemplateExample.jpg) 
+Nodes used: [Template Parameter](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Template_Parameter), [Texture Sample](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Texture_Sample), [Grayscale](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Grayscale), [Float](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Float), [Lerp](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Lerp)
 
 This feature is still in development and more of these templates will be provided in the future to implement more complex or specific effects when they become available.
 
@@ -495,7 +571,6 @@ When using the Texture Sampler node in ASE and the target platform is Android, i
 Although this can be fixed by directly changing the built-in shader files, which is troublesome to do and to maintain, a simpler solution would be to do the exact same calculation that Unity does withing the editor itself.
 
 The following image and shader file perform this calculation while also making sure that the shader still works even outside of the Android environment by checking the define symbol that Unity sets itself. We recommend that you create a Shader Function with this logic if you need to use it in several shaders.
-
 
 [Normal Scale in Android](http://amplify.pt/wp-content/download/NormalScaleInAndroid.zip)
 
