@@ -6,9 +6,17 @@ title: Hobbies
 
 # Hobbies
 
-## Drawing
-
 I like to try various painting tools. For example, sketch, colored pencils, watercolors, oil painting sticks and Procreate.
+
+{% for image in site.static_files %}
+    {% if image.path contains 'images/hobbies' %}
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+    {% endif %}
+{% endfor %}
+
+
+
+
 
 <div class="third">
 <img src="/images/hobbies/elf.jpg" >
