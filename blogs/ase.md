@@ -84,7 +84,7 @@ ASE Shader可以直接在项目选项卡中创建，或者通过Assets > Create 
 
 在版本v1.6.8.002中，你现在可以使用相机按钮拍摄你的着色器的完整画布截图。此外，您还可以通过使用链接共享按钮, 将链接直接复制和粘贴到画布中来共享节点。
 
-![QeTFBpR.gif](https://i.imgur.com/QeTFBpR.gif) 
+![QeTFBpR.gif](./ase.assets/QeTFBpR.gif) 
 
 7. 按住快捷键并单击画布上的任意位置以创建新节点。快捷键显示在[ ]中，位于选项卡上它们各自的节点名称的前面（jack:实际是后面）。例如：键“1”表示浮点，键“5”表示颜色节点。
 
@@ -356,7 +356,7 @@ Shaders可以通过单击着色器“inspector”面板上的“Open in Shader E
 
 ### 多线显示模式
 
-![LsGX8pv.gif](http://i.imgur.com/LsGX8pv.gif)
+![LsGX8pv.gif](./ase.assets/LsGX8pv.gif)
 
 使用 [ CTRL + W ] 来开关多线显示模式
 
@@ -399,7 +399,7 @@ Shaders可以通过单击着色器“inspector”面板上的“Open in Shader E
 
 半透明输入提供了一种快速表示光散射的方法。这不是最现实的方法，但它是一个灵活和快速执行的近似。在我们的例子中，见（AmplifyShaderEditor\Examples\Official\Translucency）。我们使用一个简单的红色颜色深度纹理表示皮肤地下散射效果，但你不一定需要使用相同的设置，你很可能插入一个完整的RGB纹理和半透明纹理，得到一些颜色变化或风格化的结果。
 
-![uTq4P7T.gif](http://i.imgur.com/uTq4P7T.gif)
+![uTq4P7T.gif](./ase.assets/uTq4P7T.gif)
 
 **当您将值插入半透明输入端口时，以下材质属性将自动添加到着色器中**
 
@@ -438,15 +438,15 @@ Shaders可以通过单击着色器“inspector”面板上的“Open in Shader E
 
 6. 通过从节点选项板中，拖放它来创建一个Float节点，并将其连接到Lerp节点的Alpha端口。在新创建的浮点数的节点属性中，将其最小值设置为0，将最大值设置为1。请注意，Float现在可以由滑块控制。不要忘记将其参数类型设置为Property，这样您就可以直接在材质中更改它。您还可以命名节点，通过调整“order index”值，并更改其在材质检查器中的位置。（jack:新版在输出节点最下面的Material Properties中调节）
 
-![ASE_m_18.jpg](http://amplify.pt/wp-content/uploads/2016/09/ASE_m_18.jpg)
+![ASE_m_18.jpg](./ase.assets/ASE_m_18.jpg)
 
 7. 创建一个新的Float，并将其连接到输出节点的"Smoothness"输入端口，将其最小值设置为0，最大值设置为1。将其类型设置为Property，并将其命名为Smoothness Level Value。创建另一个Float,并将其连接到Specular输入端口，将其最小值设置为0，最大值设置为1。将其类型设置为Property，并将其命名为Specular Level Value。
 
-![ASE_m_19.jpg](http://amplify.pt/wp-content/uploads/2016/09/ASE_m_19.jpg)
+![ASE_m_19.jpg](./ase.assets/ASE_m_19.jpg)
 
 8. 最后，请将Normal贴图纹理从项目浏览器中直接拖放到画布中。举例，我们使用了一个拉丝金属纹理。将其连接到输出节点的正常输入端口，您就完成了。你刚刚建立了你的第一个shader，不要忘记定期通过点击位于左上角的update按钮来保存你的工作。或者，您可以编辑启用了LIVE模式的着色器，任何更改都会立即保存和更新。根据着色器的复杂性，LIVE模式可能需要几秒钟左右才能更新。与默认的着色器值相反，任何对材质属性的更改都会立即可见。
 
-![ASE_m_20.jpg](http://amplify.pt/wp-content/uploads/2016/09/ASE_m_20.jpg) 
+![ASE_m_20.jpg](./ase.assets/ASE_m_20.jpg) 
 
 ## 3rd-Party Compatibility
 
@@ -462,7 +462,7 @@ Shaders可以通过单击着色器“inspector”面板上的“Open in Shader E
 
 在ASE中增加了对Unity 2018及以上物质的支持。[Substances](https://www.allegorithmic.com/substance) 
 
-![Tv4Hllq.gif](https://i.imgur.com/Tv4Hllq.gif)
+![Tv4Hllq.gif](./ase.assets/Tv4Hllq.gif)
 
 原始的Substance例子打包到一个Unity包中，因为.sbsar文件现在在Unity 2018中导致导入错误。对Substance的支持已被删除。
 
@@ -487,102 +487,106 @@ ASE允许您直接或间接地从编辑器内部使用物质。使用物质最�
 
 ### Curved World Shaders
 
-This guide will show you how to integrate [Curved World](https://www.assetstore.unity3d.com/en/#!/content/26165?aid=1011lPwI&pubref=Wiki) with the [Amplify Shader Editor](https://www.assetstore.unity3d.com/en/#!/content/68570?aid=1011lPwI&pubref=Wiki).
-You may download a simple example [here](http://amplify.pt/wp-content/download/CurvedWorldSample_ASE.unitypackage).
+这份说明告诉你如何集成[Curved World](https://www.assetstore.unity3d.com/en/#!/content/26165?aid=1011lPwI&pubref=Wiki) ，见 [Amplify Shader Editor](https://www.assetstore.unity3d.com/en/#!/content/68570?aid=1011lPwI&pubref=Wiki).
+这是一个例子 [here](http://amplify.pt/wp-content/download/CurvedWorldSample_ASE.unitypackage).
 
 
 ![ASE_m_23.png](./ase.assets/ASE_m_23.png)
 
-1. For the first step, we're going to include the **curvedworld.cginc** file. In the image above, notice how we added the include with the string: "../cginc/CurvedWorld_Base.cginc", this is because our shader file was in a folder next to the cginc folder where the file is, so the "../" part of the string goes up one folder, the "/cginc/" part looks inside the cginc folder and the last part is the file itself. You could simply use "CurvedWorld_Base.cginc" IF your shader file was next to this file.
+1. 首先，包含curvedworld.cginc文件。在上面的图片中，注意我们如何添加的字符串：“../cginc/CurvedWorld_Base.cginc”，这是因为我们的shader文件，与cginc文件夹在一层，所以“..”字符串的一部分向上一个文件夹，“/cginc/”部分在cginc文件夹中，最后一部分是文件本身。如果你的着色器文件与这个文件在一起，你可以简单地使用“CurvedWorld_Base.cginc”。
 
-*Note: You have to be careful with this inclusion because Unity doesn't let you automatically detect where the file is by name, you have to specify the file path. If you happen to move the file to a different folder you have to fix the file path and recompile the shader again or else it will fail to include the file.* (Alternatively you can also use a project based absolute path: "Assets/VacuumShaders/Curved World/Shaders/cginc/CurvedWorld_Base.cginc". In this case you will only have to fix the path in case you move the Curved World Shader folder.)'
+*注意：您必须小心这个include，因为Unity不允许您自动检测文件名称的位置，您必须指定文件路径。如果你碰巧将文件移动到一个不同的文件夹，你必须修复文件路径并重新编译着色器，否则它将无法包含该文件。* (或者，你也可以使用一个基于项目的绝对路径：“Assets/VacuumShaders/Curved World/Shaders/cginc/CurvedWorld_Base.cginc”。在这种情况下，您只需要在移动“Curved World Shader ”这个文件夹来修复路径。)”
 
-![ASE_m_24.png](http://amplify.pt/wp-content/uploads/2017/08/ASE_m_24.png)
+![ASE_m_24.png](./ase.assets/ASE_m_24.png)
 
-2. Secondly, in order to apply the curved world effect to the object with your shader, you need to call its own Function, which is within the file we included in the first step. To achieve this, you must create and connect a custom expression node into the "local vertex offset" output and have it call the Function you want to call in the code box, which in this case is "V_CW_TransformPointAndNormal(v.vertex, v.normal,v.tangent);". Notice the "Call Mode" checkbox in the parameters panel, it needs to be toggled on in order for this step to work without any issues.
+2. 其次，为了将“curved world effect”与shader应用到对象上，您需要调用它自己的函数，它在我们在第一步中包含的文件中。要实现这一点，您必须创建并连接一个自定义表达式节点到“local vertex offset”输出，在调用代码框中调用需要的函数，在本例中使用的是“V_CW_TransformPointAndNormal（v.vetex，v.normal，v.tangent）。注意参数面板中的“call mode”复选框，它需要被打开。
 
-*Note: Should you need to do some vertex transformation, you can still connect it to the input of the Function node.*
+*注意：如果您需要做一些顶点转换，您仍然可以将它连接到函数节点的输入。*
 
-That's it! Now you can use everything else like you would in a normal ASE shader and it should work in curved world!
+就是这样！现在你可以使用一切，就像你在ASE中一样，在“Curve world”中工作！
 
 ### VertExmotion
 
-The [VertExmotion](https://assetstore.unity.com/packages/tools/animation/vertexmotion-23930?aid=1011lPwI&pubref=Wiki) package includes built-in nodes for ASE. Be sure that the shader name begins with "VertExmotion/", followed by your shader name, else it wont be recognized as being compatible.
+[VertExmotion](https://assetstore.unity.com/packages/tools/animation/vertexmotion-23930?aid=1011lPwI&pubref=Wiki) 软件包包含了所有Build-in的ASE节点。确保着色器名称以“VertExmotion/”开头，后跟着色器名称，否则它不会被识别和兼容。
 
-1.Unpack the file 'VertExmotion/Addon/VertExmotion_AmplifyShaderEditorNodes.unitypackage'.
+1. 解压软件包： 'VertExmotion/Addon/VertExmotion_AmplifyShaderEditorNodes.unitypackage'.
 
-2. Add the VertExmotion node and connect it to the Local Vertex Offset Input port.
+2. 添加VertExmotion节点，并将其连接到Local Vertex Offset输入端口。
 
-![v2.jpg](http://amplify.pt/wp-content/uploads/2018/09/v2.jpg)
+![v2.jpg](./ase.assets/v2.jpg)
 
-3. Set the Vertex Output to 'Relative' in the Output Node parameters.
+3. 在Output Node的参数中，设定为'Relative' 。
 
-![v3.jpg](http://amplify.pt/wp-content/uploads/2018/09/v3.jpg)
+![v3.jpg](./ase.assets/v3.jpg)
 
-4. Add the VertExmotion cginc file (Assets/VertExmotion/Shaders/VertExmotion.cginc) under Additional Directives, Includes.
+4. 添加VertExmotion cginc文件(Assets/VertExmotion/Shaders/VertExmotion.cginc) 到 Additional Directives中去.
 
 ![v1.jpg](http://amplify.pt/wp-content/uploads/2018/09/v1.jpg)
 
-5. If you're using tessellation, be sure to add the VertExmotion (Advanced NC) node; plug both the Vertex Offset and Normal to the Output Node inputs. (Optional)
+5. 如果你使用tessellation, 保证添加了VertExmotion (Advanced NC) node，连接Vertex Offset and Normal 到Output Node的inputs节点. 
 
-![v4.jpg](http://amplify.pt/wp-content/uploads/2018/09/v4.jpg)
+![v4.jpg](./ase.assets/v4.jpg)
 
-6. HD SRP variant included. (Optional)
+6. 可以使用HD SRP 可以使用。
 
-![v5.jpg](http://amplify.pt/wp-content/uploads/2018/09/v5.jpg)
+![v5.jpg](./ase.assets/v5.jpg)
 
-## General Tips
+## 一般提示
 
 ### Mobile Shaders
 
-When creating shaders for mobile there are some special considerations to take into account. Usually these considerations are tied to the performance of the shader but sometimes there are artistic or design choices that lead to modifications that are needed at the shader level.
+当为移动设备，创建着色器时，需要一些特殊的考虑。通常这些考虑与着色器的性能有关，但有时会有艺术或设计选择，导致在着色器级别上需要的修改。
 
-These are just the most common way you may find useful to create shaders for mobile:
+这些是为移动设备，创建着色器最常见方法：
 
-#### Rendering Options
+#### Rendering Options（渲染选项）
 
-Often overlooked, rendering options let you turn off some key feature of unity lighting system. For example, you may find to be enough for your purpose to turn off Unity GI system but still maintaining their PBR workflow.
+经常被忽视的是，渲染选项可以让你关闭统一照明系统的一些关键功能。例如，您可能会发现关闭Unity GI系统也可以，但仍然使用PBR工作流。
 
-![RenderingOptionsMobile.jpg](http://amplify.pt/Nodes/MasterNode/RenderingOptionsMobile.jpg)
 
-It this image extreme example every special lighting feature is turned off and even shadows are off. This might not be what what's needed, but it's a good starting point.
+![RenderingOptionsMobile.jpg](./ase.assets/RenderingOptionsMobile.jpg)
 
-#### Custom Lighting Model
+在这个图里，这是个极端的例子，shadow的特性被关闭。这不一定是你需要的，但是一个很好的开始。
 
-**Attention** Custom Lighting is only available for the Universal and Built-in Renderer. Universal Custom Lighting has specific requirements which make use of the "SRP Additional Light" Node, please check this stream and example files for additional details: Dev Stream #4 - [Outline Toon Shading in LW/URP](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Tutorials/Amplify_Streams#Amplify_Creations_Dev_Stream_.234_-_Outline_Toon_Shading_in_LW.2FURP)
+#### Custom Lighting Model （自定义光模型）
+
+**注意** 自定义照明只适用于upr和build-in渲染器。通用定制照明有使用“SRP Addtional light”节点的特定要求，请查看此流和示例文件以了解更多细节: Dev Stream #4 - [Outline Toon Shading in LW/URP](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Tutorials/Amplify_Streams#Amplify_Creations_Dev_Stream_.234_-_Outline_Toon_Shading_in_LW.2FURP)
 
 ------
 
-ASE allows the creation of custom lighting model shaders for the built-in renderer. These are still unity surface shaders that allow the replacement of unity lighting functions. In ASE this means you can set your shader Light Model into custom lighting. Doing this will transform the main output node into one that only has emission and opacity ports. With this it's possible to use existing nodes with some extra light nodes to create an optimized and tailor fitted shader for a specific purpose.
+ASE允许为内置渲染器创建照明模型build-in着色器。这些仍然是统一表面着色器，允许替换统一照明功能。在ASE中，这意味着您可以将您的着色器灯光模型设置为自定义照明。这样做将把main输出节点转换为一个只有emission端口和opacity端口的节点。有了这一点，就可以使用现有的节点和一些额外的光节点，来创建一个针对特定目的优化和定制着色器。
 
-The following image shows how it's possible to create a simple wrapped Lambertian shader which should be very performant for lower end machines. ![img](http://amplify.pt/wp-content/uploads/2018/07/CustomLightingExample.jpg) 
-Nodes used: [Texture Sample](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Texture_Sample), [World Normal](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/World_Normal), [World Space Light Dir](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/World_Space_Light_Dir), [Dot](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Dot), [Multiply](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Multiply) [Float](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Float), [Add](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Add)
+下面的图片展示了如何可能创建一个简单的wrapped Lambertian着色器，适合低端性能的机器。
 
-Combine this with the previous rendering options for extra savings and do notice how in the general options a few of them where turned off or down for better performance (ie: Shader Model, Precision, Cast Shadows)
+![img](./ase.assets/CustomLightingExample-1690180000473-3.jpg) 
+节点包括: [Texture Sample](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Texture_Sample), [World Normal](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/World_Normal), [World Space Light Dir](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/World_Space_Light_Dir), [Dot](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Dot), [Multiply](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Multiply) [Float](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Float), [Add](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Add)
 
-As a learning step, it might be a good idea to check the Toon Ramp sample provided by the ASE package which uses custom lighting in a more complex way to create a toon ramp effect with rim light and shadow support.
+与前面的渲染选项结合起来，以减少额外的性能消耗。并注意在一般选项中，如何关闭或调小它们以获得更好的性能（例如：Shader Model, Precision, Cast Shadows）
 
-#### Mobile Friendly Templates
+作为一个学习步骤，学习ASE例子包，比如，学习Toon Ramp sample一个好主意。以更复杂的方式使用自定义照明，来创建一个带有边缘光（rim）和阴影(shadow)支持的toon ramp效果。
 
-Some times what's needed is a specific vertex/frag shader that does a very simple job, for instance, particles, sprites, UI, etc. For these cases and others ASE allows the injection of shader code into pre-existing shaders that we call "templates". These are regular vertex/frag shaders that were modified by adding some tags the editor can read to know where to inject new code and what code already exists in the template.
+#### Mobile Friendly Templates （好用的移动模板）
 
-There's a whole page dedicated on how these templates work and how you can build your own [right here](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Templates).
+有时，我们需要的是一个特定的vertex/frag着色器，它可以做一个非常简单的工作。例如，粒子，精灵，UI等。对于这些情况和其他，ASE允许将着色器代码注入到已存在的着色器中，我们称之为“模板”。这些是常规的vertex/frag着色器，通过添加一些编辑器可读的标记来进行修改。这样编辑器知道在哪里注入新代码以及模板中已经存在的代码。
 
-The reason they might be important for mobile shaders is that these templates can be extremely simple with barely any code at all. If the idea is to save performance, a generic unlit template can serve as a base to build upon since these are editable inside the editor and extra features can be added either by construction a more complex graph tree or by editing the original template. The only caveat being the user must have a bit of shader knowledge to edit or create the original template shader. Fortunately ASE already provides a few templates that any user can pick and use as any other shader.
+有一个整个页面专门介绍这些模板如何工作，以及如何构建自己的模板[这里](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Templates).
 
-![img](http://amplify.pt/Nodes/MasterNode/TemplateExample.jpg) 
-Nodes used: [Template Parameter](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Template_Parameter), [Texture Sample](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Texture_Sample), [Grayscale](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Grayscale), [Float](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Float), [Lerp](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Lerp)
+它们对移动着色器来说很重要的原因是这些模板可以非常简单，几乎没有任何代码。如果出发点是为了保住性能，一个通用的无照明模板可以作为一个基础，因为它们在编辑器中是可编辑的，并且额外的特性可以通过构建一个更复杂的图树或编辑原始模板来添加。唯一需要注意的是，用户必须有一点着色器知识来编辑或创建原始模板着色器。幸运的是，ASE已经提供了一些模板，任何用户都可以选择和使用作为任何其他着色器。
 
-This feature is still in development and more of these templates will be provided in the future to implement more complex or specific effects when they become available.
+![img](./ase.assets/TemplateExample.jpg) 
+节点使用: [Template Parameter](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Template_Parameter), [Texture Sample](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Texture_Sample), [Grayscale](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Grayscale), [Float](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Float), [Lerp](http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Lerp)
+
+这个特性仍在开发中，将来将提供更多这样的模板，以便在它们可用时实现更复杂或更具体的效果。
 
 ### Android
 
-When using the Texture Sampler node in ASE and the target platform is Android, it will ignore the Scale Parameter, which is an intended behaviour because Unity does not scale normal maps for platforms that don't support DXT5nm format, which is the format Unity compresses normal maps into.
+当使用ASE的Texture Sampler节点，目标平台是Android时，它将忽略比例参数，这是一个预期的行为。因为Unity不支持DXT5nm格式的平台，即Unity压缩normal纹理。 
 
-Although this can be fixed by directly changing the built-in shader files, which is troublesome to do and to maintain, a simpler solution would be to do the exact same calculation that Unity does withing the editor itself.
+虽然这可以通过直接更改build-in着色器文件来解决，这做和维护很麻烦。一个更简单的解决方案是做与Unity处理编辑器本身完全相同的计算。
 
-The following image and shader file perform this calculation while also making sure that the shader still works even outside of the Android environment by checking the define symbol that Unity sets itself. We recommend that you create a Shader Function with this logic if you need to use it in several shaders.
+下面的图像和着色器文件执行此计算，同时通过检查Unity自己设置的定义符号，确保着色器即使在安卓环境之外仍然可以工作。如果需要在多个着色器中使用它，我们建议您使用此逻辑创建一个着色器函数。
 
 [Normal Scale in Android](http://amplify.pt/wp-content/download/NormalScaleInAndroid.zip)
 
-![img](http://amplify.pt/wp-content/uploads/2017/09/ASE_m_25.png)
+![img](./ase.assets/ASE_m_25.png)
+
