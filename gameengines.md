@@ -30,13 +30,13 @@ I rewrote the surface shader for practice with the gun model, compared it with t
 ![](images/ge/gunPBR.jpg)
 
 ### Cartoon Shader
-I follow GuiltyGear Xrd's Art Style PPT and construct a cartoon shader, which includes diffuse, specular, shading, outline and correct color at last.  
 ![](images/ge/fightplay.gif)
+I follow GuiltyGear Xrd's Art Style PPT and construct a cartoon shader, which includes diffuse, specular, shading, outline and correct color at last. 
 
 <div class="third">
-<img src="/images/ge/figtht1.jpg">
-<img src="/images/ge/figtht2.jpg">
-<img src="/images/ge/figtht3.jpg">
+<img src="/images/ge/fight1.jpg">
+<img src="/images/ge/fight2.jpg">
+<img src="/images/ge/fight3.jpg">
 </div>
 
 ## Stylized Material with SD
