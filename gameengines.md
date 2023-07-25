@@ -26,16 +26,21 @@ title: Game Engines
 This is my interesting shader collections. You can get them from here [[**download**](https://github.com/swang81/JackUnityShaders/)]
 
 ### PBR Shader
-
 I rewrote the surface shader for practice with the gun model, compared it with the original one and got similar results. It is very friendly for new learners. It has a lot of comments for you. 
 ![](images/ge/gunPBR.jpg)
 
 ### Cartoon Shader
+I follow GuiltyGear Xrd's Art Style PPT and construct a cartoon shader, which includes diffuse, specular, shading, outline and correct color at last.  
 ![](images/ge/fightplay.gif)
 
-
+<div class="third">
+<img src="/images/ge/figtht1.jpg">
+<img src="/images/ge/figtht2.jpg">
+<img src="/images/ge/figtht3.jpg">
+</div>
 
 ## Stylized Material with SD
+
 This is a demonstration of the results of the  SD stylized Material practice. Various elements will be added later. 
 ![](images/ge/sd1.jpg)
 ![](images/ge/sd2.jpg)
