@@ -4,7 +4,7 @@ permalink: /gameengines/index.html
 title: Game Engines
 ---
 
-# Game Techniques
+# TA Techniques
 
 ## Unity Shader
 
@@ -12,10 +12,12 @@ This is my shader demos. You can get them from here [[**download**](https://gith
 
 ### PBR Shader
 I rewrite the surface shader, compared it with the surface shader and got similar results.
-<div class="third">
+
+<div >
 <img src="/images/ge/gunPBR.jpg">
 </div>
 <br>
+
 ### Cartoon Shader
 I follow GuiltyGear Xrd's Art Style PPT and construct a cartoon shader, which includes diffuse, specular, shading, outline and correct color at last. 
 
@@ -48,18 +50,18 @@ Here we use Oculus Quest 2 + VDS(Virtual Desktop Streamer) + UE4 to build a VR L
 
 ### Some DCC Demos
 
-<div class="third">
+<div class="second">
 <img src="/images/ge/pbrgun1.jpg">
 <img src="/images/ge/tower.jpg">
 </div>
-<div class="third">
+<div class="second">
 <img src="/images/ge/plug.jpg">
 <img src="/images/ge/girl.jpg">
 </div>
 
 ### PBR Workflow
 
-<div class="third">
+<div >
 <img src="/images/ge/pbrgun2.jpg">
 </div>
 
@@ -70,7 +72,7 @@ It is a wasteland style gun based on very popular PBR workflow. You can get it f
 ### Stylized Material with SD
 
 This is a demonstration of the results of the  SD stylized Material practice. Various elements will be added later. 
-<div class="third">
+<div class="second">
 <img src="/images/ge/sd1.jpg">
 <img src="/images/ge/sd2.jpg">
 </div>
