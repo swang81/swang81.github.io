@@ -8,22 +8,26 @@ title: Game Engines
 
 ## Unity Shader
 
-This is my interesting shader collections. You can get them from here [[**download**](https://github.com/swang81/JackUnityShaders/)]
+This is my shader demos. You can get them from here [[**download**](https://github.com/swang81/JackUnityShaders/)]
 
 - ### PBR Shader
 
-I rewrote the surface shader for practice with the gun model, compared it with the original one and got similar results. It is very friendly for new learners. It has a lot of comments for you. 
+I rewrite the surface shader, compared it with the surface shader and got similar results.
+
 ![](images/ge/gunPBR.jpg)
 
 - ### Cartoon Shader
-![](images/ge/fightplay.gif)
-I follow GuiltyGear Xrd's Art Style PPT and construct a cartoon shader, which includes diffuse, specular, shading, outline and correct color at last. 
 
 <div class="third">
 <img src="/images/ge/fight1.jpg">
 <img src="/images/ge/fight2.jpg">
 <img src="/images/ge/fight3.jpg">
 </div>
+
+<iframe src="//player.bilibili.com/player.html?bvid=BV1fh4y1V7gM&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+I follow GuiltyGear Xrd's Art Style PPT and construct a cartoon shader, which includes diffuse, specular, shading, outline and correct color at last. 
+
 
 - ### Amplify Shader Pack Chinese Manual
 Here I translated the ASE manual to Chinese. Please see [here](/blogs/ase). 
@@ -34,6 +38,7 @@ Here I translated the ASE manual to Chinese. Please see [here](/blogs/ase).
 - ### UE4 FPS
 
 <iframe src="//player.bilibili.com/player.html?bvid=BV1bP411k7mN&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 
 - ### UE VR Laser Sword
 
@@ -48,6 +53,9 @@ Here we use Oculus Quest 2 + VDS(Virtual Desktop Streamer) + UE4 to build a VR L
 <div class="third">
 <img src="/images/ge/pbrgun1.jpg">
 <img src="/images/ge/tower.jpg">
+</div>
+<br>
+<div class="third">
 <img src="/images/ge/plug.jpg">
 <img src="/images/ge/girl.jpg">
 </div>
