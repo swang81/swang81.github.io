@@ -16,9 +16,9 @@ I rewrite the surface shader, compared it with the surface shader and got simila
 <div >
 <img src="/images/ge/gunPBR.jpg">
 </div>
-<br>
 
-### Cartoon Shader
+<br>
+### Toon Shader:Character
 I follow GuiltyGear Xrd's Art Style PPT and construct a cartoon shader, which includes diffuse, specular, shading, outline and correct color at last. 
 
 <div class="third">
@@ -29,6 +29,14 @@ I follow GuiltyGear Xrd's Art Style PPT and construct a cartoon shader, which in
 
 <iframe src="//player.bilibili.com/player.html?bvid=BV1fh4y1V7gM&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
+<br>
+### Toon Shader:Water
+This is a toon style water shader and use techniques: shoreline foam, depth-based coloring and surface waves.
+
+
+
+
+<br>
 ### Amplify Shader Pack Chinese Manual
 Here I translated the ASE manual to Chinese. Please see [here](/blogs/ase). 
 
@@ -40,6 +48,7 @@ Here I translated the ASE manual to Chinese. Please see [here](/blogs/ase).
 
 ### UE VR Laser Sword
 Here we use Oculus Quest 2 + VDS(Virtual Desktop Streamer) + UE4 to build a VR Laser sword demo game.  All logic are base on blueprint. All renderings are done by the host and transmitted through VDS.
+
 [**Please, see here about how to setup the VR develop enviroment for Oculus Quest2**](/blogs/quest2)
 
 <iframe src="//player.bilibili.com/player.html?bvid=BV1Q94y1B7RT&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -58,7 +67,7 @@ Here we use Oculus Quest 2 + VDS(Virtual Desktop Streamer) + UE4 to build a VR L
 <img src="/images/ge/plug.jpg">
 <img src="/images/ge/girl.jpg">
 </div>
-
+<br>
 ### PBR Workflow
 
 <div >
