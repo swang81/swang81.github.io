@@ -10,13 +10,13 @@ title: Game Engines
 
 This is my shader demos. You can get them from here [[**download**](https://github.com/swang81/JackUnityShaders/)]
 
-- ### PBR Shader
-
+### PBR Shader
 I rewrite the surface shader, compared it with the surface shader and got similar results.
 
 ![](images/ge/gunPBR.jpg)
 
-- ### Cartoon Shader
+### Cartoon Shader
+I follow GuiltyGear Xrd's Art Style PPT and construct a cartoon shader, which includes diffuse, specular, shading, outline and correct color at last. 
 
 <div class="third">
 <img src="/images/ge/fight1.jpg">
@@ -26,22 +26,16 @@ I rewrite the surface shader, compared it with the surface shader and got simila
 
 <iframe src="//player.bilibili.com/player.html?bvid=BV1fh4y1V7gM&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-I follow GuiltyGear Xrd's Art Style PPT and construct a cartoon shader, which includes diffuse, specular, shading, outline and correct color at last. 
-
-
-- ### Amplify Shader Pack Chinese Manual
+### Amplify Shader Pack Chinese Manual
 Here I translated the ASE manual to Chinese. Please see [here](/blogs/ase). 
 
-
 ## Game Live Demo
-
-- ### UE4 FPS
+### UE4 FPS
 
 <iframe src="//player.bilibili.com/player.html?bvid=BV1bP411k7mN&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
-- ### UE VR Laser Sword
-
+### UE VR Laser Sword
 Here we use Oculus Quest 2 + VDS(Virtual Desktop Streamer) + UE4 to build a VR Laser sword demo game.  All logic are base on blueprint. All renderings are done by the host and transmitted through VDS.
 - [Please, see here about how to setup the VR develop enviroment for Oculus Quest2](/blogs/quest2)
 
@@ -49,7 +43,8 @@ Here we use Oculus Quest 2 + VDS(Virtual Desktop Streamer) + UE4 to build a VR L
 
 ## DCC Workflow
 
-- ### Some DCC Demos
+### Some DCC Demos
+
 <div class="third">
 <img src="/images/ge/pbrgun1.jpg">
 <img src="/images/ge/tower.jpg">
@@ -60,15 +55,17 @@ Here we use Oculus Quest 2 + VDS(Virtual Desktop Streamer) + UE4 to build a VR L
 <img src="/images/ge/girl.jpg">
 </div>
 
-- ### PBR Workflow
+### PBR Workflow
 
 <div class="third">
 <img src="/images/ge/pbrgun2.jpg">
 </div>
+
 It is a wasteland style gun based on very popular PBR workflow. You can get it from here [[**download**](https://github.com/swang81/MyModels/)]. It contains FBX and all Textures for Unity. The main workflow is as follows: Modeling / UV Editing / Baking / Texturing / Rendering. 
 
 
-- ### Stylized Material with SD
+### Stylized Material with SD
+
 This is a demonstration of the results of the  SD stylized Material practice. Various elements will be added later. 
 <div class="third">
 <img src="/images/ge/sd1.jpg">
