@@ -17,6 +17,7 @@ I rewrite the surface shader, compared it with the surface shader and got simila
 <img src="/images/ge/gunPBR.jpg">
 </div>
 
+
 <br>
 ### Toon Shader:Character
 I follow GuiltyGear Xrd's Art Style PPT and construct a cartoon shader, which includes diffuse, specular, shading, outline and correct color at last. 
@@ -31,13 +32,16 @@ I follow GuiltyGear Xrd's Art Style PPT and construct a cartoon shader, which in
 
 <br>
 ### Toon Shader:Water
-This is a toon style water shader and use techniques: shoreline foam, depth-based coloring and surface waves.
+This is a toon style water shader and use techniques: depth-based mixed coloring, noise texuture and transparent blending. 
 
+<iframe src="//player.bilibili.com/player.html?bvid=BV1sh4y1c7B4&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 
 <br>
+
 ### Amplify Shader Pack Chinese Manual
+
 Here I translated the ASE manual to Chinese. Please see [here](/blogs/ase). 
 
 ## Game Live Demo
@@ -59,8 +63,9 @@ Here we use Oculus Quest 2 + VDS(Virtual Desktop Streamer) + UE4 to build a VR L
 
 ### Some DCC Demos
 
+<iframe src="//player.bilibili.com/player.html?bvid=BV1g14y167gR&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+<br>
 <div class="second">
-<img src="/images/ge/pbrgun1.jpg">
 <img src="/images/ge/tower.jpg">
 </div>
 <div class="second">
@@ -68,6 +73,7 @@ Here we use Oculus Quest 2 + VDS(Virtual Desktop Streamer) + UE4 to build a VR L
 <img src="/images/ge/girl.jpg">
 </div>
 <br>
+
 ### PBR Workflow
 
 <div >
