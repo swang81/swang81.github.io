@@ -36,8 +36,6 @@ This is a toon style water shader and use techniques: depth-based mixed coloring
 
 <iframe src="//player.bilibili.com/player.html?bvid=BV1sh4y1c7B4&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-
-
 <br>
 
 ### Amplify Shader Pack Chinese Manual
@@ -86,17 +84,20 @@ It is a wasteland style gun based on very popular PBR workflow. You can get it f
 
 ### Stylized Material with SD
 
-This is a demonstration of the results of the  SD stylized Material practice. Various elements will be added later. 
+This is my demonstration of the results of the  SD stylized Material practice. Various elements will be added later. 
 <div class="second">
 <img src="/images/ge/sd1.jpg">
 <img src="/images/ge/sd2.jpg">
 </div>
 <br>
 
+## Vulkan Learning
+
+- This is the best [**Vulkan Tutorial**](https://vulkan-tutorial.com/). This tutorial will teach you the basics of using the Vulkan graphics and compute API. 
 
 ## Deep Learning
 
-- [how to setup the Pytorch enviroment](/blogs/buildpytorch)
+- [how to setup the Pytorch enviroment](/blogs/buildpytorch). I decribed the whole process for setting up the Pytorch enviroment. 
 
 
 
