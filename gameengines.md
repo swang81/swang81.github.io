@@ -4,13 +4,13 @@ permalink: /gameengines/index.html
 title: Game Engines
 ---
 
-# TA Techniques
+# Game Techniques
 
 ## Unity Shader
 
-This is my shader demos. You can get them from here [[**download**](https://github.com/swang81/JackUnityShaders/)]
+This is my shader demos. You can get them from here [[**download**](https://github.com/swang81/UnityShaderCollections)]
 
-### PBR Shader
+### PBR Shader(D01)
 I rewrite the surface shader, compared it with the surface shader and got similar results.
 
 <div >
@@ -19,7 +19,7 @@ I rewrite the surface shader, compared it with the surface shader and got simila
 
 
 <br>
-### Toon Shader:Character
+### Toon Shader:Character(D02)
 I follow GuiltyGear Xrd's Art Style PPT and construct a cartoon shader, which includes diffuse, specular, shading, outline and correct color at last. 
 
 <div class="third">
@@ -31,7 +31,7 @@ I follow GuiltyGear Xrd's Art Style PPT and construct a cartoon shader, which in
 <iframe src="//player.bilibili.com/player.html?bvid=BV1fh4y1V7gM&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 <br>
-### Toon Shader:Water
+### Toon Shader:Water(D03)
 This is a toon style water shader and use techniques: depth-based mixed coloring, noise texuture and transparent blending. 
 
 <iframe src="//player.bilibili.com/player.html?bvid=BV1sh4y1c7B4&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
