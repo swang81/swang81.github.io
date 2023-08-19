@@ -36,10 +36,10 @@ links:
     url: /
   - title: Publications
     url: /publications/
-  - title: Pre-Projects
-    url: /projects/
   - title: Game Projects
     url: /gameengines/
+  - title: Pre-Projects
+    url: /projects/
   - title: Hobbies
     url: /hobbies/
 
