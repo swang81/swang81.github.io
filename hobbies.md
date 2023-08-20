@@ -1,10 +1,10 @@
 ---
 layout: page
 permalink: /hobbies/index.html
-title: Hobbies
+title: Art Practice
 ---
 
-# Hobbies
+# Hand Drawing
 
 I like to try various painting tools. For example, sketch, colored pencils, watercolors, oil painting sticks and Procreate.
 
@@ -15,4 +15,3 @@ I like to try various painting tools. For example, sketch, colored pencils, wate
     {% endif %}
 {% endfor %}
 </div>
-
