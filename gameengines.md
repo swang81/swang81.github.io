@@ -8,6 +8,10 @@ title: Game Engines
 
 ## Game Demos
 
+### Unity3D VR Brush
+Use Oculus Quest2 + Oculus Integration package to setup a VR brush. You can change the color, brush size and paint freely.  
+<iframe src="//player.bilibili.com/player.html?bvid=BV1fX4y1x7bM&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 ### Unity3D VR Game
 Here I use Oculus Quest2 + SteamVR to develop a Archery demo game. You can shoot the balloon, wood and use the fire arrow. 
 <iframe src="//player.bilibili.com/player.html?bvid=BV1eu411J7NR&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -15,12 +19,12 @@ Here I use Oculus Quest2 + SteamVR to develop a Archery demo game. You can shoot
 ### Unity3D Mobile FPS Game
 <iframe src="//player.bilibili.com/player.html?bvid=BV11X4y1s7p6&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-### UE4 FPS Game
-<iframe src="//player.bilibili.com/player.html?bvid=BV1bP411k7mN&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
 ### UE4 VR Laser Sword Game
 Here I use Oculus Quest 2 + VDS + UE4 to build a VR Laser sword demo game. 
 <iframe src="//player.bilibili.com/player.html?bvid=BV1Q94y1B7RT&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+### UE4 FPS Game
+<iframe src="//player.bilibili.com/player.html?bvid=BV1bP411k7mN&page=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 
 ## Unity Shader Demos
