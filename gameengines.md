@@ -6,7 +6,13 @@ title: Game Engines
 
 # Game Projects
 
-## Unit3D Character Demo
+
+## Unity3D Particle System Demo
+
+Use Unity3D URP +  Particle System to setup the fires,  wind and lighting visual effect demos.
+<iframe src="//player.bilibili.com/player.html?bvid=BV1oF411678M&page=1&&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+## Unity3D Character Demo
 
 Use Unity3D URP render pipeline, cartoon bones and URP plane reflection algorithm to setup a character demo.  
 <iframe src="//player.bilibili.com/player.html?bvid=BV1fG411d7M8&page=1&&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
@@ -83,7 +89,6 @@ This is my demonstration of the results of the  SD stylized Material practice.
 <img src="/images/ge/sd1.jpg">
 <img src="/images/ge/sd2.jpg">
 </div>
-
 
 
 
