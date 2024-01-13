@@ -25,13 +25,15 @@ I am **Shuai Wang (Jack)**.
 ## Technical background
 
 + Solid foundation in mathematics and physics
-+ Unity Shader, OpenGL ES 
-+ Physics simulation, SLAM, ROS, OpenCV
++ Unity 3D and Unreal Engine 5 Programming 
++ Unity Shader and Effect 
++ Oculus Quest 2/3 API and MR feature development
++ Physics Simulation for Computer Graphic
++ SLAM, ROS, OpenCV, OpenGL
 + Deep learning, Python, PyTorch
 + C++, C#，Linux, Fortran
-+ Unity 3D, UE,  MR Game for Oculus Quest 2/3
-+ PBR workflow DCC tools: 3D Max, Maya, PS, SP, SD, Zbrush, VRED, C4D
-+ Hand drawing ability (PS, Procreate, oil painting stick, sketch, watercolor, sketch)
++ PBR workflow DCC tools: 3D Max, Maya, PS, SP, SD, ZBrush, VRED, C4D
++ Hand drawing ability 
 
 ## Honors and Awards
 
