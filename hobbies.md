@@ -17,7 +17,6 @@ I like to try various painting tools. For example, sketch, colored pencils, wate
     {% endif %}
 {% endfor %}
 </div>
-
 ## Water Color
 
 <div class="third">
@@ -59,7 +58,6 @@ I like to try various painting tools. For example, sketch, colored pencils, wate
     {% endif %}
 {% endfor %}
 </div>
-
 ## Zbrush
 
 <div class="third">
