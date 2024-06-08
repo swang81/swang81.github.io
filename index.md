@@ -10,19 +10,19 @@ layout: page
 
 I am **Shuai Wang (Jack)**. 
 
-## Study experience
+## Study Experience
 
 - 2010.09 - 2011.10 : Postdoctoral Fellow in Graphics (State Key Laboratory of CAD&CG), Zhejiang University
 - 2005.09 - 2010.07 : Ph. D. in Condensed Matter Physics (Master and Doctor), Chinese Academy of Sciences Institute of Physics
 - 1999.09 - 2003.07 : Bachelor of Applied Physics, Shenyang University of Technology
 
-## Work experience
+## Work Experience
 
-- 2021.05 - present: Technique Expert, Yi Sheng
+- 2021.05 - present: Technique Expert for game developing, Yi Sheng
 - 2011.11 - 2021.05: CEO of software business department, United Imaging Healthcare Technology Co., Ltd
 - 2003.07 - 2005.09: University Teacher, Shenyang University of Technology
 
-## Technical background
+## Technical Background
 
 + Solid foundation in mathematics and physics
 + Unity 3D and Unreal Engine 5 Programming 

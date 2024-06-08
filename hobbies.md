@@ -6,7 +6,18 @@ title: Art Practice
 
 # Art Practice
 
-I like to try various painting tools. For example, sketch, colored pencils, watercolors, oil painting sticks and Procreate.
+Practicing hand-drawing can enhance the aesthetic appreciation of games and create more diverse game art styles. Therefore, I try various painting tools to import my abilities. For example, 3D modeling tools, sketch, colored pencils, watercolors, oil painting sticks and Procreate.
+
+## 3D Modeling for Game Development
+
+<div class="third">
+{% for image in site.static_files %}
+    {% if image.path contains 'images/3dmodeling' %}
+        <img src="{{ site.baseurl }}{{ image.path }}" >
+    {% endif %}
+{% endfor %}
+</div>
+---
 
 ## Sketch
 
@@ -17,6 +28,8 @@ I like to try various painting tools. For example, sketch, colored pencils, wate
     {% endif %}
 {% endfor %}
 </div>
+---
+
 ## Water Color
 
 <div class="third">
@@ -26,6 +39,7 @@ I like to try various painting tools. For example, sketch, colored pencils, wate
     {% endif %}
 {% endfor %}
 </div>
+---
 
 ## Color Pencil
 
@@ -36,7 +50,7 @@ I like to try various painting tools. For example, sketch, colored pencils, wate
     {% endif %}
 {% endfor %}
 </div>
-
+---
 
 ## Oil Pastel
 
@@ -47,22 +61,13 @@ I like to try various painting tools. For example, sketch, colored pencils, wate
     {% endif %}
 {% endfor %}
 </div>
+---
 
-
-## ProCreate and PS
+## Procreate and PS
 
 <div class="third">
 {% for image in site.static_files %}
     {% if image.path contains 'images/ps' %}
-        <img src="{{ site.baseurl }}{{ image.path }}" >
-    {% endif %}
-{% endfor %}
-</div>
-## Zbrush
-
-<div class="third">
-{% for image in site.static_files %}
-    {% if image.path contains 'images/zbrush' %}
         <img src="{{ site.baseurl }}{{ image.path }}" >
     {% endif %}
 {% endfor %}
