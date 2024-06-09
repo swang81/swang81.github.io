@@ -65,21 +65,11 @@ This is a toon style water shader and use techniques: depth-based mixed coloring
 ## Amplify Shader Pack Chinese Manual
 Here I translated the ASE manual to Chinese. Please see [here](/blogs/ase). 
 
-## Some DCC Demos
-
-<iframe src="//player.bilibili.com/player.html?bvid=BV1g14y167gR&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-<br>
-<div class="second">
-<img src="/images/ge/tower.jpg">
-</div>
-<div class="second">
-<img src="/images/ge/plug.jpg">
-<img src="/images/ge/girl.jpg">
-</div>
-<br>
 
 ## PBR Workflow
 It is a wasteland style gun based on very popular PBR workflow. You can get it from here [[**download**](https://github.com/swang81/MyModels/)]. It contains FBX and all Textures for Unity. The main workflow is as follows: Modeling / UV Editing / Baking / Texturing / Rendering. 
+
+<iframe src="//player.bilibili.com/player.html?bvid=BV1g14y167gR&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 <div >
 <img src="/images/ge/pbrgun2.jpg">
