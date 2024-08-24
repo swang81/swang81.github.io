@@ -18,7 +18,7 @@ I am **Shuai Wang (Jack)**.
 
 ## Work Experience
 
-- 2021.05 - present: Technique Expert for game developing, Yi Sheng
+- 2021.05 - Present: Technique Expert for game developing, Yi Sheng
 - 2011.11 - 2021.05: CEO of software business department, United Imaging Healthcare Technology Co., Ltd
 - 2003.07 - 2005.09: University Teacher, Shenyang University of Technology
 
@@ -26,7 +26,7 @@ I am **Shuai Wang (Jack)**.
 
 + Solid foundation in mathematics and physics
 + Unreal Engine 5 Programming
-+ Unity 3D Prog 
++ Unity 3D Programming
 + Unity Shader and Effect 
 + Oculus Quest 2/3 API and MR feature development
 + Physics Simulation for Computer Graphic
