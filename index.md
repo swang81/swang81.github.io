@@ -25,7 +25,8 @@ I am **Shuai Wang (Jack)**.
 ## Technical Background
 
 + Solid foundation in mathematics and physics
-+ Unity 3D and Unreal Engine 5 Programming 
++ Unreal Engine 5 Programming
++ Unity 3D Prog 
 + Unity Shader and Effect 
 + Oculus Quest 2/3 API and MR feature development
 + Physics Simulation for Computer Graphic
