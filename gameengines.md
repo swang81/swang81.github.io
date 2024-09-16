@@ -9,15 +9,17 @@ title: Game Engines
 ## MR Games for Oculus Quest 3 Demo
 
 A mix reality party sport game based on Oculus Quest 3, which is base on UE5 with Meta MR techniques, such as spatial anchor, passthrough, movement tracking and scene capture. 
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1705568690&bvid=BV12T421Y7hf&cid=1576493635&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1705568690&bvid=BV12T421Y7hf&cid=1576493635&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
+## UE5 2D Game
 Use UE5 with PaperZD to build an interesting 2D game,which can be controlled by XBOX controller and keyboard.
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113145527999412&bvid=BV1My49eoEmt&cid=25658923290&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=113145527999412&bvid=BV1My49eoEmt&cid=25658923290&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 ## Unity3D Particle System Demo
 
 Use Unity3D URP +  Particle System to setup the fires,  wind and lighting visual effect demos.
 <iframe src="//player.bilibili.com/player.html?bvid=BV1oF411678M&page=1&&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
 
 ## Unity3D Character Demo
 
@@ -92,3 +94,4 @@ This is my demonstration of the results of the  SD stylized Material practice.
 
 
 
+``
