@@ -4,6 +4,7 @@ permalink: /notes/index.html
 title: Learning Notes
 ---
 
-[# Note 1](https://swang81.github.io/TechnicalNotes/)
+[Gitbook](https://swang81.github.io/TechnicalNotes/gitbookIntro/)
 
-# Note 2
+[AI游戏相关资源](https://swang81.github.io/TechnicalNotes/AIbooks/)
+
