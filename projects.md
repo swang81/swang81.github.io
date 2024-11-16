@@ -1,10 +1,10 @@
 ---
 layout: page
 permalink: /projects/index.html
-title: Projects
+title: Research Projects
 ---
 
-# Projects
+# Research Projects
 
 ## Volume Rendering Engine
 
