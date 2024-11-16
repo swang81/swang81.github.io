@@ -38,8 +38,10 @@ links:
     url: /publications/
   - title: Game Projects
     url: /gameengines/
-  - title: Pre-Projects
+  - title: Research Projects
     url: /projects/
+    title: Learning Notes
+    url: https://swang81.github.io/TechnicalNotes/
   - title: Art Practice
     url: /hobbies/
 
@@ -79,5 +81,4 @@ include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "minimal-mistakes.sublime-project", "minimal-mistakes.sublime-workspace"]
 
 
-# Latest update in 2023/05/01 by Hanlin Cai.
-# URL: https://caihanlin.com/
+
