@@ -40,7 +40,7 @@ links:
     url: /gameengines/
   - title: Research Projects
     url: /projects/
-    title: Learning Notes
+  - title: Learning Notes
     url: /notes/
   - title: Art Practice
     url: /hobbies/
@@ -75,7 +75,7 @@ kramdown:
 
 # disqus settings:
 disqus:
-  shortname: lancecai
+  shortname: Jack
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "minimal-mistakes.sublime-project", "minimal-mistakes.sublime-workspace"]
