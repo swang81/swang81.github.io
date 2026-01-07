@@ -46,6 +46,7 @@ links:
 #    url: /hobbies/
   - title: Tech Blog
     url: https://swang81.github.io/GamePhysicsNotes/
+    external: true
 
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
