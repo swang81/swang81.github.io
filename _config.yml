@@ -45,8 +45,7 @@ links:
 #  - title: Game Art Practice
 #    url: /hobbies/
   - title: Tech Blog
-    url: https://swang81.github.io/GamePhysicsNotes/
-    external: true
+    url: /GamePhysicsNotes/
 
 
 
