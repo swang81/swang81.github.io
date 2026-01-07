@@ -42,8 +42,11 @@ links:
     url: /projects/
 #  - title: Learning Notes
 #    url: /notes/
-  - title: Art Practice
-    url: /hobbies/
+#  - title: Game Art Practice
+#    url: /hobbies/
+  - title: Tech Blog
+    url: https://swang81.github.io/GamePhysicsNotes/
+
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone: China/Beijing
