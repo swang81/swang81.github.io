@@ -45,8 +45,8 @@ links:
 #  - title: Game Art Practice
 #    url: /hobbies/
   - title: Tech Blog
-    url: https://swang81.github.io/GamePhysicsNotes/
-    external: true
+    url: "//swang81.github.io/GamePhysicsNotes/"
+
 
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
