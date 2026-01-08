@@ -5,7 +5,7 @@ layout: page
 # About Me
 
 <div>
-<img src="/images/wangshuai.jpg">
+<img src="/images/background.png">
 </div>
 
 I am **Shuai Wang (Jack)**. 
