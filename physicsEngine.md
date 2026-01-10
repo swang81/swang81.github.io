@@ -1,7 +1,6 @@
 ---
 layout: page
 permalink: /physicsEngine/index.html
-title: Research Projects
 ---
 
 ##  Surface Model for Water Drop Animation
