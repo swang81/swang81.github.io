@@ -34,18 +34,19 @@ google_verify: "SkiyuGpJOKT74vv5GmXLvYXXDkXy4v8VWPtbelYz3Hs"
 links:
   - title: About Me
     url: /
-  - title: Publications
-    url: /publications/
-  - title: Game Projects
-    url: /gameengines/
-  - title: Research Projects
-    url: /projects/
+  - title: Physics Engine
+    url: /physicsengine
+  - title: Game Development
+    url: /gameDevelopment
+  - title: Tech Blog
+    url: /GamePhysicsNotes/
+
+
 #  - title: Learning Notes
 #    url: /notes/
 #  - title: Game Art Practice
 #    url: /hobbies/
-  - title: Tech Blog
-    url: /GamePhysicsNotes/
+
 
 
 

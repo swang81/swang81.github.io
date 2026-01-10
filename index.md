@@ -25,16 +25,11 @@ I am **Shuai Wang (Jack)**.
 ## Technical Background
 
 + Solid foundation in mathematics and physics
++ Physics Simulation for Computer Graphic
 + Unreal Engine 5 Programming
 + Unity 3D Programming
-+ Unity Shader and Effect 
-+ Oculus Quest 2/3 API and MR feature development
-+ Physics Simulation for Computer Graphic
-+ SLAM, ROS, OpenCV, OpenGL
-+ Deep learning, Python, PyTorch
++ Oculus Quest 3 API and MR feature development
 + C++, C#，Linux, Fortran
-+ PBR workflow DCC tools: 3D Max, Maya, PS, SP, SD, ZBrush, VRED, C4D
-+ Hand drawing ability 
 
 ## Honors and Awards
 
@@ -49,5 +44,4 @@ I am **Shuai Wang (Jack)**.
 - Papers: More than10 papers published in PRB, PRL, IEEE and other international journals
 - Patents: 17 domestic and international patents related to medical image processing algorithms. (13 authorized/registered and 4 applied)
 - National Projects: Participated in 3 medical imaging projects of the Ministry of Science and Technology and Shanghai Science and Technology Commission
-- Lose weight: To satisfy the need of work, I lose weight of 20kg by running and maintained so far
 - Obtain the “Game Designer Subject” Certification
