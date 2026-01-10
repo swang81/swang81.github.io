@@ -22,10 +22,16 @@ As a postdoctoral researcher, we proposed a deformable surface model to simulate
 
 ---
 
-## First principle study of spin-transfer torques
-
+## First-principles simulation of spin-transfer torques
 <br>
-Recent experiments on the tunneling system and magnetic domain wall call for a full quantum treatment of the whole system. We have developed an efficient first-principles method to calculate spin-transfer torques (STTs) in layered system with noncollinear magnetization. The complete scattering wave function is determined by matching the wave function in the scattering region with the Bloch states in the leads. The STTs are obtained with the aid of the scattering wave function. 
+
+Recent experiments on magnetic tunneling systems and domain-wall dynamics require a full quantum-mechanical description. We study spin-transfer torques (STTs) in layered magnetic systems with noncollinear magnetization using a first-principles quantum transport approach.
+
+The scattering problem of the open system is solved by matching the wave function in the scattering region with Bloch states in the leads. Based on the resulting scattering wave function, spin-transfer torques are evaluated from the spin-dependent electronic states.
+
+This work provides a physically grounded and efficient framework for simulating current-induced torques in nanoscale magnetic systems.
+
+[[pdf](./mypaper/thesis/wangshuaiphd.pdf)]
 
 ---
 
