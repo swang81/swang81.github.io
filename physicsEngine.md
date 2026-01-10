@@ -3,6 +3,12 @@ layout: page
 permalink: /physicsEngine/index.html
 ---
 
+## 2D Rigid Body Physics Engine
+
+I developed a custom 2D rigid body physics engine inspired by Box2D, focusing on clarity of physical modeling and numerical stability. The engine implements rigid body dynamics with linear and angular motion, impulse-based collision resolution, and iterative constraint solving. Core features include broad-phase and narrow-phase collision detection, contact manifolds, restitution and friction modeling, and a Sequential Impulse (Gauss–Seidel) solver derived from Lagrange multiplier formulations.
+
+
+
 ##  Surface Model for Water Drop Animation
 <div align="left">
 	<img src="/images/droplet.jpg">
@@ -13,8 +19,6 @@ permalink: /physicsEngine/index.html
 
 <br>
 As a postdoctoral researcher, we proposed a deformable surface model to simulate the flow behavior of water droplets on different solid surfaces. In the Lagrangian coordinate system, at each time step, the implicit curvature flow operator is used to simulate the surface tension of water, the contact angle operator is used to change the shape of water droplets on the solid surface, and the topological structure of the mesh is optimized to improve the robustness of the mesh. Through a series of numerical experiments, it is proved that real-time rendering can be achieved.  It was published in IEEE.
-
----
 
 ---
 
