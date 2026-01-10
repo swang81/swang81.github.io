@@ -1,20 +1,7 @@
 ---
 layout: page
-permalink: /projects/index.html
+permalink: /physicsEngine/index.html
 title: Research Projects
----
-
-# Research Projects
-
-## Volume Rendering Engine
-
-<div align="left">
-	<img src="/images/volumerendering.jpg">
-</div>
-
-<br>
-Lead the team to develop the core algorithm( Ray-Casting) based on OpenGL/HLSL and optimize the algorithm to meet the requirements of real-time 3D rendering of medical image data and various complex interactive operations , such as splitting, hiding, group,etc.
-
 ---
 
 ##  Surface Model for Water Drop Animation
@@ -27,6 +14,26 @@ Lead the team to develop the core algorithm( Ray-Casting) based on OpenGL/HLSL a
 
 <br>
 As a postdoctoral researcher, we proposed a deformable surface model to simulate the flow behavior of water droplets on different solid surfaces. In the Lagrangian coordinate system, at each time step, the implicit curvature flow operator is used to simulate the surface tension of water, the contact angle operator is used to change the shape of water droplets on the solid surface, and the topological structure of the mesh is optimized to improve the robustness of the mesh. Through a series of numerical experiments, it is proved that real-time rendering can be achieved.  It was published in IEEE.
+
+---
+
+---
+
+## First principle study of spin-transfer torques
+
+<br>
+Recent experiments on the tunneling system and magnetic domain wall call for a full quantum treatment of the whole system. We have developed an efficient first-principles method to calculate spin-transfer torques (STTs) in layered system with noncollinear magnetization. The complete scattering wave function is determined by matching the wave function in the scattering region with the Bloch states in the leads. The STTs are obtained with the aid of the scattering wave function. 
+
+---
+
+## Volume Rendering Engine
+
+<div align="left">
+	<img src="/images/volumerendering.jpg">
+</div>
+
+<br>
+Lead the team to develop the core algorithm( Ray-Casting) based on OpenGL/HLSL and optimize the algorithm to meet the requirements of real-time 3D rendering of medical image data and various complex interactive operations , such as splitting, hiding, group,etc.
 
 ---
 
@@ -52,15 +59,5 @@ Lead the team to develop many interesting product prototypes, which is based on 
 <br>
 Develop colon segmentation algorithms, colon centerline extraction, and colon polyp CAD diagnosis algorithms. Visualize the neuro fibers and MR brain Images based on OpenGL(HLSL). Intel IPP technology is used for acceleration. Algorithms have been integrated into the products. It has more than 10 related patents.
 
----
 
-## First principle study of spin-transfer torques
-
-
-<div align="left">
-	<img src="/images/poster.jpg">
-</div>
-
-<br>
-Recent experiments on the tunneling system and magnetic domain wall call for a full quantum treatment of the whole system. We have developed an efficient first-principles method to calculate spin-transfer torques (STTs) in layered system with noncollinear magnetization. The complete scattering wave function is determined by matching the wave function in the scattering region with the Bloch states in the leads. The STTs are obtained with the aid of the scattering wave function. 
 
