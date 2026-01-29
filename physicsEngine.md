@@ -5,7 +5,7 @@ permalink: /physicsEngine/index.html
 
 ## 2D Rigid Body Physics Engine
 
-I developed a custom 2D rigid body physics engine inspired by Box2D, focusing on clarity of physical modeling and numerical stability. The engine implements rigid body dynamics with linear and angular motion, impulse-based collision resolution, and iterative constraint solving. Core features include broad-phase and narrow-phase collision detection, contact manifolds, restitution and friction modeling, and a Sequential Impulse (Gauss–Seidel) solver derived from Lagrange multiplier formulations.
+I developed a custom 2D rigid body physics engine inspired by Box2D, focusing on clarity of physical modeling and numerical stability. The engine implements rigid body dynamics with linear and angular motion, impulse-based collision resolution, and iterative constraint solving. Core features include broad-phase and narrow-phase collision detection, contact manifolds, restitution and friction modeling, and a Sequential Impulse (Gauss–Seidel) solver derived from Lagrange multiplier formulations. You can run the **Impulse 2D Demo** directly in your browser by clicking [this link.](https://swang81.github.io/Impuse2DWebDemo/) The notes for the **Impulse** 2D physics engine are available [here](https://swang81.github.io/DevNotes/).
 
 
 
