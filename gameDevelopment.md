@@ -70,9 +70,9 @@ Use Unity3D URP render pipeline, cartoon bones and URP plane reflection algorith
 I follow GuiltyGear Xrd's Art Style PPT and construct a cartoon shader, which includes diffuse, specular, shading, outline and correct color at last. 
 <iframe src="//player.bilibili.com/player.html?bvid=BV1fh4y1V7gM&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 <div class="third">
-<img src="/images/ge/fight1.jpg">
-<img src="/images/ge/fight2.jpg">
-<img src="/images/ge/fight3.jpg">
+<img src="/images/gameDev/fight1.webp">
+<img src="/images/gameDev/fight2.webp">
+<img src="/images/gameDev/fight3.webp">
 </div>
 
 ## Toon Shader:Water
@@ -89,14 +89,21 @@ It is a wasteland style gun based on very popular PBR workflow. You can get it f
 <iframe src="//player.bilibili.com/player.html?bvid=BV1g14y167gR&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 <div >
-<img src="/images/ge/pbrgun2.jpg">
+<img src="/images/gameDev/pbrgun1.webp">
 </div>
+
+
+<div >
+<img src="/images/gameDev/gunPBR.webp">
+</div>
+
+
 
 
 ## Stylized Material with SD
 This is my demonstration of the results of the  SD stylized Material practice. 
 <div class="second">
-<img src="/images/ge/sd1.jpg">
-<img src="/images/ge/sd2.jpg">
+<img src="/images/gameDev/sd1.webp">
+<img src="/images/gameDev/sd2.webp">
 </div>
 

@@ -8,7 +8,7 @@ permalink: /physicsEngine/index.html
 I developed a custom 2D rigid body physics engine inspired by Box2D, focusing on clarity of physical modeling and numerical stability. The engine implements rigid body dynamics with linear and angular motion, impulse-based collision resolution, and iterative constraint solving. Core features include broad-phase and narrow-phase collision detection, contact manifolds, restitution and friction modeling, and a Sequential Impulse (Gauss–Seidel) solver derived from Lagrange multiplier formulations.The notes for the **Impulse** 2D physics engine are available [here](https://swang81.github.io/DevNotes/).
 
 <div align="left">
-	<img src="/images/Impulse2D.png">
+	<img src="/images/prEngine/Impulse2D.webp">
 </div>
 
  You can run the **Impulse 2D Demo** directly in your browser by clicking [this link.](https://swang81.github.io/Impuse2DWebDemo/) 
@@ -17,7 +17,7 @@ I developed a custom 2D rigid body physics engine inspired by Box2D, focusing on
 
 ##  Surface Model for Water Drop Animation
 <div align="left">
-	<img src="/images/droplet.jpg">
+	<img src="/images/prEngine/droplet.webp">
 </div>
 
 
@@ -42,7 +42,7 @@ This work provides a physically grounded and efficient framework for simulating 
 ## Volume Rendering Engine
 
 <div align="left">
-	<img src="/images/volumerendering.jpg">
+	<img src="/images/prEngine/volumerendering.webp">
 </div>
 
 <br>
@@ -53,7 +53,7 @@ Lead the team to develop the core algorithm( Ray-Casting) based on OpenGL/HLSL a
 ## VR/AR/3D printing in Medical Image Application
 
 <div align="left">
-	<img src="/images/vrar3dprinting.jpg">
+	<img src="/images/prEngine/vrar3dprinting.webp">
 </div>
 
 <br>
@@ -66,7 +66,7 @@ Lead the team to develop many interesting product prototypes, which is based on 
 
 
 <div align="left">
-	<img src="/images/algorithm.jpg">
+	<img src="/images/prEngine/algorithm.webp">
 </div>
 
 <br>
