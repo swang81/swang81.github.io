@@ -4,6 +4,59 @@ permalink: /publications/index.html
 title: Publications
 ---
 
+<div class="lang-zh" markdown="1">
+
+# 发表成果
+
+## 学位论文
+
+### 博士
+
+第一性原理研究自旋转移力矩及全相对论自旋极化 EMTO 方法，2010 年 5 月 [[pdf](./mypaper/thesis/wangshuaiphd.pdf)]
+
+### 学士
+
+单壁碳纳米管结构与储氢性能的计算机模拟
+
+## 论文
+
+- Yizhong Zhang, Huamin Wang, Shuai Wang, Yiying Tong, Kun Zhou. A Deformable Surface Model for Real-Time Water Drop Animation. IEEE Transactions on Visualization & Computer Graphics, TVCG. 2011.141 [[pdf](./mypaper/papers/tvcg.pdf)] [[video](./mypaper/papers/02_WaterDropAnimation.mp4)]
+
+- Shuai Wang, Ling Tang, Ke Xia, Spin transfer torque in the presence of Andreev reflections, PHYSICAL REVIEW B 81, 094404 (2010).
+
+- Zhe Yuan, Shuai Wang and Ke Xia, Thermal spin-transfer torques on magnetic domain walls, Solid State Communications, 150, 548 (2010).
+
+- H.Y.T. Nguyen, R. Acharyya, E. Huey, B. Richard, R. Loloee, W.P. Pratt Jr., J. Bass, Shuai Wang and Ke Xia, Conduction Electron Scattering and Spin-Flipping at Sputtered Co/Ni Interfaces, Phys. Rev. B 82, 220401(R) (2010).
+
+- BH Zhou，Y Xu，S Wang，G Zhou and K Xia，An ab initio investigation on boundary resistance for metallic grains, Solid State Communications, 150(150):1422-1424 (2010)
+
+- R. Acharyya, H. Y. T. Nguyen, R. Loloee, W. P. Pratt, Jr., J. Bass, Shuai Wang,and Ke Xia, Specific resistance of Pd/Ir interfaces, APPLIED PHYSICS LETTERS 94, 022112(2009).
+
+- A. Sharma, N. Theodoropoulou, Shuai Wang, Ke Xia, W. P. Pratt, Jr., and J. Bass, Sensitivity of Ag/Al interface specific resistances to interfacial intermixing, JOURNAL OF APPLIED PHYSICS, 105, 123920 (2009).
+
+- Y. Z. Wu, C. Won, J. Wu, Y. Xu, S. Wang, Ke Xia, E. Rotenberg, and Z. Q. Qiu，Effect of inserting Ni and Co layers on the quantum well states of a thin Cu film grown on Co/Cu(001)， Phys. Rev. B 80, 205426 (2009)
+
+- Shuai Wang, Yuan Xu, Ke Xia, First principles study on the spin transfer torques, Phys. Rev. B 77, 184430 (2008)
+
+- Yuan Xu, Shuai Wang, and Ke Xia, Spin-Transfer Torques in Antiferromagnetic Metals from First Principles, Phys.Rev.Letter 100, 226602 (2008).
+
+- Ling Tang, Shuai Wang, First Principle Noncollinear Transport Calculation and Interfacial Spin-flipping of Cu/Co Multilayers, Modern Physics Letters B, Volume 22, 2553-2560 (2008).
+
+## 专利
+
+- EP3213296B1，图像处理方法及系统，授权日期：2020.02.19
+- US10748280B2，图像处理系统及方法，授权日期：2020.08.18
+- CN107157588A，图像记录设备的数据处理方法及图像记录设备，授权日期：2021.05.18
+- CN105719333A，3D图像数据处理方法及装置，授权日期：2019.12.20
+- CN105488848A，基于视线的纤维绘制方法，授权日期：2019.07.19
+- CN104240215A，医学图像处理方法，授权日期：2018.05.04
+- CN107799167A，一种医学图像处理方法，授权日期：2022.03.25
+- CN104112265A，结肠图像分割方法及装置，授权日期：2019.04.23
+
+</div>
+
+<div class="lang-en" markdown="1">
+
 # Publications
 
 ## Thesis
@@ -20,23 +73,23 @@ Computer simulation on structure and hydrogen storage of single-walled carbon na
 
 - Yizhong Zhang, Huamin Wang, Shuai Wang, Yiying Tong, Kun Zhou. A Deformable Surface Model for Real-Time Water Drop Animation. IEEE Transactions on Visualization & Computer Graphics, TVCG. 2011.141 [[pdf](./mypaper/papers/tvcg.pdf)] [[video](./mypaper/papers/02_WaterDropAnimation.mp4)]
 
-- Shuai Wang, Ling Tang, Ke Xia, Spin transfer torque in the presence of Andreev reflections, PHYSICAL REVIEW B 81, 094404 (2010). 
+- Shuai Wang, Ling Tang, Ke Xia, Spin transfer torque in the presence of Andreev reflections, PHYSICAL REVIEW B 81, 094404 (2010).
 
-- Zhe Yuan, Shuai Wang and Ke Xia, Thermal spin-transfer torques on magnetic domain walls, Solid State Communications, 150, 548 (2010). 
+- Zhe Yuan, Shuai Wang and Ke Xia, Thermal spin-transfer torques on magnetic domain walls, Solid State Communications, 150, 548 (2010).
 
-- H.Y.T. Nguyen, R. Acharyya, E. Huey, B. Richard, R. Loloee, W.P. Pratt Jr., J. Bass, Shuai Wang and Ke Xia, Conduction Electron Scattering and Spin-Flipping at Sputtered Co/Ni Interfaces, Phys. Rev. B 82, 220401(R) (2010). 
+- H.Y.T. Nguyen, R. Acharyya, E. Huey, B. Richard, R. Loloee, W.P. Pratt Jr., J. Bass, Shuai Wang and Ke Xia, Conduction Electron Scattering and Spin-Flipping at Sputtered Co/Ni Interfaces, Phys. Rev. B 82, 220401(R) (2010).
 
 - BH Zhou，Y Xu，S Wang，G Zhou and K Xia，An ab initio investigation on boundary resistance for metallic grains, Solid State Communications, 150(150):1422-1424 (2010)
 
-- R. Acharyya, H. Y. T. Nguyen, R. Loloee, W. P. Pratt, Jr., J. Bass, Shuai Wang,and Ke Xia, Specific resistance of Pd/Ir interfaces, APPLIED PHYSICS LETTERS 94, 022112(2009). 
+- R. Acharyya, H. Y. T. Nguyen, R. Loloee, W. P. Pratt, Jr., J. Bass, Shuai Wang,and Ke Xia, Specific resistance of Pd/Ir interfaces, APPLIED PHYSICS LETTERS 94, 022112(2009).
 
-- A. Sharma, N. Theodoropoulou, Shuai Wang, Ke Xia, W. P. Pratt, Jr., and J. Bass, Sensitivity of Ag/Al interface specific resistances to interfacial intermixing, JOURNAL OF APPLIED PHYSICS, 105, 123920 (2009). 
+- A. Sharma, N. Theodoropoulou, Shuai Wang, Ke Xia, W. P. Pratt, Jr., and J. Bass, Sensitivity of Ag/Al interface specific resistances to interfacial intermixing, JOURNAL OF APPLIED PHYSICS, 105, 123920 (2009).
 
-- Y. Z. Wu, C. Won, J. Wu, Y. Xu, S. Wang, Ke Xia, E. Rotenberg, and Z. Q. Qiu，Effect of inserting Ni and Co layers on the quantum well states of a thin Cu film grown on Co/Cu(001)， Phys. Rev. B 80, 205426 (2009) 
+- Y. Z. Wu, C. Won, J. Wu, Y. Xu, S. Wang, Ke Xia, E. Rotenberg, and Z. Q. Qiu，Effect of inserting Ni and Co layers on the quantum well states of a thin Cu film grown on Co/Cu(001)， Phys. Rev. B 80, 205426 (2009)
 
-- Shuai Wang, Yuan Xu, Ke Xia, First principles study on the spin transfer torques, Phys. Rev. B 77, 184430 (2008) 
+- Shuai Wang, Yuan Xu, Ke Xia, First principles study on the spin transfer torques, Phys. Rev. B 77, 184430 (2008)
 
-- Yuan Xu, Shuai Wang, and Ke Xia, Spin-Transfer Torques in Antiferromagnetic Metals from First Principles, Phys.Rev.Letter 100, 226602 (2008). 
+- Yuan Xu, Shuai Wang, and Ke Xia, Spin-Transfer Torques in Antiferromagnetic Metals from First Principles, Phys.Rev.Letter 100, 226602 (2008).
 
 - Ling Tang, Shuai Wang, First Principle Noncollinear Transport Calculation and Interfacial Spin-flipping of Cu/Co Multilayers, Modern Physics Letters B, Volume 22, 2553-2560 (2008).
 
@@ -51,5 +104,4 @@ Computer simulation on structure and hydrogen storage of single-walled carbon na
 - CN107799167A, A kind of medical image processing method, granted 2022.03.25
 - CN104112265A, Colon image segmenting method, and colon image segmenting device, granted 2019.04.23
 
-
-
+</div>

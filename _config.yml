@@ -33,12 +33,16 @@ google_verify: "SkiyuGpJOKT74vv5GmXLvYXXDkXy4v8VWPtbelYz3Hs"
 # For external links add external: true
 links:
   - title: About Me
+    title_zh: 关于我
     url: /
   - title: Physics & Render Engine
+    title_zh: 物理与渲染引擎
     url: /physicsEngine
   - title: Game Development
+    title_zh: 游戏开发
     url: /gameDevelopment
   - title: Dev Notes
+    title_zh: 开发笔记
     url: /DevNotes/
 
 

@@ -7,8 +7,9 @@
 		<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 		    <ul>
 		        {% for link in site.links %}
-            <li><a href="{{ site.url }}{{ link.url }}" {% if url == link.url %}class="top-navigation-current"{% endif %}>{{ link.title }}</a></li>
+            <li><a href="{{ site.url }}{{ link.url }}" {% if url == link.url %}class="top-navigation-current"{% endif %} data-zh="{{ link.title_zh }}" data-en="{{ link.title }}">{{ link.title_zh }}</a></li>
 		        {% endfor %}
+		        <li><button id="lang-toggle" class="lang-btn">EN</button></li>
 		    </ul>
 		</nav>
 	</div><!-- /.top-navigation -->
