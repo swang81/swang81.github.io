@@ -11,7 +11,7 @@
 
     if (lang === 'zh') {
       for (var i = 0; i < zhBlocks.length; i++) {
-        zhBlocks[i].style.display = '';
+        zhBlocks[i].style.display = 'block';
       }
       for (var j = 0; j < enBlocks.length; j++) {
         enBlocks[j].style.display = 'none';
@@ -21,7 +21,7 @@
         zhBlocks[k].style.display = 'none';
       }
       for (var l = 0; l < enBlocks.length; l++) {
-        enBlocks[l].style.display = '';
+        enBlocks[l].style.display = 'block';
       }
     }
 
