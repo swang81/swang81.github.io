@@ -54,7 +54,7 @@ title: Game Development
 ## PBR 渲染
 重写 Surface Shader，与原版对比并得到相近结果。
 <div >
-<img src="/images/ge/gunPBR.jpg">
+<img src="/images/ge/gunPBR.webp">
 </div>
 
 
@@ -96,7 +96,7 @@ title: Game Development
 </div>
 
 <div >
-<img src="/images/gameDev/gunPBR.webp">
+<img src="/images/gameDev/plug.webp">
 </div>
 
 
@@ -157,7 +157,7 @@ Use UE5 with PaperZD to build an interesting 2D game,which can be controlled by 
 ## PBR Rendering
 I rewrite the surface shader, compared it with the surface shader and got similar results.
 <div >
-<img src="/images/ge/gunPBR.jpg">
+<img src="/images/ge/gunPBR.webp">
 </div>
 
 
@@ -199,7 +199,7 @@ It is a wasteland style gun based on very popular PBR workflow. You can get it f
 </div>
 
 <div >
-<img src="/images/gameDev/gunPBR.webp">
+<img src="/images/gameDev/plug.webp">
 </div>
 
 
