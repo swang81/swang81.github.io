@@ -10,7 +10,7 @@ layout: page
 <img src="/images/aboutMe/background.webp">
 </div>
 
-我是**王帅（Jack）**。
+我是**Jack**。
 
 ## 学习经历
 
@@ -22,7 +22,7 @@ layout: page
 
 - 2021.05 - 至今：益生游戏，游戏开发技术专家
 - 2011.11 - 2021.05：联影医疗科技股份有限公司，软件业务部总经理
-- 2003.07 - 2005.09：沈阳工业大学，教师
+- 2003.07 - 2005.09：沈阳工业大学，大学教师
 
 ## 技术背景
 
@@ -58,7 +58,7 @@ layout: page
 <img src="/images/aboutMe/background.webp">
 </div>
 
-I am **Shuai Wang (Jack)**.
+I am **Jack**.
 
 ## Study Experience
 
