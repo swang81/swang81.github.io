@@ -5,15 +5,19 @@ permalink: /physicsEngine/index.html
 
 <div class="lang-zh" markdown="1">
 
-## 2D 刚体物理引擎
+## XPBD布料模拟Demo
 
-我开发了一款受 Box2D 启发的自定义 2D 刚体物理引擎，注重物理建模的清晰性与数值稳定性。引擎实现了带线性和角运动的刚体动力学、基于冲量的碰撞解析，以及迭代约束求解。核心功能包括：宽相和窄相碰撞检测、接触流形、恢复系数与摩擦力建模，以及由拉格朗日乘子推导出的序列冲量（Gauss–Seidel）求解器。**Impulse** 2D 物理引擎的技术笔记请见[此处](https://swang81.github.io/DevNotes/)。
+这是一个扩展位置基动力学(XPBD)算法，基于CUDA加速的布料模拟的演示项目。支持拉伸、弯曲、固定与长距离约束，并提供粒子自碰撞与SDF碰撞处理。通过OpenGL实时渲染可视化调试。通过 GPU 并行友好的约束求解、稳定的时间步进策略、高效的空间哈希碰撞检测，以及针对原子操作和内存访问的多层优化，实现了高性能、稳定的实时布料模拟。
+
+## 2D 刚体物理引擎
 
 <div align="left">
 	<img src="/images/prEngine/Impulse2D.webp">
 </div>
 
- 您可以点击[此链接](https://swang81.github.io/Impuse2DWebDemo/)直接在浏览器中运行 **Impulse 2D Demo**。
+我开发了一款受 Box2D 启发的自定义 2D 刚体物理引擎，注重物理建模的清晰性与数值稳定性。引擎实现了带线性和角运动的刚体动力学、基于冲量的碰撞解析，以及迭代约束求解。核心功能包括：宽相和窄相碰撞检测、接触流形、恢复系数与摩擦力建模，以及由拉格朗日乘子推导出的序列冲量（Gauss–Seidel）求解器。**Impulse** 2D 物理引擎的技术笔记请见[此处](https://swang81.github.io/DevNotes/)。
+
+您可以点击[此链接](https://swang81.github.io/Impuse2DWebDemo/)直接在浏览器中运行 **Impulse 2D Demo**。
 
 ---
 
@@ -75,11 +79,11 @@ permalink: /physicsEngine/index.html
 
 ## 2D Rigid Body Physics Engine
 
-I developed a custom 2D rigid body physics engine inspired by Box2D, focusing on clarity of physical modeling and numerical stability. The engine implements rigid body dynamics with linear and angular motion, impulse-based collision resolution, and iterative constraint solving. Core features include broad-phase and narrow-phase collision detection, contact manifolds, restitution and friction modeling, and a Sequential Impulse (Gauss–Seidel) solver derived from Lagrange multiplier formulations.The notes for the **Impulse** 2D physics engine are available [here](https://swang81.github.io/DevNotes/).
-
 <div align="left">
 	<img src="/images/prEngine/Impulse2D.webp">
 </div>
+
+I developed a custom 2D rigid body physics engine inspired by Box2D, focusing on clarity of physical modeling and numerical stability. The engine implements rigid body dynamics with linear and angular motion, impulse-based collision resolution, and iterative constraint solving. Core features include broad-phase and narrow-phase collision detection, contact manifolds, restitution and friction modeling, and a Sequential Impulse (Gauss–Seidel) solver derived from Lagrange multiplier formulations.The notes for the **Impulse** 2D physics engine are available [here](https://swang81.github.io/DevNotes/).
 
  You can run the **Impulse 2D Demo** directly in your browser by clicking [this link.](https://swang81.github.io/Impuse2DWebDemo/)
 
