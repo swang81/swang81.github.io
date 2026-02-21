@@ -398,6 +398,6 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 .lang-btn:hover { border-color: #666; }
 
 
-h1 { font-size: 34px; }
-h2 { font-size: 28px; }
-h3 { font-size: 22px; }
+.article-wrap h1 { font-size: 34px !important; }
+.article-wrap h2 { font-size: 28px !important; }
+.article-wrap h3 { font-size: 22px !important; }
