@@ -3,6 +3,8 @@ layout: page
 permalink: /physicsEngine/index.html
 ---
 
+<div id="page-toc" class="toc"></div>
+
 <div class="lang-zh" markdown="1">
 
 ## XPBD布料模拟Demo
