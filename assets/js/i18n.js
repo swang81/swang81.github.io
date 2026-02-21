@@ -41,6 +41,41 @@
 
     // Update html lang attribute
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+
+    buildToc(lang);
+  }
+
+  function buildToc(lang) {
+    var tocEl = document.getElementById('page-toc');
+    if (!tocEl) return;
+
+    var selector = lang === 'zh' ? '.lang-zh' : '.lang-en';
+    var container = document.querySelector(selector);
+    if (!container) return;
+
+    var headings = container.querySelectorAll('h1, h2');
+    if (headings.length === 0) {
+      tocEl.style.display = 'none';
+      return;
+    }
+
+    var ul = document.createElement('ul');
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent;
+      if (h.tagName === 'H2') {
+        li.style.marginLeft = '1em';
+      }
+      li.appendChild(a);
+      ul.appendChild(li);
+    }
+
+    tocEl.innerHTML = '';
+    tocEl.appendChild(ul);
+    tocEl.style.display = '';
   }
 
   function init() {

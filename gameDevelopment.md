@@ -4,8 +4,7 @@ permalink: /gameDevelopment/index.html
 title: Game Development
 ---
 
-* TOC
-{:toc}
+<div id="page-toc" class="toc"></div>
 
 <div class="lang-zh" markdown="1">
 
