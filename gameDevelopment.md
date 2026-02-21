@@ -6,7 +6,6 @@ title: Game Development
 
 <div class="lang-zh" markdown="1">
 
-<!-- 自动目录 -->
 {:toc}
 
 # MR/VR/AR 应用
