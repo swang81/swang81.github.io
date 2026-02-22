@@ -45,6 +45,8 @@
     // 更新移动端面板标题
     var panelTitle = document.getElementById('toc-mobile-panel-title');
     if (panelTitle) panelTitle.textContent = lang === 'zh' ? '目录' : 'Contents';
+    var btnLabel = document.getElementById('toc-btn-label');
+    if (btnLabel) btnLabel.textContent = lang === 'zh' ? '目录' : 'TOC';
 
     buildToc(lang);
   }

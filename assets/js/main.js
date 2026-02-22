@@ -1908,7 +1908,7 @@ $(function() {
   btn.id = 'toc-mobile-btn';
   btn.className = 'toc-mobile-btn';
   btn.setAttribute('aria-label', '目录');
-  btn.innerHTML = '☰';
+  btn.innerHTML = '☰ <span id="toc-btn-label">目录</span>';
   // 默认隐藏由 CSS 处理，buildToc 后通过 .toc-visible class 控制显示
   document.body.appendChild(btn);
 

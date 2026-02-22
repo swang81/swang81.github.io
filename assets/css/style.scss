@@ -1,7 +1,6 @@
 ---
 ---
 
-@import "{{ site.theme }}";
 
 :root {
   --color-primary: #5a9bd5;
@@ -141,6 +140,12 @@
 
   .toc-mobile-btn.toc-visible {
     display: flex;
+    width: auto;
+    border-radius: 24px;
+    padding: 0 16px;
+    gap: 6px;
+    font-size: 14px;
+    white-space: nowrap;
   }
 
   /* 半透明遮罩 */
