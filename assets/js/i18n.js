@@ -42,6 +42,10 @@
     // Update html lang attribute
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
 
+    // 更新移动端面板标题
+    var panelTitle = document.getElementById('toc-mobile-panel-title');
+    if (panelTitle) panelTitle.textContent = lang === 'zh' ? '目录' : 'Contents';
+
     buildToc(lang);
   }
 
@@ -56,6 +60,8 @@
     var headings = container.querySelectorAll('h1, h2');
     if (headings.length === 0) {
       tocEl.style.display = 'none';
+      var btn = document.getElementById('toc-mobile-btn');
+      if (btn) btn.style.display = 'none';
       return;
     }
 
@@ -76,6 +82,21 @@
     tocEl.innerHTML = '';
     tocEl.appendChild(ul);
     tocEl.style.display = '';
+
+    // 同步更新移动端 panel
+    var panel = document.getElementById('toc-mobile-panel-list');
+    if (panel) {
+      panel.innerHTML = ul.cloneNode(true).outerHTML;
+      // 点击链接后自动关闭面板
+      panel.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', window.closeMobileToc);
+      });
+    }
+    // 控制悬浮按钮显隐（无标题时隐藏按钮）
+    var mobileBtn = document.getElementById('toc-mobile-btn');
+    if (mobileBtn) {
+      mobileBtn.style.display = headings.length === 0 ? 'none' : '';
+    }
   }
 
   function init() {

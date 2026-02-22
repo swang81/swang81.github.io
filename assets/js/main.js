@@ -1881,6 +1881,67 @@ $(function() {
 // Add lightbox class to all image links
 $("a[href$='.jpg'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
 
+// === 移动端 TOC 初始化 ===
+$(function() {
+  // 只在有 #page-toc 的页面生效
+  if (!document.getElementById('page-toc')) return;
+
+  // 注入 backdrop
+  var backdrop = document.createElement('div');
+  backdrop.id = 'toc-mobile-backdrop';
+  backdrop.className = 'toc-mobile-backdrop';
+  document.body.appendChild(backdrop);
+
+  // 注入底部面板
+  var panel = document.createElement('div');
+  panel.className = 'toc-mobile-panel';
+  panel.innerHTML =
+    '<div class="toc-mobile-panel-header">' +
+      '<span id="toc-mobile-panel-title">目录</span>' +
+      '<button class="toc-mobile-close" id="toc-mobile-close">✕</button>' +
+    '</div>' +
+    '<div id="toc-mobile-panel-list"></div>';
+  document.body.appendChild(panel);
+
+  // 注入悬浮按钮（☰ 图标）
+  var btn = document.createElement('button');
+  btn.id = 'toc-mobile-btn';
+  btn.className = 'toc-mobile-btn';
+  btn.setAttribute('aria-label', '目录');
+  btn.innerHTML = '☰';
+  btn.style.display = 'none'; // 默认隐藏，buildToc 后由 JS 控制
+  document.body.appendChild(btn);
+
+  // 打开/关闭函数
+  function openMobileToc() {
+    panel.classList.add('open');
+    backdrop.classList.add('open');
+  }
+  window.closeMobileToc = function() {
+    panel.classList.remove('open');
+    backdrop.classList.remove('open');
+  };
+
+  btn.addEventListener('click', openMobileToc);
+  backdrop.addEventListener('click', window.closeMobileToc);
+  document.getElementById('toc-mobile-close').addEventListener('click', window.closeMobileToc);
+
+  // i18n.js buildToc() runs on DOMContentLoaded before jQuery ready, so the
+  // mobile panel didn't exist yet when it ran. Sync content from the desktop TOC now.
+  var tocEl = document.getElementById('page-toc');
+  var panelList = document.getElementById('toc-mobile-panel-list');
+  if (tocEl && panelList) {
+    var existingUl = tocEl.querySelector('ul');
+    if (existingUl) {
+      panelList.innerHTML = existingUl.outerHTML;
+      panelList.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', window.closeMobileToc);
+      });
+      btn.style.display = '';
+    }
+  }
+});
+
 // Magnific-Popup options
 $(document).ready(function() {
   $('.image-popup').magnificPopup({
