@@ -9,7 +9,7 @@
 		        {% for link in site.links %}
             <li><a href="{{ site.url }}{{ link.url }}" {% if url == link.url %}class="top-navigation-current"{% endif %} data-zh="{{ link.title_zh }}" data-en="{{ link.title }}">{{ link.title_zh }}</a></li>
 		        {% endfor %}
-		        <li><button id="lang-toggle" class="lang-btn">EN</button></li>
+		        <li><button id="lang-toggle" class="lang-btn" aria-label="切换语言 / Switch Language">EN</button></li>
 		    </ul>
 		</nav>
 	</div><!-- /.top-navigation -->

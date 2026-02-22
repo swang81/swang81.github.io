@@ -7,7 +7,7 @@ layout: page
 # 关于我
 
 <div>
-<img src="/images/aboutMe/background.webp">
+<img src="/images/aboutMe/background.webp" alt="Jack Wang - background" loading="lazy">
 </div>
 
 我是**Jack**。
@@ -55,7 +55,7 @@ layout: page
 # About Me
 
 <div>
-<img src="/images/aboutMe/background.webp">
+<img src="/images/aboutMe/background.webp" alt="Jack Wang - background" loading="lazy">
 </div>
 
 I am **Jack**.

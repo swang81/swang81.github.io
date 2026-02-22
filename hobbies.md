@@ -13,7 +13,7 @@ title: Art Practice
 <div class="third">
 {% for image in site.static_files %}
     {% if image.path contains 'images/3dmodeling' %}
-        <img src="{{ site.baseurl }}{{ image.path }}" >
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="3D modeling artwork" loading="lazy">
     {% endif %}
 {% endfor %}
 </div>
@@ -29,7 +29,7 @@ title: Art Practice
 <div class="third">
 {% for image in site.static_files %}
     {% if image.path contains 'images/3dmodeling' %}
-        <img src="{{ site.baseurl }}{{ image.path }}" >
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="3D modeling artwork" loading="lazy">
     {% endif %}
 {% endfor %}
 </div>

@@ -1916,10 +1916,12 @@ $(function() {
   function openMobileToc() {
     panel.classList.add('open');
     backdrop.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
   }
   window.closeMobileToc = function() {
     panel.classList.remove('open');
     backdrop.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
   };
 
   btn.addEventListener('click', openMobileToc);
