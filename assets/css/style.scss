@@ -112,9 +112,15 @@
 }
 
 /* === 移动端 TOC 悬浮按钮 + 底部弹出层 === */
+
+/* 悬浮按钮默认隐藏（由 JS 添加 .toc-visible class 来显示） */
+.toc-mobile-btn {
+  display: none;
+}
+
 @media (max-width: 599px) {
 
-  /* 悬浮按钮：固定在右下角 */
+  /* 悬浮按钮：固定在右下角，有标题时显示 */
   .toc-mobile-btn {
     position: fixed;
     bottom: 24px;
@@ -129,10 +135,12 @@
     font-size: 18px;
     cursor: pointer;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
     align-items: center;
     justify-content: center;
-    /* 当页面无目录时由 JS 控制隐藏 */
+  }
+
+  .toc-mobile-btn.toc-visible {
+    display: flex;
   }
 
   /* 半透明遮罩 */

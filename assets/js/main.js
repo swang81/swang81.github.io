@@ -1909,7 +1909,7 @@ $(function() {
   btn.className = 'toc-mobile-btn';
   btn.setAttribute('aria-label', '目录');
   btn.innerHTML = '☰';
-  btn.style.display = 'none'; // 默认隐藏，buildToc 后由 JS 控制
+  // 默认隐藏由 CSS 处理，buildToc 后通过 .toc-visible class 控制显示
   document.body.appendChild(btn);
 
   // 打开/关闭函数
@@ -1939,7 +1939,7 @@ $(function() {
       panelList.querySelectorAll('a').forEach(function(a) {
         a.addEventListener('click', window.closeMobileToc);
       });
-      btn.style.display = '';
+      btn.classList.add('toc-visible');
     }
   }
 });

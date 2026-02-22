@@ -61,7 +61,7 @@
     if (headings.length === 0) {
       tocEl.style.display = 'none';
       var btn = document.getElementById('toc-mobile-btn');
-      if (btn) btn.style.display = 'none';
+      if (btn) btn.classList.remove('toc-visible');
       return;
     }
 
@@ -95,12 +95,13 @@
     // 控制悬浮按钮显隐（无标题时隐藏按钮）
     var mobileBtn = document.getElementById('toc-mobile-btn');
     if (mobileBtn) {
-      mobileBtn.style.display = headings.length === 0 ? 'none' : '';
+      mobileBtn.classList.toggle('toc-visible', headings.length > 0);
     }
   }
 
   function init() {
-    var saved = localStorage.getItem(STORAGE_KEY);
+    var saved;
+    try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
     var lang = (saved === 'en' || saved === 'zh') ? saved : DEFAULT_LANG;
 
     applyLanguage(lang);
@@ -108,9 +109,11 @@
     var btn = document.getElementById('lang-toggle');
     if (btn) {
       btn.addEventListener('click', function () {
-        var current = localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG;
+        var current;
+        try { current = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+        current = current || DEFAULT_LANG;
         var next = current === 'zh' ? 'en' : 'zh';
-        localStorage.setItem(STORAGE_KEY, next);
+        try { localStorage.setItem(STORAGE_KEY, next); } catch (e) {}
         applyLanguage(next);
       });
     }
