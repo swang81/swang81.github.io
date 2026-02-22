@@ -21,6 +21,7 @@ permalink: /physicsEngine/index.html
 
 我开发了一款受 Box2D 启发的自定义 2D 刚体物理引擎，注重物理建模的清晰性与数值稳定性。引擎实现了带线性和角运动的刚体动力学、基于冲量的碰撞解析，以及迭代约束求解。核心功能包括：宽相和窄相碰撞检测、接触流形、恢复系数与摩擦力建模，以及由拉格朗日乘子推导出的序列冲量（Gauss–Seidel）求解器。**Impulse** 2D 物理引擎的技术笔记请见[此处](https://swang81.github.io/DevNotes/)。
 
+<br>
 您可以点击[此链接](https://swang81.github.io/Impuse2DWebDemo/)直接在浏览器中运行 **Impulse 2D Demo**。
 
 ---
