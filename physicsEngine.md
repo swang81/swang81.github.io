@@ -82,6 +82,12 @@ permalink: /physicsEngine/index.html
 
 <div class="lang-en" markdown="1">
 
+## XPBD Cloth Simulation Demo
+
+This is a cloth simulation demo based on the Extended Position-Based Dynamics (XPBD) algorithm, accelerated with CUDA. It supports stretch, bend, fixed, and long-range constraints, along with particle self-collision and SDF collision handling, with real-time visualization via OpenGL. High performance and stability are achieved through GPU-friendly constraint solving, stable time-stepping, spatial hashing for collision detection, and multi-level optimizations for atomic operations and memory access.
+
+---
+
 ## 2D Rigid Body Physics Engine
 
 <div align="left">

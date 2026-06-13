@@ -59,10 +59,14 @@ title: Game Development
 
 
 ## Unity3D 手机 FPS 游戏
+
+使用 Unity3D 开发的移动端第一人称射击游戏 Demo，支持触屏操控、射击与移动。
 <iframe title="Unity3D Mobile FPS Game Demo" src="//player.bilibili.com/player.html?bvid=BV11X4y1s7p6&page=1&autoplay=0" loading="lazy" allowfullscreen></iframe>
 
 
 ## UE4 FPS 游戏
+
+使用 UE4 开发的第一人称射击游戏 Demo，包含基础射击机制与场景交互。
 <iframe title="UE4 FPS Game Demo" src="//player.bilibili.com/player.html?bvid=BV1bP411k7mN&page=1&autoplay=0" loading="lazy" allowfullscreen></iframe>
 
 ---
@@ -178,10 +182,14 @@ Use UE5 with PaperZD to build an interesting 2D game,which can be controlled by 
 
 
 ## Unity3D Mobile FPS Game
+
+A mobile first-person shooter demo built with Unity3D, featuring touch controls, shooting and movement mechanics.
 <iframe title="Unity3D Mobile FPS Game Demo" src="//player.bilibili.com/player.html?bvid=BV11X4y1s7p6&page=1&autoplay=0" loading="lazy" allowfullscreen></iframe>
 
 
 ## UE4 FPS Game
+
+A first-person shooter demo built with UE4, featuring basic shooting mechanics and scene interaction.
 <iframe title="UE4 FPS Game Demo" src="//player.bilibili.com/player.html?bvid=BV1bP411k7mN&page=1&autoplay=0" loading="lazy" allowfullscreen></iframe>
 
 ---
