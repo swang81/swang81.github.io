@@ -17,7 +17,7 @@ layout: page
 
 + 扎实的数学与物理学基础
 + 计算机图形学物理仿真
-+ 虚幻引擎 5 开发
++ 虚幻引擎 5 开发（GAS、Mass Entity、多人联机、性能优化）
 + Unity 3D 开发
 + Oculus Quest 3 API 及 MR 功能开发
 + C++、C#、Linux、Fortran
@@ -45,7 +45,7 @@ I am **Jack**.
 
 + Solid foundation in mathematics and physics
 + Physics Simulation for Computer Graphic
-+ Unreal Engine 5 Programming
++ Unreal Engine 5 Programming (GAS, Mass Entity, Multiplayer Networking, Performance Optimization)
 + Unity 3D Programming
 + Oculus Quest 3 API and MR feature development
 + C++, C#，Linux, Fortran
