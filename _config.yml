@@ -35,12 +35,15 @@ links:
   - title: About Me
     title_zh: 关于我
     url: /
-  - title: Physics & Render Engine
-    title_zh: 物理与渲染引擎
-    url: /physicsEngine
-  - title: Game Development
-    title_zh: 游戏开发
+  - title: Games
+    title_zh: 游戏作品
     url: /gameDevelopment
+  - title: Graphics & Art
+    title_zh: 图形与美术
+    url: /graphics
+  - title: Tech & Systems
+    title_zh: 技术系统
+    url: /physicsEngine
   - title: Dev Notes
     title_zh: 开发笔记
     url: /DevNotes/
