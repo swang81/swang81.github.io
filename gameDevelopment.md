@@ -10,6 +10,28 @@ title: Game Development
 
 # MR/VR/AR 应用
 
+## Superhero IRL
+
+在 Meta Quest 3/3S 上发布的混合现实派对对战游戏（抢先体验版）。将《超级粉碎兄弟》式混战与混合现实魔法结合，在现实环境中出拳、挥剑、格挡爆炸并躲避各种奇特攻击，成为现实中的超级英雄。类型：格斗 / 动作 / 派对游戏。
+
+[**在 Meta 商店查看 →**](https://www.meta.com/experiences/superhero-irl/23870439482625848/)
+
+<div>
+<img src="/images/gameDev/superhero-irl.webp" alt="Superhero IRL Meta Quest MR game screenshot" loading="lazy">
+</div>
+
+
+## Bullet Hell IRL
+
+在 Meta Quest 3/3S 上发布的混合现实弹幕射击游戏（抢先体验版）。将经典弹幕游戏玩法带入混合现实世界——用双腿躲弹幕，用枪扫清障碍。节奏紧张，动作十足，充满乐趣。类型：射击 / 动作 / 派对游戏。
+
+[**在 Meta 商店查看 →**](https://www.meta.com/experiences/bullet-hell-irl/25795163460147854/)
+
+<div>
+<img src="/images/gameDev/bullet-hell-irl.webp" alt="Bullet Hell IRL Meta Quest MR game screenshot" loading="lazy">
+</div>
+
+
 ## Oculus Quest 3 MR 游戏 Demo
 
 基于 Oculus Quest 3 的混合现实派对运动游戏，采用 UE5 及 Meta MR 技术开发，包含空间锚点、透视（Passthrough）、动作追踪和场景捕获等功能。
@@ -115,6 +137,28 @@ title: Game Development
 <div class="lang-en" markdown="1">
 
 # MR/VR/AR Applications
+
+## Superhero IRL
+
+A mixed reality party fighting game on Meta Quest 3/3S (Early Access). Superhero IRL mashes Smash Bros-style chaos with mixed reality magic — throw punches, swing swords, bash back blasts, and dodge outlandish attacks to become a superhero in real life. Genre: Fighting / Action / Party.
+
+[**View on Meta Store →**](https://www.meta.com/experiences/superhero-irl/23870439482625848/)
+
+<div>
+<img src="/images/gameDev/superhero-irl.webp" alt="Superhero IRL Meta Quest MR game screenshot" loading="lazy">
+</div>
+
+
+## Bullet Hell IRL
+
+A mixed reality bullet hell shooter on Meta Quest 3/3S (Early Access). Bullet Hell IRL turns classic bullet chaos into mixed reality mayhem — your legs are the dodge button and your gun clears the way. It's fast, physical, and a little ridiculous. Genre: Shooter / Action / Party.
+
+[**View on Meta Store →**](https://www.meta.com/experiences/bullet-hell-irl/25795163460147854/)
+
+<div>
+<img src="/images/gameDev/bullet-hell-irl.webp" alt="Bullet Hell IRL Meta Quest MR game screenshot" loading="lazy">
+</div>
+
 
 ## MR Games for Oculus Quest 3 Demo
 
