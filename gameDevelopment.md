@@ -32,12 +32,6 @@ title: Game Development
 </div>
 
 
-## Oculus Quest 3 MR 游戏 Demo
-
-基于 Oculus Quest 3 的混合现实派对运动游戏，采用 UE5 及 Meta MR 技术开发，包含空间锚点、透视（Passthrough）、动作追踪和场景捕获等功能。
-<iframe title="Oculus Quest 3 MR Game Demo" src="//player.bilibili.com/player.html?isOutside=true&aid=1705568690&bvid=BV12T421Y7hf&cid=1576493635&p=1&autoplay=0" loading="lazy" allowfullscreen></iframe>
-
-
 ## Unity3D VR 画笔
 
 使用 Oculus Quest2 + Oculus Integration 套件搭建 VR 画笔工具，可自由切换颜色、笔刷大小并随意绘制。
@@ -158,12 +152,6 @@ A mixed reality bullet hell shooter on Meta Quest 3/3S (Early Access). Bullet He
 <div>
 <img src="/images/gameDev/bullet-hell-irl.webp" alt="Bullet Hell IRL Meta Quest MR game screenshot" loading="lazy">
 </div>
-
-
-## MR Games for Oculus Quest 3 Demo
-
-A mix reality party sport game based on Oculus Quest 3, which is base on UE5 with Meta MR techniques, such as spatial anchor, passthrough, movement tracking and scene capture.
-<iframe title="Oculus Quest 3 MR Game Demo" src="//player.bilibili.com/player.html?isOutside=true&aid=1705568690&bvid=BV12T421Y7hf&cid=1576493635&p=1&autoplay=0" loading="lazy" allowfullscreen></iframe>
 
 
 ## Unity3D VR Brush
